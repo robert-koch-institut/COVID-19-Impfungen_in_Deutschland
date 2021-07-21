@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draftCoronaImpfV-07/schema#",
+  "title": "Datenformat SARS-CoV-2 Schutzimpfungen der Bundesländer",
+  "description": "Daten über den verlauf der SARS-CoV-2 Schutzimpfungen in Deutschland.",
+  "type": "object",
+  "definitions": {
+    "nichtnegative_ganze_zahl": {
+      "description": "Eine nichtnegative ganze Zahl",
+      "type": "integer",
+      "minimum": 0
+    },
+    "impfdatum": {
+      "description": "Impfdatum",
+      "type": "string",
+      "format": "date"
+    },
+    "bundelandID_impfort": {
+      "description": "Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen im Bundesressort (17)",
+	  "type": "string",
+      "enum": [
+		"01",
+		"02",
+		"03",
+		"04",
+		"05",
+		"06",
+		"07",
+		"08",
+		"09",
+		"10",
+		"11",
+		"12",
+		"13",
+		"14",
+		"15",
+		"16",
+		"17"
+      ]
+    },
+    "impfserie": {
+      "description": "Angabe zur Erst- oder Zeitimpfung",
+      "type": "integer",
+      "enum": [
+	  1,
+	  2
+	]
+    },
+    "Impfstoff": {
+      "description": "Impfstoffe",
+      "type": "string",
+      "enum": [
+        "Moderna",
+        "Comirnaty",
+        "AstraZeneca",
+		"Janssen"
+      ]
+    },
+	"impfungen": {
+      "description": "Anzahl der  Impfungen",
+      "$ref": "#/definitions/nichtnegative_ganze_zahl"
+    },
+  },
+  "properties": {
+    "metadata": {
+      "description": "Zeitpunkt der Erstellung des Abzugs",
+      "type": "string",
+      "format": "date-time"
+    },
+    "impf_deutschland": {
+      "description": "Gesammelte Daten zu SARS-CoV-2 Impfungen in Deutschland",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "Datum": {
+            "$ref": "#/definitions/impfdatum"
+          },
+          "Landkreis": {
+            "$ref": "#/definitions/bundelandID_impfort"
+          },
+          "Impfstoff": {
+            "$ref": "#/definitions/impfstoffe"
+          },
+          "Impfserie": {
+            "$ref": "#/definitions/impfserie"
+          },
+		  "Impfungen": {
+            "$ref": "#/definitions/Impfungen"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "metadata",
+    "impf_deutschland"
+  ]
+}
