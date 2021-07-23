@@ -10,7 +10,7 @@ on:
       - master
     paths:
       - 'Readme.md'
-      - './.github/pictures/**'                #Uncomment if u use imgges in your Readme.md
+      - '.github/pictures/**'                #Uncomment if u use imgges in your Readme.md
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,8 +28,8 @@ jobs:
         with:
           input_dir: .
           output_dir: .
-          image_import: ./.github/pictures  #Uncomment if u use imgges in your Readme.md
-          images_dir: ./.github/pictures     #Uncomment if u use imgges in your Readme.md
+          #image_import: ./.github/pictures  #Uncomment if u use imgges in your Readme.md
+          #images_dir: ./.github/pictures     #Uncomment if u use imgges in your Readme.md
           build_html: false
       # Renames Readme.pdf to 'Dokumentation <reponame>.pdf'
       - run: mv Readme.pdf "[Dokumentation] $(echo "$GITHUB_REPOSITORY" | awk -F / '{print $2}' | tr "_" " ").pdf"
