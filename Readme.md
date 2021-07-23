@@ -23,7 +23,7 @@ Sven Schröder (Datenmanagement)
 
 ---
   
-Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.xxxxxx](https://doi.org/10.5281/zenodo.xxxxxx).  
+Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.5126652](http://doi.org/10.5281/zenodo.5126652).  
 
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>
 
@@ -233,5 +233,5 @@ Offene Forschungsdaten des RKI werden auf GitHub.com, Zenodo.org und Edoc.rki.de
 
 Die empfohlene Zitierweise ist:  
 
-Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.xxxxxx](https://doi.org/10.5281/zenodo.xxxxxx).
+Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.5126652](http://doi.org/10.5281/zenodo.5126652).
 
