@@ -2,7 +2,7 @@ Datensatzdokumentation
 
 # COVID-19-Impfungen in Deutschland
 
-[Robert Koch-Institut](https://rki.de) | RKI  
+[Robert Koch-Institut](https://grid.ac/institutes/grid.13652.33) | RKI  
 Nordufer 20  
 13353 Berlin  
 
