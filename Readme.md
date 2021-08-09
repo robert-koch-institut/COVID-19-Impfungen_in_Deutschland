@@ -2,7 +2,7 @@ Datensatzdokumentation
 
 # COVID-19-Impfungen in Deutschland
 
-[Robert Koch-Institut](https://rki.de) | RKI  
+[Robert Koch-Institut](https://grid.ac/institutes/grid.13652.33) | RKI  
 Nordufer 20  
 13353 Berlin  
 
@@ -59,22 +59,22 @@ Das DIM-Projekt enthält Daten über den Verlauf der COVID-19-Impfungen in Deuts
 
 - Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden.  
 
-- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die [Kassenärztliche Bundesvereinigung (KBV)](https://www.kbv.de/).
+- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die [Kassenärztliche Bundesvereinigung (KBV)](https://www.kbv.de/).  
 
-- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die [Privatärztliche Bundesvereinigung (PBV)](https://www.pbv-aerzte.de/).
+- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die [Privatärztliche Bundesvereinigung (PBV)](https://www.pbv-aerzte.de/).  
  
 
 ### Aufbereitung der übermittelten Daten
 
 Die Rohdaten der einzelnen Datenquellen werden für den vorliegenden Datensatz aufbereitet. Für alle Datenquellen werden die folgenden Schritte durchgeführt:  
 
-* Grundlegenden Validitätsprüfung der übermittelten Datensätze
-* Einheitliche Benennung der Impfstoffe
-* Zuweisung der BundeslandID oder LandkreisID des Impforts
-* Ausweisung der Impfserie von Impfungen mit dem Impfstoff Janssen als 1, Erstimpfung (nur KBV)
-* Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums (nur DIM)
-* Auswahl der aktuellsten Datensätze je Pseudonym und Impfdatum (nur DIM)
-* Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag
+* Grundlegenden Validitätsprüfung der übermittelten Datensätze  
+* Einheitliche Benennung der Impfstoffe  
+* Zuweisung der BundeslandID oder LandkreisID des Impforts  
+* Ausweisung der Impfserie von Impfungen mit dem Impfstoff Janssen als 1, Erstimpfung (nur KBV)  
+* Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums (nur DIM)  
+* Auswahl der aktuellsten Datensätze je Pseudonym und Impfdatum (nur DIM)  
+* Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
 
 Den übermittelten DIM-Daten wird ein personenbezogenes Pseudonym zugeordnet. Beispielsweise, durch die spätere Korrektur von Meldungen kommt es dazu, dass zu einem personenbezogenen Pseudonym mehrere, sich widersprechende Einträge vorliegen. Das ist z.B. der Fall, wenn fälschlicherweise eine Erstimpfung als Zweitimpfung gemeldet wird und später zur Erstimpfung korrigiert wird.  
 Im Datensatz wird dann zuerst die Zweitimpfung und, als später Korrektur, die Erstimpfung gemeldet werden. Wichtig ist, dass innerhalb des DIM Systems zwischen Impfdatum und dem Datum der Datenerfassung unterschieden wird. Meldungen als auch deren Korrekturen können sich auf des gleiche Impfdatum beziehen, das Datum der Datenerfassung unterscheidet sich jedoch, da die Korrektur später gemeldet wird.  
@@ -122,7 +122,7 @@ Neben der Beschreibung biblographischer Metadaten, in der .zenodo.json, wird das
 > [[Datenschema] Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/%5BDatenschema%5D%20Deutschland_Bundeslaender_COVID-19-Impfungen.json)  
 > [[Datenschema] Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/%5BDatenschema%5D%20Deutschland_Landkreise_COVID-19-Impfungen.json)  
 
-Im Datenschema enhalten sind die in den Impfdaten enhaltenen Variablen sowie deren Ausprägungen.  
+Im Datenschema aufgeführt sind die in den Impfdaten enthaltenen Variablen sowie deren Ausprägungen.  
 
 ## COVID-19 Impfdaten auf Ebene der Bundesländer 
 
@@ -145,7 +145,7 @@ Zusätzlich werden folgende Variablen angegeben:
 - Datum der Impfung (Impfdatum)  
 - Anzahl der Impfungen in der Gruppe (Anzahl)  
 
-Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der Impfungen in einem Bundesland, des Impfstoffes und der Impfserie an. Für jede Impfgruppe wird die tägliche Anzahl neuer Impfungen ausgewiesen, sofern diese größer null sind. Für jedes Datum angegeben, wie viele Personen, differenziert nach den oben aufgeführten Variablen, geimpft wurden.  
+Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der Impfungen in einem Bundesland, des Impfstoffes und der Impfserie an. Für jede Impfgruppe wird die tägliche Anzahl neuer Impfungen ausgewiesen, sofern diese größer null sind. Für jedes Datum ist angegeben, wie viele Personen, differenziert nach den oben aufgeführten Variablen, geimpft wurden.  
 
 ### Variablenausprägungen 
 
@@ -176,7 +176,7 @@ Die Impfdaten differenzieren nach verschiedenen Merkmalen einer Impfgruppe. Pro 
 
 - Ort der Impfung (LandkreisId_Impfort)  
 - Angabe zu Vollständigkeit des Impfschutzes (Impfschutz)  
-- Altersgrupper der Geimpften (Altersgruppe)  
+- Altersgruppe der Geimpften (Altersgruppe)  
 
 Zusätzlich werden folgende Variablen angegeben:  
 
@@ -184,6 +184,25 @@ Zusätzlich werden folgende Variablen angegeben:
 - Anzahl der Impfungen in der Gruppe (Impfungen)  
 
 Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der Impfungen eines Landkreises, der Altergruppe der Geimpften und der Ausprägung des Impfschutzes an. Für jede Impfgruppe wird die tägliche Anzahl neuer Impfungen ausgewiesen, sofern diese größer vier ist.  
+
+**Hinweis zur Interpretation der Variablen**  
+
+Die Zuordnung der Impfzahlen zu Bundesländern und Landkreisen erfolgt anhand der Postleihzahl (PLZ) der impfenden Stellen (Impfzentren, Betriebe, Betriebsärzte, niedergelassene Ärzteschaft). Nur diese Angabe des Orts der Impfung ist in allen Datenquellen enthalten. Die PLZ der Geimpften ist in den Daten der KBV nicht enthalten, teilweise fehlt sie, aufgrund unvollständiger Übermittlung, in den Daten des DIM.  
+Anhand der PLZ der impfenden Stelle lässt sich keine Impfquote auf Landkreisebene berechnen, da geimpfte ihren Wohnsitz auch in anderen Landkreisen als dem Landkreis der impfenden Stelle haben können. Der Anteil der in einem Landkreis ansässigen Geimpften ist daher auf Grundlage der vorliegenden Daten nicht ermittelbar.  
+
+### Variablenausprägungen 
+
+Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
+<font size="2">
+| Variable | Typ | Ausprägung | Beschreibung |
+| -------- | --- | ---------- | ------------ |
+|Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
+| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS)  |
+| Altersgruppe | Text | 12-17: Altersgruppe 12 bis 17 Jahre <br>18-59: Altersgruppe 18 bis 59 Jahre <br> 60+:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
+|Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz | Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
+|Anzahl | Natürliche Zahl | &ge;5 | Anzahl der Impfungen in der Impfgruppe |
+
+</font>
 
 Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kummulierte Abzahal der Impfungen an einem Tag den Wert von fünf übersteigt.  
 
@@ -200,21 +219,6 @@ Die Anzahl der Impfungen dieser Impfgruppe ist für die ersten beiden Tage klein
 
 >Impfdatum,LandkreisId_Impfort,Altersgruppe,Impfschutz,Anzahl  
 >2021-06-28 ,01004 ,60+ ,1 ,16  
-
-### Variablenausprägungen 
-
-Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
-<font size="2">
-| Variable | Typ | Ausprägung | Beschreibung |
-| -------- | --- | ---------- | ------------ |
-|Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS)  |
-| Altersgruppe | Text | 12-17: Altersgruppe 12 bis 17 Jahre <br>18-59: Altersgruppe 18 bis 59 Jahre <br> 60+:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
-|Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz | Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
-|Anzahl | Natürliche Zahl | &ge;5 | Anzahl der Impfungen in der Impfgruppe |
-
-</font>
-
 
 ## Lizenz
 
