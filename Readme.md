@@ -48,9 +48,9 @@ An dem Projekt "Digitales Impfquoten-Monitoring" sind verschiedene Stakeholder b
 - Anette Siedler | [Fachgebiet 33](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html)  
 - Lei Mao und Hermann Claus  | [Fachgebiet 31](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG31/FG31_node.html)  
 
-Die zugrundeliegenden Daten werden über die Bundesdruckerei an das Robert Koch-Institut (RKI) übermittelt. Die Verarbeitung und Aufbereitung der vorliegenden Rohdaten erfolgt durch das [Fachgebiet 31 | Infektionsepidemiologische Fach-IT und Anwendungsentwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG31/FG31_node.html) des RKI. Die epidemiologische Datenanalyse erfolgt durch das [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html) des RKI. Inhaltliche Fragen zum Digitalen Impfquoten-Monitoring und dem Impf-Fortschritt können direkt an das [RKI](mailto:info@rki.de) gerichtet werden.   
+Die zugrundeliegenden Daten werden über die Bundesdruckerei an das Robert Koch-Institut (RKI) übermittelt. Die Verarbeitung und Aufbereitung der vorliegenden Rohdaten erfolgt durch das [Fachgebiet 31 | Infektionsepidemiologische Fach-IT und Anwendungsentwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG31/FG31_node.html) des RKI. Die epidemiologische Datenanalyse erfolgt durch das [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html) des RKI. Inhaltliche Fragen zum Digitalen Impfquoten-Monitoring und dem Impf-Fortschritt können direkt an [info@rki.de](mailto:info@rki.de) gerichtet werden.   
 
-Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MF/MF4/mf4_node.html). Die Datensatzkuration und Betreuung der Publikationsinfrastruktur erfolgen durch Hannes Wuensche. Fragen zum Datenmanagement können an das Fachgebiet MF4 gerichtet werden ([MF4@rki.de](mailto:MF4@rki.de)).  
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MF/MF4/mf4_node.html). Die Datensatzkuration und Betreuung der Publikationsinfrastruktur erfolgen durch Hannes Wuensche. Fragen zum Datenmanagement können an das Fachgebiet MF4 gerichtet werden ([OpenData@rki.de](mailto:opendata@rki.de)).  
 
 ### Zusammensetzung der Datenquellen
 
@@ -71,7 +71,7 @@ Die Rohdaten der einzelnen Datenquellen werden für den vorliegenden Datensatz a
 * Grundlegenden Validitätsprüfung der übermittelten Datensätze  
 * Einheitliche Benennung der Impfstoffe  
 * Zuweisung der BundeslandID oder LandkreisID des Impforts  
-* Ausweisung der Impfserie von Impfungen mit dem Impfstoff Janssen als 1, Erstimpfung (nur KBV)  
+* Generelle Ausweisung von Impfungen mit dem Impfstoff Janssen als Erstimpfung (Impfserie=1), unabhängig des tatsächlich gemeldeten Werts  
 * Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums (nur DIM)  
 * Auswahl der aktuellsten Datensätze je Pseudonym und Impfdatum (nur DIM)  
 * Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
@@ -168,7 +168,7 @@ Die aktuellen COVID-19-Impfzahlen auf Ebene der Landkreise sind im Hauptverzeich
 > [Aktuell_Deutschland_Landkreise_COVID-19_Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv)  
 > [Archiv/JJJJ-MM-TT_Deutschland_Landkreise_COVID-19-Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Archiv)  
 
-Die Impfdaten der Landkreise bilden einen tagesaktuellen Stand (8:30 Uhr) aller an das RKI auf Landkreisebene gemeldeten Impfungen in Deutschland ab. Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv" ist identisch mit dem neusten Datenstand des Archivs.  
+Die Impfdaten der Landkreise bilden einen tagesaktuellen Stand (8:30 Uhr) aller an das RKI auf Landkreisebene gemeldeten Impfungen in Deutschland - mit Ausnahme der Bundesressorts - ab. Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv" ist identisch mit dem neusten Datenstand des Archivs.  
 
 ### Variablen 
 
@@ -187,7 +187,7 @@ Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der
 
 **Hinweis zur Interpretation der Variablen**  
 
-Die Zuordnung der Impfzahlen zu Bundesländern und Landkreisen erfolgt anhand der Postleihzahl (PLZ) der impfenden Stellen (Impfzentren, Betriebe, Betriebsärzte, niedergelassene Ärzteschaft). Nur diese Angabe des Orts der Impfung ist in allen Datenquellen enthalten. Die PLZ der Geimpften ist in den Daten der KBV nicht enthalten, teilweise fehlt sie, aufgrund unvollständiger Übermittlung, in den Daten des DIM.  
+Die Zuordnung der Impfzahlen zu Bundesländern und Landkreisen erfolgt anhand der Postleitzahl (PLZ) der impfenden Stellen (Impfzentren, Betriebe, Betriebsärzte, niedergelassene Ärzteschaft). Nur diese Angabe des Orts der Impfung ist in allen Datenquellen enthalten. Die PLZ der Geimpften ist in den Daten der KBV nicht enthalten, teilweise fehlt sie, aufgrund unvollständiger Übermittlung, in den Daten des DIM.  
 Anhand der PLZ der impfenden Stelle lässt sich keine Impfquote auf Landkreisebene berechnen, da geimpfte ihren Wohnsitz auch in anderen Landkreisen als dem Landkreis der impfenden Stelle haben können. Der Anteil der in einem Landkreis ansässigen Geimpften ist daher auf Grundlage der vorliegenden Daten nicht ermittelbar.  
 
 ### Variablenausprägungen 
