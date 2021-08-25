@@ -154,7 +154,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressort  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen im Bundesressort  |
+| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen in Bundesressorts  |
 |Impfstoff | Text | AstraZeneca: AstraZeneca <br> Moderna: Moderna <br> Comirnaty: BioNTech/Pfizer <br> Janssen:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br>| Verabreichter Impfstoff | 
 |Impfserie| Natürliche Zahl | 1: Erstimpfung <br> 2: Zweitimpfung | Angabe zur Erst- oder Zweitimpfung| 
 |Anzahl| Natürliche Zahl | &ge;1 | Anzahl der Impfungen in der Impfgruppe |
@@ -168,7 +168,7 @@ Die aktuellen COVID-19-Impfzahlen auf Ebene der Landkreise sind im Hauptverzeich
 > [Aktuell_Deutschland_Landkreise_COVID-19_Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv)  
 > [Archiv/JJJJ-MM-TT_Deutschland_Landkreise_COVID-19-Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Archiv)  
 
-Die Impfdaten der Landkreise bilden einen tagesaktuellen Stand (8:30 Uhr) aller an das RKI auf Landkreisebene gemeldeten Impfungen in Deutschland - mit Ausnahme der Bundesressorts - ab. Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv" ist identisch mit dem neusten Datenstand des Archivs.  
+Die Impfdaten der Landkreise bilden einen tagesaktuellen Stand (8:30 Uhr) aller an das RKI auf Landkreisebene gemeldeten Impfungen in Deutschland ab. Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv" ist identisch mit dem neusten Datenstand des Archivs.  
 
 ### Variablen 
 
@@ -197,7 +197,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS)  |
+| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> 17000 : Bundesressorts <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen in Bundesressorts  |
 | Altersgruppe | Text | 12-17: Altersgruppe 12 bis 17 Jahre <br>18-59: Altersgruppe 18 bis 59 Jahre <br> 60+:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
 |Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz | Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
 |Anzahl | Natürliche Zahl | &ge;5 | Anzahl der Impfungen in der Impfgruppe |
