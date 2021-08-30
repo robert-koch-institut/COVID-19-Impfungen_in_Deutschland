@@ -37,7 +37,7 @@ Ein Hauptbestandteil des DIM-Projekts ist die DIM-Anwendung, eine Web-basierte S
 
 Die DIM-Anwendung besteht aus Eingabemasken/Dialogen (Frontend) und dahinter liegenden Datenbanksystem (Backend). Autorisiertes Personal der stationären Impfzentren und mobile Impfteams können über die Web-Anwendung die Impfdatensätze zur COVID-19-Impfung eingeben und über eine gesicherte Internetverbindung pseudonymisiert an die Bundesdruckerei übermitteln. Im Auftrag des RKI werden die Daten von der Bundesdruckerei zwischengespeichert und vom RKI mehrmals täglich abgerufen. Alternativ zur direkten Eingabe können Daten in einem vorgegebenen csv-Datenformat durch die DIM-Web-Anwendung übermittelt werden (csv-Upload Schnittstelle). Als dritte Möglichkeit können Datensätze über eine REST-API Schnittstelle aus einem Fremdsystem an in das Datenbanksystem übertragen werden. Die nachfolgende Darstellung zeigt schematisch den Datenfluss von Erfassung der Daten in den Impfzentren bis hin zur Weitergabe der aggregierten Daten durch das RKI.
 
-![**Abbildung**: Überblick Datenfluss Digitales Impfquoten-Monitoring (DIM)](/.github/pictures/2021-08-27_DIM_Datenfluss_Uebersicht.jpg "DIM Datenfluss")
+![**Abbildung**: Überblick Datenfluss Digitales Impfquoten-Monitoring (DIM)](/.github/pictures/DIM_Datenfluss_Übersicht.jpg "DIM Datenfluss")
 
 
 ### Projektbeteiligte und Rollenbesetzung  
@@ -156,7 +156,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 |Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
 | BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen in Bundesressorts  |
 |Impfstoff | Text | AstraZeneca: AstraZeneca <br> Moderna: Moderna <br> Comirnaty: BioNTech/Pfizer <br> Janssen:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br>| Verabreichter Impfstoff | 
-|Impfserie| Natürliche Zahl | 1: Erstimpfung <br> 2: Zweitimpfung | Angabe zur Erst- oder Zweitimpfung| 
+|Impfserie| Natürliche Zahl | 1: Erstimpfung <br> 2: Zweitimpfung <br> 3: Auffrischungsimpfung | Angabe zur Erst-, Zweit- oder Auffrischungsimpfung| 
 |Anzahl| Natürliche Zahl | &ge;1 | Anzahl der Impfungen in der Impfgruppe |
 
 </font>
@@ -199,7 +199,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 |Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
 | LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> 17000 : Bundesressorts <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen in Bundesressorts  |
 | Altersgruppe | Text | 12-17: Altersgruppe 12 bis 17 Jahre <br>18-59: Altersgruppe 18 bis 59 Jahre <br> 60+:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
-|Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz | Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
+|Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz <br> 3: Aufgefrischter Impfschutz| Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
 |Anzahl | Natürliche Zahl | &ge;5 | Anzahl der Impfungen in der Impfgruppe |
 
 </font>
