@@ -71,23 +71,42 @@ Die Rohdaten der einzelnen Datenquellen werden für den vorliegenden Datensatz a
 * Grundlegenden Validitätsprüfung der übermittelten Datensätze  
 * Einheitliche Benennung der Impfstoffe  
 * Zuweisung der BundeslandID oder LandkreisID des Impforts  
-* Generelle Ausweisung von Impfungen mit dem Impfstoff Janssen als Erstimpfung (Impfserie=1), unabhängig des tatsächlich gemeldeten Werts  
+* Generelle Ausweisung von Impfungen mit dem Impfstoff Janssen als Erstimpfung (Impfserie=1) bzw. Auffrischungsimpfung (Impfserie = 3)  
 * Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums (nur DIM)  
+* Erkennung von Sammelpatienten:innen (nur DIM)
 * Auswahl der aktuellsten Datensätze je Pseudonym und Impfdatum (nur DIM)  
 * Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
 
-Den übermittelten DIM-Daten wird ein personenbezogenes Pseudonym zugeordnet. Beispielsweise, durch die spätere Korrektur von Meldungen kommt es dazu, dass zu einem personenbezogenen Pseudonym mehrere, sich widersprechende Einträge vorliegen. Das ist z.B. der Fall, wenn fälschlicherweise eine Erstimpfung als Zweitimpfung gemeldet wird und später zur Erstimpfung korrigiert wird.  
-Im Datensatz wird dann zuerst die Zweitimpfung und, als später Korrektur, die Erstimpfung gemeldet werden. Wichtig ist, dass innerhalb des DIM Systems zwischen Impfdatum und dem Datum der Datenerfassung unterschieden wird. Meldungen als auch deren Korrekturen können sich auf des gleiche Impfdatum beziehen, das Datum der Datenerfassung unterscheidet sich jedoch, da die Korrektur später gemeldet wird.  
-Zur Herstellung inhaltlicher Konsistenz, werden folgenden Regeln auf Einträge mit gleichem Personen-Pseudonym angewendet. Der Hinweis "aktuellste" bezieht sich dabei auf das Datum der Datenerfassung, nicht das Impfdatum:  
+Zu beachten ist, dass Zweitimpfungen erst ab dem 15.01.2021 und Auffrischimpfungen erst ab 01.06.2021 als plausibel erachtet werden. Entsprechende Impfungen mit einem früheren Datum sind am ehesten auf Eingabefehler zurückzuführen, werden jedoch in den aggregierten Daten mit ausgewiesen.  
+
+#### Korrektur von mehrfachen Meldungen  
+
+Den übermittelten DIM-Daten wird ein personenbezogenes Pseudonym zugeordnet. Beispielsweise, durch die spätere Korrektur von Meldungen kommt es dazu, dass zu einem personenbezogenen Pseudonym mehrere, sich widersprechende Einträge vorliegen. Das ist z.B. der Fall, wenn fälschlicherweise eine Erstimpfung als Zweitimpfung gemeldet wird und später zur Erstimpfung korrigiert wird. Im Datensatz wird dann zunächst die Zweitimpfung und, nach gemeldeter Korrektur, die Erstimpfung ausgewiesen werden.  
+
+#### Korrektur von Sammelpatient:innen  
+
+Ein weiterer Fall von mehrfach vorkommenden Pseudonymen sind sogenannte Sammelpatient:innen, d.h. unterschiedliche Personen, denen dasselbe Pseudonym zugeordnet wird. Liegen Datensätze mit gleichem Pseudonym aber Unterschieden in der Postleitzahl der Person sowie dem Impfzentrum vor, ist davon auszugehen, dass es sich um Sammelpatient:innen, d.h. verschiedene Personen, handelt. Die Annahme wird auch dann getroffen, wenn Unterschiede in der Postleitzahl der Person oder dem angegebenen Impfzentrum zu unterschliedlichen Tagen vorliegen. Im folgenden Aufbereitungsprozess werden alle zu einem erkannten Sammelpatient:innen gehörigen Datensätze wie im Falle eines neuen Pseudonyms behandelt.  
+
+#### Regeln zur Herstellung inhaltlicher Konsistenz  
+
+Zur Herstellung inhaltlicher Konsistenz werden folgenden Regeln auf Einträge mit gleichem Personen-Pseudonym/erkannten Sammelpatient:innen angewendet. Eine Auffrischungsimpfung ist erlaubt, wenn sie nach dem 01.06.2021 erfolgte. Der Hinweis "aktuellste" bezieht sich dabei auf das Datum der Datenerfassung, nicht das Impfdatum:   
 <font size="2">
 | Schritt | Kriterium | Aktion |
 | ------- | --------- | ------ |
-|1        | Aktuellste Erstimpfung zum spätesten Impfdatum mit Janssen  | ja : behalte nur die aktuellste Erstimpfung zum spätesten Impfdatum mit Janssen. </br> nein : weiter mit Schritt 2 |
-|2        | Genau ein Eintrag oder genau zwei Einträge mit unterschiedlicher Impfserie und mindestens 14 Tagen Abstand im Impfdatum | Ja : valide Einträge, keine weitere Aktion </br> Nein : weiter mit Schritt 3 |
-|3        | Mind. zwei Einträge mit weniger als 14 Tagen max. Abstand im Impfdatum | Ja : Die Einträge werden als Korrekturen voneinander angesehen, daher wird nur der aktuellste Eintrag behalten. </br> Nein: weiter mit Schritt 4|
-|4        | Mind. drei Einträge mit mind. 14 Tagen max. Abstand im Impfdatum und beiden Impfserien | Ja : Wähle den neuesten Eintrag je Impfserie. </br> Nein: weiter mit Schritt 5 |
-|5        | Mind. zwei Einträge mit mind. 14 Tagen max. Abstand im Impfdatum zur gleichen Impfserie| Wähle den neuesten Eintrag des frühesten Impfdatums und setze die Impfserie auf 1. Wähle den neuesten Datensatz bzgl. des spätesten Impfdatums und setze die Impfserie auf 2.
+|1        | Späteste Erstimpfung mit Janssen  | ja : behalte nur die Erstimpfung zum spätesten Impfdatum mit Janssen sowie die erste spätere, erlaubte Auffrischungsimpfung, wenn diese mit Janssen erfolgte. </br> nein : weiter mit Schritt 2 |
+|2        | Weniger als 14 Tagen max. Abstand im Impfdatum | Ja : Die Einträge werden als Korrekturen voneinander angesehen, daher wird nur der aktuellste Eintrag behalten.  </br> Nein : weiter mit Schritt 3 |
+|3        | Genau eine Erst- vor der Zweitimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 4|
+|4        | Genau eine Zweit- vor der Erstimpfung | Ja : Impfserie vertauscht, tausche die Impfserie </br> Nein: weiter mit Schritt 5 |
+|5        | Genau eine Erst- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 6|
+|6        | Genau eine Erst- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung </br> Nein: weiter mit Schritt 7|
+|7        | Genau eine Auffrischungs- vor der Erstimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. Ist die Erstimpfung mind. 120 Tage später erfolgt und erlaubt im Sinne einer Auffrischungsimpfung, dann ändere die Erstimpfung zur Auffrischungsimpfung ab, sonst zur Zweitimpfung. </br> Nein: weiter mit Schritt 8|
+|8        | Genau eine Zweit- vor der erlaubten Auffrischugsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 9|
+|9        | Genau eine Zweit- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ändere die Zweitimpfung zur Erstimpfung ab. Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung </br> Nein: weiter mit Schritt 10|
+|10       | Genau eine Auffrischungs- vor der Zweitimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. </br> Nein: weiter mit Schritt 11|
+|11       | Sonst | Das früheste Impfereignis wird zur Erstimpfung. </br> Das erste folgende Impfereignis mit Impfstoff ungleich Janssen und mind. 14 Tagen Abstand wird zur Zweitimpfung. </br> Die erste folgende, erlaubte Auffrischungsimpfung wird zur Auffrischungsimpfung. |
 </font>
+
+Wichtig ist, dass innerhalb des DIM Systems zwischen Impfdatum und dem Datum der Datenerfassung unterschieden wird. Meldungen als auch deren Korrekturen können sich auf des gleiche Impfdatum beziehen, das Datum der Datenerfassung unterscheidet sich jedoch, da die Korrektur später gemeldet wird.  
 
 
 ## Aufbau und Inhalt des Datensatzes
@@ -154,7 +173,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen in Bundesressorts  |
+| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
 |Impfstoff | Text | AstraZeneca: AstraZeneca <br> Moderna: Moderna <br> Comirnaty: BioNTech/Pfizer <br> Janssen:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br>| Verabreichter Impfstoff | 
 |Impfserie| Natürliche Zahl | 1: Erstimpfung <br> 2: Zweitimpfung <br> 3: Auffrischungsimpfung | Angabe zur Erst-, Zweit- oder Auffrischungsimpfung| 
 |Anzahl| Natürliche Zahl | &ge;1 | Anzahl der Impfungen in der Impfgruppe |
@@ -197,7 +216,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> 17000 : Bundesressorts <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS), zuzüglich der Zuordung zu Impfungen in Bundesressorts  |
+| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> 17000 : Bundesressorts <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden. |
 | Altersgruppe | Text | 12-17: Altersgruppe 12 bis 17 Jahre <br>18-59: Altersgruppe 18 bis 59 Jahre <br> 60+:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
 |Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz <br> 3: Aufgefrischter Impfschutz| Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
 |Anzahl | Natürliche Zahl | &ge;5 | Anzahl der Impfungen in der Impfgruppe |
