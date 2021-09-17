@@ -50,28 +50,34 @@ An dem Projekt "Digitales Impfquoten-Monitoring" sind verschiedene Stakeholder b
 
 Die zugrundeliegenden Daten werden über die Bundesdruckerei an das Robert Koch-Institut (RKI) übermittelt. Die Verarbeitung und Aufbereitung der vorliegenden Rohdaten erfolgt durch das [Fachgebiet 31 | Infektionsepidemiologische Fach-IT und Anwendungsentwicklung](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG31/FG31_node.html) des RKI. Die epidemiologische Datenanalyse erfolgt durch das [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Content/Institut/OrgEinheiten/Abt3/FG33/FG33_node.html) des RKI. Inhaltliche Fragen zum Digitalen Impfquoten-Monitoring und dem Impf-Fortschritt können direkt an [info@rki.de](mailto:info@rki.de) gerichtet werden.   
 
-Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MF/MF4/mf4_node.html). Die Datensatzkuration und Betreuung der Publikationsinfrastruktur erfolgen durch Hannes Wuensche. Fragen zum Datenmanagement können an das Fachgebiet MF4 gerichtet werden ([OpenData@rki.de](mailto:opendata@rki.de)).  
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Forschungsdatenmanagement](https://www.rki.de/DE/Content/Institut/OrgEinheiten/MF/MF4/mf4_node.html). Die Datensatzkuration und Betreuung der Publikationsinfrastruktur erfolgen durch Hannes Wuensche. Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
 
 ### Zusammensetzung der Datenquellen
 
-Das DIM-Projekt enthält Daten über den Verlauf der COVID-19-Impfungen in Deutschland. Diese Daten werden der Disziplin der Infektionsepidemiologie zugeordnet. Die hier veröffentlichten Impfdaten sind aggregierte Daten aus drei Datenquellen. Neben dem Meldeweg über die DIM-Anwendung werden zur Erfassung der Impfquote auch Impfdaten aus Arztpraxen über die Kassenärztliche Bundesvereinigung (KBV) und die privatärztliche Bundesvereinigung (PBV) erfasst. Insgesamt werden im Datensatz "COVID-19-Impfungen in Deutschland" somit verschiedenste Datenquellen in einem Datensatz zusammengeführt und ständig erweitert:
+Das DIM-Projekt enthält Daten über den Verlauf der COVID-19-Impfungen in Deutschland. Diese Daten werden der Disziplin der Infektionsepidemiologie zugeordnet. Die hier veröffentlichten Impfdaten sind aggregierte Daten aus drei Datenquellen. Neben dem Meldeweg über die DIM-Anwendung werden zur Erfassung der Impfquote auch Impfdaten aus Arztpraxen über die Kassenärztliche Bundesvereinigung (KBV) und den Privatärztlicher Bundesverband (PBV) erfasst. Insgesamt werden im Datensatz "COVID-19-Impfungen in Deutschland" somit verschiedenste Datenquellen in einem Datensatz zusammengeführt und ständig erweitert:
 
 
-- Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden.  
+* Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzt:innen, die über die DIM-Webanwendung übermittelt werden.  
 
-- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die [Kassenärztliche Bundesvereinigung (KBV)](https://www.kbv.de/).  
+Aus den Impfzentren, mobilen Impfteams und Krankenhäusern der Bundesländer werden seit dem 27.12.2020, von Betriebsärzt:innen und betriebsmedizinischen Diensten seit dem 07.06.2021, täglich pseudonymisierte Daten mit der Web-Anwendung "Digitales Impfquotenmonitoring" übermittelt.  
 
-- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die [Privatärztliche Bundesvereinigung (PBV)](https://www.pbv-aerzte.de/).  
- 
+* Der täglich aggregierte Kerndatensatz der impfenden Vertragsärzt:innen über die [Kassenärztliche Bundesvereinigung (KBV)](https://www.kbv.de/).  
 
-### Aufbereitung der übermittelten Daten
+Von den Vertragsärzt:innen werden täglich aggregierte Daten an die KBV übermittelt und dort in zwei separaten Datenpaketen dem RKI bereitgestellt: Anzahl durchgeführter Impfungen je Praxis und Impftag aufgeschlüsselt nach Impfstoff und Impfstoffdosis (verfügbar seit Impftag 10.03.2021) sowie aufgeschlüsselt nach Altersgruppe <18, 18-59 und 60+ Jahre und Impfstoffdosis (verfügbar seit Impftag 26.03.2021).  
+
+
+* Der täglich aggregierte Kerndatensatz der impfenden Privatärzt:innen über die [Privatärztlicher Bundesverband (PBV)](https://www.pbv-aerzte.de/).  
+
+Von den Privatärzt:innen werden täglich aggregierte Daten an die PVS (Privatärztliche Verrechnungsstelle als technischer Dienstleister des PBV) übermittelt und dort in einem Datenpaket dem RKI bereitgestellt: Anzahl durchgeführter Impfungen je Praxis und Impftag aufgeschlüsselt nach Impfstoff, Altersgruppe <18, 18-59 und 60+ Jahre und Impfstoffdosis (Daten verfügbar seit Impftag 07.06.2021).  
+
+### Aufbereitung der übermittelten Daten  
 
 Die Rohdaten der einzelnen Datenquellen werden für den vorliegenden Datensatz aufbereitet. Für alle Datenquellen werden die folgenden Schritte durchgeführt:  
 
-* Grundlegenden Validitätsprüfung der übermittelten Datensätze  
+* Grundlegende Validitätsprüfung der übermittelten Datensätze  
 * Einheitliche Benennung der Impfstoffe  
 * Zuweisung der BundeslandID oder LandkreisID des Impforts  
-* Generelle Ausweisung von Impfungen mit dem Impfstoff Janssen als Erstimpfung (Impfserie=1) bzw. Auffrischungsimpfung (Impfserie = 3)  
+* Generelle Ausweisung von Impfungen mit dem Impfstoff Janssen als Erstimpfung (Impfserie = 1) bzw. Auffrischungsimpfung (Impfserie = 3)  
 * Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums (nur DIM)  
 * Erkennung von Sammelpatienten:innen (nur DIM)
 * Auswahl der aktuellsten Datensätze je Pseudonym und Impfdatum (nur DIM)  
@@ -85,7 +91,7 @@ Den übermittelten DIM-Daten wird ein personenbezogenes Pseudonym zugeordnet. Be
 
 #### Korrektur von Sammelpatient:innen  
 
-Ein weiterer Fall von mehrfach vorkommenden Pseudonymen sind sogenannte Sammelpatient:innen, d.h. unterschiedliche Personen, denen dasselbe Pseudonym zugeordnet wird. Liegen Datensätze mit gleichem Pseudonym aber Unterschieden in der Postleitzahl der Person sowie dem Impfzentrum vor, ist davon auszugehen, dass es sich um Sammelpatient:innen, d.h. verschiedene Personen, handelt. Die Annahme wird auch dann getroffen, wenn Unterschiede in der Postleitzahl der Person oder dem angegebenen Impfzentrum zu unterschliedlichen Tagen vorliegen. Im folgenden Aufbereitungsprozess werden alle zu einem erkannten Sammelpatient:innen gehörigen Datensätze wie im Falle eines neuen Pseudonyms behandelt.  
+Ein weiterer Fall von mehrfach vorkommenden Pseudonymen sind sogenannte Sammelpatient:innen, d.h. unterschiedliche Personen, denen dasselbe Pseudonym zugeordnet wird. Liegen Datensätze mit gleichem Pseudonym aber Unterschieden in der Postleitzahl der Person sowie dem Impfzentrum vor, ist davon auszugehen, dass es sich um Sammelpatient:innen, d.h. verschiedene Personen, handelt. Die Annahme wird auch dann getroffen, wenn Unterschiede in der Postleitzahl der Person oder dem angegebenen Impfzentrum zu unterschiedlichen Tagen vorliegen. Im folgenden Aufbereitungsprozess werden alle zu einem erkannten Sammelpatient:innen gehörigen Datensätze wie im Falle eines neuen Pseudonyms behandelt.  
 
 #### Regeln zur Herstellung inhaltlicher Konsistenz  
 
@@ -100,7 +106,7 @@ Zur Herstellung inhaltlicher Konsistenz werden folgenden Regeln auf Einträge mi
 |5        | Genau eine Erst- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 6|
 |6        | Genau eine Erst- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung </br> Nein: weiter mit Schritt 7|
 |7        | Genau eine Auffrischungs- vor der Erstimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. Ist die Erstimpfung mind. 120 Tage später erfolgt und erlaubt im Sinne einer Auffrischungsimpfung, dann ändere die Erstimpfung zur Auffrischungsimpfung ab, sonst zur Zweitimpfung. </br> Nein: weiter mit Schritt 8|
-|8        | Genau eine Zweit- vor der erlaubten Auffrischugsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 9|
+|8        | Genau eine Zweit- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 9|
 |9        | Genau eine Zweit- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ändere die Zweitimpfung zur Erstimpfung ab. Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung </br> Nein: weiter mit Schritt 10|
 |10       | Genau eine Auffrischungs- vor der Zweitimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. </br> Nein: weiter mit Schritt 11|
 |11       | Sonst | Das früheste Impfereignis wird zur Erstimpfung. </br> Das erste folgende Impfereignis mit Impfstoff ungleich Janssen und mind. 14 Tagen Abstand wird zur Zweitimpfung. </br> Die erste folgende, erlaubte Auffrischungsimpfung wird zur Auffrischungsimpfung. |
@@ -115,7 +121,7 @@ Der Datensatz enthält Daten über den Verlauf der COVID-19-Impfungen in Deutsch
 
 * Impfdaten mit tagesaktuellen Meldungen von COVID-19-Impfungen  
 * Datenschema der Impfdaten  
-* Archiv mit der Sammlung aller bisherigen Fallzahlentabellen  
+* Archiv mit der Sammlung aller bisherigen Impfzahlentabellen  
 * Lizenz Datei mit der Nutzungslizenz des Datensatzes  
 * Datensatzdokumentation in deutscher Sprache  
 * Metadaten Datei zum Import in Zenodo  
@@ -136,10 +142,10 @@ Die bereitgestellten Daten sind mit Metadaten beschrieben und wissenschaftlich z
 
 Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.
 
-Neben der Beschreibung biblographischer Metadaten, in der .zenodo.json, wird das Datenschema der Impfdaten bereitgestellt:  
+Neben der Beschreibung bibliographischer Metadaten, in der .zenodo.json, wird das Datenschema der Impfdaten bereitgestellt:  
 
-> [[Datenschema] Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/%5BDatenschema%5D%20Deutschland_Bundeslaender_COVID-19-Impfungen.json)  
-> [[Datenschema] Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/%5BDatenschema%5D%20Deutschland_Landkreise_COVID-19-Impfungen.json)  
+> [Kontextmaterialien/Datenschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Kontextmaterialien/Datenschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json)  
+> [Kontextmaterialien/Datenschema_Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Kontextmaterialien/Datenschema_Landkreise_COVID-19-Impfungen.json)  
 
 Im Datenschema aufgeführt sind die in den Impfdaten enthaltenen Variablen sowie deren Ausprägungen.  
 
@@ -194,7 +200,7 @@ Die Impfdaten der Landkreise bilden einen tagesaktuellen Stand (8:30 Uhr) aller 
 Die Impfdaten differenzieren nach verschiedenen Merkmalen einer Impfgruppe. Pro Eintrag bzw. Zeile ist eine eineindeutige Impfgruppe abgebildet. Eine Impfgruppe wird grundlegend durch folgende Merkmale charakterisiert (in den Klammern finden sich die Variablen dieser Merkmale):  
 
 - Ort der Impfung (LandkreisId_Impfort)  
-- Angabe zu Vollständigkeit des Impfschutzes (Impfschutz)  
+- Angabe zur Vollständigkeit/Unvollständigkeit des Impfschutzes (Impfschutz)  
 - Altersgruppe der Geimpften (Altersgruppe)  
 
 Zusätzlich werden folgende Variablen angegeben:  
@@ -202,12 +208,19 @@ Zusätzlich werden folgende Variablen angegeben:
 - Datum der Impfung (Impfdatum)  
 - Anzahl der Impfungen in der Gruppe (Impfungen)  
 
-Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der Impfungen eines Landkreises, der Altergruppe der Geimpften und der Ausprägung des Impfschutzes an. Für jede Impfgruppe wird die tägliche Anzahl neuer Impfungen ausgewiesen, sofern diese größer vier ist.  
+Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der Impfungen eines Landkreises, der Altersgruppe der Geimpften und der Ausprägung des Impfschutzes an. Für jede Impfgruppe wird die tägliche Anzahl neuer Impfungen ausgewiesen, sofern diese größer vier ist.  
 
-**Hinweis zur Interpretation der Variablen**  
+#### Hinweis zur Interpretation der Landkreisangaben  
 
-Die Zuordnung der Impfzahlen zu Bundesländern und Landkreisen erfolgt anhand der Postleitzahl (PLZ) der impfenden Stellen (Impfzentren, Betriebe, Betriebsärzte, niedergelassene Ärzteschaft). Nur diese Angabe des Orts der Impfung ist in allen Datenquellen enthalten. Die PLZ der Geimpften ist in den Daten der KBV nicht enthalten, teilweise fehlt sie, aufgrund unvollständiger Übermittlung, in den Daten des DIM.  
+Die Zuordnung der Impfzahlen zu Bundesländern und Landkreisen erfolgt anhand der Postleitzahl (PLZ) der impfenden Stellen (Impfzentren, Betriebe, Betriebsärzt:innen, niedergelassene Ärzteschaft). Nur diese Angabe des Orts der Impfung ist in allen Datenquellen enthalten. Die PLZ der Geimpften ist in den Daten der KBV nicht enthalten, teilweise fehlt sie, aufgrund unvollständiger Übermittlung, in den Daten des DIM.  
 Anhand der PLZ der impfenden Stelle lässt sich keine Impfquote auf Landkreisebene berechnen, da geimpfte ihren Wohnsitz auch in anderen Landkreisen als dem Landkreis der impfenden Stelle haben können. Der Anteil der in einem Landkreis ansässigen Geimpften ist daher auf Grundlage der vorliegenden Daten nicht ermittelbar.  
+
+#### Hinweis zur Berechnung von Impfquoten auf Basis der Landkreisdaten
+
+Auf Basis der COVID-19 Impfdaten der Landkreise lässt sich keine Berechnung der Impfquoten, wie sie in den Daten der Pressetabelle des RKI vorliegen, durchführen.  
+Hintergrund ist, dass über die Variable "Impfschutz", keine Aussage zur Anzahl der mindestens einmal Geimpften getroffen werden kann. Als "mindestens einmal geimpft" gelten Personen, die eine Erstimpfung mit den Impfstoffen von AstraZeneca, BioNTech oder Moderna oder eine Einzelimpfung mit Janssen erhalten haben. Personen, die mit Janssen geimpft wurden, gelten daher als "mindestens einmal geimpft", werden aber in der Tabelle der Landkreise ausschließlich in der Gruppe der vollständig Geimpften ausgewiesen (Impfschutz = 2). Eine Ableitung mindestens einmal geimpfter Personen ist nicht möglich, da aus den Daten nicht ermittelbar ist, wie viele Impfungen mit vollständigem Impfschutz auf Impfungen mit Janssen entfallen.  
+Die Impfquoten werden daher separat bereitgestellt, siehe [COVID-19 Impfquoten](#COVID-19-Impfquoten)
+
 
 ### Variablenausprägungen 
 
@@ -223,7 +236,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 
 </font>
 
-Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kummulierte Abzahal der Impfungen an einem Tag den Wert von fünf übersteigt.  
+Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.  
 
 **Beispiel**
 
@@ -239,19 +252,70 @@ Die Anzahl der Impfungen dieser Impfgruppe ist für die ersten beiden Tage klein
 >Impfdatum,LandkreisId_Impfort,Altersgruppe,Impfschutz,Anzahl  
 >2021-06-28 ,01004 ,60+ ,1 ,16  
 
-## Lizenz
+## COVID-19 Impfquoten 
+
+Die aktuellen COVID-19-Impfquoten sind im Hauptverzeichnis unter "Aktuell_Deutschland_COVID-19_Impfquoten.csv" abrufbar und werden täglich überschrieben. Im Archivordner sind die täglichen Impfquoten unter den Dateinamen "JJJJ-MM-TT_Deutschland_COVID-19-Impfquoten.csv" abgelegt.  
+
+> [Aktuell_Deutschland_COVID-19-Impfquoten.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Aktuell_Deutschland_COVID-19-Impfquoten.csv)  
+> [Archiv/JJJJ-MM-TT_Deutschland_COVID-19-Impfquoten.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Archiv)  
+
+Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_COVID-19-Impfquoten.csv" ist identisch mit dem neusten Datenstand des Archivs.  
+Die kumulative Zahl der Impfungen umfasst alle Impfungen bis einschließlich des Vortages, die bis zum Erstellungsdatum, 08:00 Uhr, dem RKI gemeldet wurden. Nachmeldungen und Datenkorrekturen aus zurückliegenden Tagen sind in der kumulativen Zahl der Impfungen enthalten.
+
+### Variablen 
+
+Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impfstatus und der Altersgruppen. 
+
+- Impfstatus (_min1, _voll, _boost)  
+- Altersgruppe ( _gesamt, _12bis17, _18bis59, _18plus, _60plus)  
+
+Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differenziert nach Impfstatus - angegeben. Es werden nur Impfungen einbezogen, die bis zum Vortag des Erstellungsdatums durchgeführt und bis zum Erstellungsdatum der Datei gemeldet wurden.
+
+### Variablenausprägungen 
+
+Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
+<font size="2">
+| Variable | Typ | Ausprägung | Beschreibung |
+| -------- | --- | ---------- | ------------ |
+|Datum |Datum | JJJJ-MM-TT | Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden |
+|Bundesland   | Text | Schleswig-Holstein, [...], Thüringen <br> Deutschland | Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet
+| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
+|Impfungen_gesamt | natürliche Zahl |  &ge;0 | Gesamtzahl der aller Impfungen. Die Impfungen mit Janssen sind sowohl in der Gruppe der mindestens einmal Geimpften als auch in der Gruppe der vollständig Geimpften enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. |
+|Impfungen_gesamt_min1 | natürliche Zahl |  &ge;0 | Gesamtzahl mindestens einmal Geimpfter. Diese umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben.  |
+|Impfungen_gesamt_voll | natürliche Zahl |  &ge;0 | Gesamtzahl der vollständig Geimpften. Diese umfasst alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. |
+|Impfungen_gesamt_boost | natürliche Zahl |  &ge;0 | Gesamtzahl der Personen mit einer Auffrischungsimpfung |
+|Impfquote_gesamt_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen | 
+|Impfquote_12bis17_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindestens einmal geimpften Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen ab 60 Jahren|
+|Impfquote_gesamt_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen | 
+|Impfquote_12bis17_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_voll| rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen ab 60 Jahren|
+</font>
+
+Für die Bundesressorts können keine Impfquoten ausgewiesen werden. Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte.
+
+**Hinweis bezüglich Impfungen mit Impfstoff Janssen**  
+
+Die Gesamtzahl mindestens einmal Geimpfter umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben. Als vollständig geimpft gelten alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. Die Impfungen mit Janssen sind daher sowohl in der Gruppe "mindestens einmal geimpft" als auch in der Gruppe "vollständig geimpft" enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt.  
+In den Impfquoten der mindestens einmal geimpften Erwachsenen (Altersgruppe 18+ Jahre insgesamt) werden alle Janssen-Impfungen der Vertragsärzt:innen unter der Annahme zusammengefasst, dass mit diesem Impfstoff ausschließlich Personen ab 18 Jahre geimpft wurden (entsprechend der Zulassung). Eine weitere Aufschlüsselung in die Altersgruppen 18-59 Jahre und 60+ Jahre ist nicht möglich. In diesen beiden Altersgruppen werden die Impfquoten der mindestens einmal Geimpften systematisch zu niedrig ausgewiesen, da diese die Janssen-Impfungen der Vertragsärzt:innen nicht enthalten. In den aggregierten Daten der Vertragsärzt:innen (Datensatz der KBV) werden Janssen-Impfungen immer als Zweitimpfungen übermittelt, eine Zuordnung der Impfstoffe nach Altersgruppe fehlt jedoch (siehe: [Zusammensetzung der Datenquellen](#Zusammensetzung-der-Datenquellen)).  
+
+## Hinweise zur Nachnutzung der Daten
+
+Offene Forschungsdaten des RKI werden auf GitHub.com, Zenodo.org und Edoc.rki.de bereitgestellt:  
+
+* https://github.com/robert-koch-institut  
+* https://zenodo.org/communities/robertkochinstitut  
+* https://edoc.rki.de/  
+
+### Lizenz
 
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>.  
 
-Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede_r hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/LIZENZ) Datei des Datensatzes.  
-
-
-### Hinweise zur Nachnutzung der Daten
-
-Offene Forschungsdaten des RKI werden auf GitHub.com, Zenodo.org und Edoc.rki.de bereitgestellt:  
-* https://github.com/robert-koch-institut  
-* https://zenodo.org/communities/robertkochinstitut  
-* https://edoc.rki.de/
+Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede:r hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/LIZENZ) Datei des Datensatzes.  
 
 Die empfohlene Zitierweise ist:  
 
