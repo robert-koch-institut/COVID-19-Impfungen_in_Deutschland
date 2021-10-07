@@ -298,10 +298,16 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 
 Für die Bundesressorts können keine Impfquoten ausgewiesen werden. Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte.
 
-**Hinweis bezüglich Impfungen mit Impfstoff Janssen**  
+#### Hinweis bezüglich Impfungen mit Impfstoff Janssen  
 
 Die Gesamtzahl mindestens einmal Geimpfter umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben. Als vollständig geimpft gelten alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. Die Impfungen mit Janssen sind daher sowohl in der Gruppe "mindestens einmal geimpft" als auch in der Gruppe "vollständig geimpft" enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt.  
-In den Impfquoten der mindestens einmal geimpften Erwachsenen (Altersgruppe 18+ Jahre insgesamt) werden alle Janssen-Impfungen der Vertragsärzt:innen unter der Annahme zusammengefasst, dass mit diesem Impfstoff ausschließlich Personen ab 18 Jahre geimpft wurden (entsprechend der Zulassung). Eine weitere Aufschlüsselung in die Altersgruppen 18-59 Jahre und 60+ Jahre ist nicht möglich. In diesen beiden Altersgruppen werden die Impfquoten der mindestens einmal Geimpften systematisch zu niedrig ausgewiesen, da diese die Janssen-Impfungen der Vertragsärzt:innen nicht enthalten. In den aggregierten Daten der Vertragsärzt:innen (Datensatz der KBV) werden Janssen-Impfungen immer als Zweitimpfungen übermittelt, eine Zuordnung der Impfstoffe nach Altersgruppe fehlt jedoch (siehe: [Zusammensetzung der Datenquellen](#Zusammensetzung-der-Datenquellen)).  
+
+#### Unterschätzung der Impfquoten nach Alter, mindestens einmal Geimpfter  
+
+Aus dem vertragsärztlichen Bereich, der rund 40% aller Impfungen ausmacht, werden dem RKI keine Impfdaten aufgeschlüsselt nach Impfstoff und Alter übermittelt. Das RKI erhält von der KBV zwei Datenpakete, das eine aufgeschlüsselt nach Impfstoff und Impfserie und das andere aufgeschlüsselt nach Altersgruppe und Impfserie (siehe: [Zusammensetzung der Datenquellen](#Zusammensetzung-der-Datenquellen)).  
+
+Da die KBV sämtliche Janssen-Impfungen als Impfdosis = 2 übermittelt, können die Janssen-Impfungen bei den vollständig Geimpften aller Altersgruppen mitgezählt werden (da in dem Datenpaket nach Alter bei den jeweiligen Altersgruppen für Impfserie=2 enthalten).  
+In den Impfquoten der mindestens einmal geimpften Erwachsenen "Impfquote_18plus_min1"), werden alle Janssen-Impfungen der Vertragsärzt:innen unter der Annahme zusammengefasst, dass mit diesem Impfstoff ausschließlich Personen ab 18 Jahre geimpft wurden (entsprechend der Zulassung). Dem RKI ist jedoch unbekannt, wie sich die Janssen-Impfungen der KBV auf die Altersgruppen 18-59 Jahre und 60+ Jahre verteilen. Daher können sie den mindestens einmal Geimpften der beiden Altersgruppen nicht zugewiesen werden. Dadurch werden in beiden Altersgruppen die Impfquoten der mindestens einmal Geimpften systematisch zu niedrig ausgewiesen. Es kommt hinzu, dass generell (in allen 3 Datenquellen) Genesene als "Vollständig Geimpft" übermittelt werden. In diesen Fällen werden ebenfalls keine Erstimpfungen angegeben. Das zusammengenommen führt dazu, dass in einigen Bundesländer die Impfquote der vollständig Geimpften höher als die der mindestens einmal Geimpften ist.  
 
 ## Hinweise zur Nachnutzung der Daten
 

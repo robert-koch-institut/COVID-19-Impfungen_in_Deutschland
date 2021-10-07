@@ -38,7 +38,7 @@
       ]
     },
     "impfserie": {
-      "description": "Angabe zur Erst- oder Zeitimpfung",
+      "description": "Angabe zur Erst- oder Zweitimpfung",
       "type": "integer",
       "enum": [
 	  1,
