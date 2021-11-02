@@ -99,7 +99,7 @@ Zur Herstellung inhaltlicher Konsistenz werden folgenden Regeln auf Einträge mi
 <font size="2">
 | Schritt | Kriterium | Aktion |
 | ------- | --------- | ------ |
-|1        | Späteste Erstimpfung mit Janssen  | ja : behalte nur die Erstimpfung zum spätesten Impfdatum mit Janssen sowie die erste spätere, erlaubte Auffrischungsimpfung, wenn diese mit Janssen erfolgte. </br> nein : weiter mit Schritt 2 |
+|1        | Späteste Erstimpfung mit Janssen  | ja : behalte nur die Erstimpfung zum spätesten Impfdatum mit Janssen sowie die erste spätere, erlaubte Auffrischungsimpfung </br> nein : weiter mit Schritt 2 |
 |2        | Weniger als 14 Tagen max. Abstand im Impfdatum | Ja : Die Einträge werden als Korrekturen voneinander angesehen, daher wird nur der aktuellste Eintrag behalten.  </br> Nein : weiter mit Schritt 3 |
 |3        | Genau eine Erst- vor der Zweitimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 4|
 |4        | Genau eine Zweit- vor der Erstimpfung | Ja : Impfserie vertauscht, tausche die Impfserie </br> Nein: weiter mit Schritt 5 |
@@ -254,10 +254,10 @@ Die Anzahl der Impfungen dieser Impfgruppe ist für die ersten beiden Tage klein
 
 ## COVID-19 Impfquoten 
 
-Die aktuellen COVID-19-Impfquoten sind im Hauptverzeichnis unter "Aktuell_Deutschland_COVID-19_Impfquoten.csv" abrufbar und werden täglich überschrieben. Im Archivordner sind die täglichen Impfquoten unter den Dateinamen "JJJJ-MM-TT_Deutschland_COVID-19-Impfquoten.csv" abgelegt.  
+Die aktuellen COVID-19-Impfquoten sind im Hauptverzeichnis unter "Aktuell_Deutschland_Impfquoten_COVID-19.csv" abrufbar und werden täglich überschrieben. Im Archivordner sind die täglichen Impfquoten unter den Dateinamen "JJJJ-MM-TT_Deutschland_Impfquoten_COVID-19.csv" abgelegt.  
 
-> [Aktuell_Deutschland_COVID-19-Impfquoten.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Aktuell_Deutschland_Impfquoten_COVID-19.csv)  
-> [Archiv/JJJJ-MM-TT_Deutschland_COVID-19-Impfquoten.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Archiv)  
+> [Aktuell_Deutschland_Impfquoten_COVID-19.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Aktuell_Deutschland_Impfquoten_COVID-19.csv)  
+> [Archiv/JJJJ-MM-TT_Deutschland_Impfquoten_COVID-19.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Archiv)  
 
 Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_COVID-19-Impfquoten.csv" ist identisch mit dem neusten Datenstand des Archivs.  
 Die kumulative Zahl der Impfungen umfasst alle Impfungen bis einschließlich des Vortages, die bis zum Erstellungsdatum, 08:00 Uhr, dem RKI gemeldet wurden. Nachmeldungen und Datenkorrekturen aus zurückliegenden Tagen sind in der kumulativen Zahl der Impfungen enthalten.
@@ -294,6 +294,11 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 |Impfquote_18plus_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter ab 18 Jahren |
 |Impfquote_18bis59_voll| rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter von 18 bis 59 Jahren|
 |Impfquote_60plus_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen ab 60 Jahren|
+|Impfquote_gesamt_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen | 
+|Impfquote_12bis17_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_boost| rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen ab 60 Jahren|
 </font>
 
 Für die Bundesressorts können keine Impfquoten ausgewiesen werden. Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte.
