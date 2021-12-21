@@ -78,7 +78,7 @@ Die Rohdaten der einzelnen Datenquellen werden für den vorliegenden Datensatz a
 * Einheitliche Benennung der Impfstoffe  
 * Zuweisung der BundeslandID oder LandkreisID des Impforts  
 * Generelle Ausweisung von Impfungen mit dem Impfstoff Janssen als Erstimpfung (Impfserie = 1) bzw. Auffrischungsimpfung (Impfserie = 3)  
-* Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums (nur DIM)  
+* Ausschluss von Datensätzen ohne Angabe der Impfserie oder des Impfzentrums sowie bei einer Altersangabe kleiner "2" (nur DIM)  
 * Erkennung von Sammelpatienten:innen (nur DIM)
 * Auswahl der aktuellsten Datensätze je Pseudonym und Impfdatum (nur DIM)  
 * Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
@@ -96,21 +96,20 @@ Ein weiterer Fall von mehrfach vorkommenden Pseudonymen sind sogenannte Sammelpa
 #### Regeln zur Herstellung inhaltlicher Konsistenz  
 
 Zur Herstellung inhaltlicher Konsistenz werden folgenden Regeln auf Einträge mit gleichem Personen-Pseudonym/erkannten Sammelpatient:innen angewendet. Eine Auffrischungsimpfung ist erlaubt, wenn sie nach dem 01.06.2021 erfolgte. Der Hinweis "aktuellste" bezieht sich dabei auf das Datum der Datenerfassung, nicht das Impfdatum:   
-<font size="2">
+
 | Schritt | Kriterium | Aktion |
 | ------- | --------- | ------ |
-|1        | Späteste Erstimpfung mit Janssen  | ja : behalte nur die Erstimpfung zum spätesten Impfdatum mit Janssen sowie die erste spätere, erlaubte Auffrischungsimpfung </br> nein : weiter mit Schritt 2 |
-|2        | Weniger als 14 Tagen max. Abstand im Impfdatum | Ja : Die Einträge werden als Korrekturen voneinander angesehen, daher wird nur der aktuellste Eintrag behalten.  </br> Nein : weiter mit Schritt 3 |
-|3        | Genau eine Erst- vor der Zweitimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 4|
-|4        | Genau eine Zweit- vor der Erstimpfung | Ja : Impfserie vertauscht, tausche die Impfserie </br> Nein: weiter mit Schritt 5 |
-|5        | Genau eine Erst- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 6|
-|6        | Genau eine Erst- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung </br> Nein: weiter mit Schritt 7|
-|7        | Genau eine Auffrischungs- vor der Erstimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. Ist die Erstimpfung mind. 120 Tage später erfolgt und erlaubt im Sinne einer Auffrischungsimpfung, dann ändere die Erstimpfung zur Auffrischungsimpfung ab, sonst zur Zweitimpfung. </br> Nein: weiter mit Schritt 8|
-|8        | Genau eine Zweit- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion </br> Nein: weiter mit Schritt 9|
-|9        | Genau eine Zweit- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ändere die Zweitimpfung zur Erstimpfung ab. Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung </br> Nein: weiter mit Schritt 10|
-|10       | Genau eine Auffrischungs- vor der Zweitimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. </br> Nein: weiter mit Schritt 11|
-|11       | Sonst | Das früheste Impfereignis wird zur Erstimpfung. </br> Das erste folgende Impfereignis mit Impfstoff ungleich Janssen und mind. 14 Tagen Abstand wird zur Zweitimpfung. </br> Die erste folgende, erlaubte Auffrischungsimpfung wird zur Auffrischungsimpfung. |
-</font>
+|1        | Weniger als 14 Tagen max. Abstand im Impfdatum | Ja : Die Einträge werden als Korrekturen voneinander angesehen, daher wird nur der aktuellste Eintrag behalten.  <br/> Nein : weiter mit Schritt 2 |
+|2        | Späteste Erstimpfung mit Janssen  | ja : behalte nur die Erstimpfung zum spätesten Impfdatum mit Janssen sowie die erste spätere, erlaubte Auffrischungsimpfung bzw. die erste später erfolgte Impfung mit Impfserie "2", die einen Abstand von mind. 30 Tagen zur Erstimpfung hat, erlaubt ist im Sinne einer Auffrischungsimpfung und weise diese als Auffrischungsimpfung aus<br/> nein : weiter mit Schritt 3 |
+|3        | Genau eine Erst- vor der Zweitimpfung | Ja : valide Einträge, keine weitere Aktion <br/> Nein: weiter mit Schritt 4|
+|4        | Genau eine Zweit- vor der Erstimpfung | Ja : Impfserie vertauscht, tausche die Impfserie <br/> Nein: weiter mit Schritt 5 |
+|5        | Genau eine Erst- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion <br/> Nein: weiter mit Schritt 6|
+|6        | Genau eine Erst- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung <br/> Nein: weiter mit Schritt 7|
+|7        | Genau eine Auffrischungs- vor der Erstimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. Ist die Erstimpfung mind. 120 Tage später erfolgt und erlaubt im Sinne einer Auffrischungsimpfung, dann ändere die Erstimpfung zur Auffrischungsimpfung ab, sonst zur Zweitimpfung. <br/> Nein: weiter mit Schritt 8|
+|8        | Genau eine Zweit- vor der erlaubten Auffrischungsimpfung | Ja : valide Einträge, keine weitere Aktion <br/> Nein: weiter mit Schritt 9|
+|9        | Genau eine Zweit- vor der nicht erlaubten Auffrischungsimpfung | Ja : Ändere die Zweitimpfung zur Erstimpfung ab. Ist die Auffrischungsimpfung nicht mit Janssen, dann ändere die Auffrischungsimpfung zur Zweitimpfung ab, sonst verwerfe die Auffrischungsimpfung <br/> Nein: weiter mit Schritt 10|
+|10       | Genau eine Auffrischungs- vor der Zweitimpfung | Ja : Ändere die Auffrischungsimpfung zur Erstimpfung ab. <br/> Nein: weiter mit Schritt 11|
+|11       | Sonst | Das früheste Impfereignis wird zur Erstimpfung. <br/> Das erste folgende Impfereignis mit Impfstoff ungleich Janssen und mind. 14 Tagen Abstand wird zur Zweitimpfung. <br/> Die erste folgende, erlaubte Auffrischungsimpfung wird zur Auffrischungsimpfung. |
 
 Wichtig ist, dass innerhalb des DIM Systems zwischen Impfdatum und dem Datum der Datenerfassung unterschieden wird. Meldungen als auch deren Korrekturen können sich auf des gleiche Impfdatum beziehen, das Datum der Datenerfassung unterscheidet sich jedoch, da die Korrektur später gemeldet wird.  
 
@@ -175,16 +174,14 @@ Eine Impfgruppe nimmt eine eineindeutige Ausprägung hinsichtlich der Anzahl der
 ### Variablenausprägungen 
 
 Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
-<font size="2">
+
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
-|Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
-|Impfstoff | Text | AstraZeneca: AstraZeneca <br> Moderna: Moderna <br> Comirnaty: BioNTech/Pfizer <br> Janssen:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br>| Verabreichter Impfstoff | 
-|Impfserie| Natürliche Zahl | 1: Erstimpfung <br> 2: Zweitimpfung <br> 3: Auffrischungsimpfung | Angabe zur Erst-, Zweit- oder Auffrischungsimpfung| 
-|Anzahl| Natürliche Zahl | &ge;1 | Anzahl der Impfungen in der Impfgruppe |
-
-</font>
+|Impfdatum |Datum | ```JJJJ-MM-TT``` | Datum der Impfungen
+| BundeslandId_Impfort | Text | ```01``` bis ```16``` : Bundesland ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
+|Impfstoff | Text | ```AstraZeneca```: AstraZeneca <br/> ```Moderna```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Janssen```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/>| Verabreichter Impfstoff | 
+|Impfserie| Natürliche Zahl | ```1```: Erstimpfung <br/> ```2```: Zweitimpfung <br/> ```3```: Auffrischungsimpfung | Angabe zur Erst-, Zweit- oder Auffrischungsimpfung| 
+|Anzahl| Natürliche Zahl | ```≥1``` | Anzahl der Impfungen in der Impfgruppe |
 
 ## COVID-19 Impfdaten auf Ebene der Landkreise 
 
@@ -225,16 +222,14 @@ Die Impfquoten werden daher separat bereitgestellt, siehe [COVID-19 Impfquoten](
 ### Variablenausprägungen 
 
 Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
-<font size="2">
+
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
-|Impfdatum |Datum | JJJJ-MM-TT | Datum der Impfungen
-| LandkreisId_Impfort | Text | 01001 bis 16077: Landkreis ID <br> 17000 : Bundesressorts <br> u: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden. |
-| Altersgruppe | Text | 12-17: Altersgruppe 12 bis 17 Jahre <br>18-59: Altersgruppe 18 bis 59 Jahre <br> 60+:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
-|Impfschutz| Natürliche Zahl | 1: Unvollständiger Impfschutz <br> 2: Vollständiger Impfschutz <br> 3: Aufgefrischter Impfschutz| Angabe zum Impfschutz<br> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
-|Anzahl | Natürliche Zahl | &ge;5 | Anzahl der Impfungen in der Impfgruppe |
-
-</font>
+|Impfdatum |Datum | ```JJJJ-MM-TT```| Datum der Impfungen
+| LandkreisId_Impfort | Text | ```01001``` bis ```16077```: Landkreis ID <br/> ```17000``` : Bundesressorts <br/> ```u```: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden. |
+| Altersgruppe | Text | ```05-11```: Altersgruppe 5 bis 11 Jahre <br/> ```12-17```: Altersgruppe 12 bis 17 Jahre <br/>```18-59```: Altersgruppe 18 bis 59 Jahre <br/> ```60+```:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
+|Impfschutz| Natürliche Zahl | ```1```: Unvollständiger Impfschutz <br/> ```2```: Vollständiger Impfschutz <br/> ```3```: Aufgefrischter Impfschutz| Angabe zum Impfschutz<br/> Vollständiger Impfschutz besteht bei zweifacher Impfung, Impfung mit Janssen und einfach Geimpften mit überstandener SARS-CoV-2 Infektion| 
+|Anzahl | Natürliche Zahl | ```≥5``` | Anzahl der Impfungen in der Impfgruppe |
 
 Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.  
 
@@ -267,39 +262,40 @@ Die kumulative Zahl der Impfungen umfasst alle Impfungen bis einschließlich des
 Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impfstatus und der Altersgruppen. 
 
 - Impfstatus (_min1, _voll, _boost)  
-- Altersgruppe ( _gesamt, _12bis17, _18bis59, _18plus, _60plus)  
+- Altersgruppe ( _gesamt, _05bis11, _12bis17, _18bis59, _18plus, _60plus)  
 
 Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differenziert nach Impfstatus - angegeben. Es werden nur Impfungen einbezogen, die bis zum Vortag des Erstellungsdatums durchgeführt und bis zum Erstellungsdatum der Datei gemeldet wurden.
 
 ### Variablenausprägungen 
 
 Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
-<font size="2">
+
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
-|Datum |Datum | JJJJ-MM-TT | Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden |
-|Bundesland   | Text | Schleswig-Holstein, [...], Thüringen <br> Deutschland | Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet
-| BundeslandId_Impfort | Text | 01 bis 16 : Bundesland ID<br> 17 : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
-|Impfungen_gesamt | natürliche Zahl |  &ge;0 | Gesamtzahl der aller Impfungen. Die Impfungen mit Janssen sind sowohl in der Gruppe der mindestens einmal Geimpften als auch in der Gruppe der vollständig Geimpften enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. |
-|Impfungen_gesamt_min1 | natürliche Zahl |  &ge;0 | Gesamtzahl mindestens einmal Geimpfter. Diese umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben.  |
-|Impfungen_gesamt_voll | natürliche Zahl |  &ge;0 | Gesamtzahl der vollständig Geimpften. Diese umfasst alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. |
-|Impfungen_gesamt_boost | natürliche Zahl |  &ge;0 | Gesamtzahl der Personen mit einer Auffrischungsimpfung |
-|Impfquote_gesamt_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen | 
-|Impfquote_12bis17_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindestens einmal geimpften Personen im Alter von 12 bis 17 Jahren |
-|Impfquote_18plus_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen im Alter ab 18 Jahren |
-|Impfquote_18bis59_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen im Alter von 18 bis 59 Jahren|
-|Impfquote_60plus_min1 | rationale Zahl | &ge;0.0 oder NA | Impfquote der mindesten einmal geimpften Personen ab 60 Jahren|
-|Impfquote_gesamt_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen | 
-|Impfquote_12bis17_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter von 12 bis 17 Jahren |
-|Impfquote_18plus_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter ab 18 Jahren |
-|Impfquote_18bis59_voll| rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen im Alter von 18 bis 59 Jahren|
-|Impfquote_60plus_voll | rationale Zahl | &ge;0.0 oder NA | Impfquote der vollständig geimpften Personen ab 60 Jahren|
-|Impfquote_gesamt_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen | 
-|Impfquote_12bis17_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen im Alter von 12 bis 17 Jahren |
-|Impfquote_18plus_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen im Alter ab 18 Jahren |
-|Impfquote_18bis59_boost| rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen im Alter von 18 bis 59 Jahren|
-|Impfquote_60plus_boost | rationale Zahl | &ge;0.0 oder NA | Impfquote der booster geimpften Personen ab 60 Jahren|
-</font>
+|Datum |Datum | ```JJJJ-MM-TT``` | Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden |
+|Bundesland   | Text | ```Schleswig-Holstein``` <br/> ... <br/> ```Thüringen```  <br/> ```Deutschland``` | Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet
+| BundeslandId_Impfort | Text | ```01```&nbsp;bis&nbsp;```16```&nbsp;:&nbsp;Bundesland&nbsp;ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
+|Impfungen_gesamt | natürliche Zahl |  ```≥0``` | Gesamtzahl der aller Impfungen. Die Impfungen mit Janssen sind sowohl in der Gruppe der mindestens einmal Geimpften als auch in der Gruppe der vollständig Geimpften enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. |
+|Impfungen_gesamt_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl mindestens einmal Geimpfter. Diese umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben.  |
+|Impfungen_gesamt_05bis11_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen im Alter von 5 bis 11 Jahren, die in der Variable Impfungen_gesamt_min1 enthalten sind |
+|Impfungen_gesamt_voll | natürliche Zahl |  ```≥0``` | Gesamtzahl der vollständig Geimpften. Diese umfasst alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. |
+|Impfungen_gesamt_boost | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen mit einer Auffrischungsimpfung |
+|Impfquote_gesamt_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen | 
+|Impfquote_12bis17_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindestens einmal geimpften Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen ab 60 Jahren|
+|Impfquote_gesamt_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen | 
+|Impfquote_12bis17_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_voll| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_voll | rationale Zahl | ```≥0.0```oder ```NA``` | Impfquote der vollständig geimpften Personen ab 60 Jahren|
+|Impfquote_gesamt_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen | 
+|Impfquote_12bis17_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_boost| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen ab 60 Jahren|n|
+
 
 Für die Bundesressorts können keine Impfquoten ausgewiesen werden. Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte.
 
@@ -313,6 +309,10 @@ Aus dem vertragsärztlichen Bereich, der rund 40% aller Impfungen ausmacht, werd
 
 Da die KBV sämtliche Janssen-Impfungen als Impfdosis = 2 übermittelt, können die Janssen-Impfungen bei den vollständig Geimpften aller Altersgruppen mitgezählt werden (da in dem Datenpaket nach Alter bei den jeweiligen Altersgruppen für Impfserie=2 enthalten).  
 In den Impfquoten der mindestens einmal geimpften Erwachsenen "Impfquote_18plus_min1"), werden alle Janssen-Impfungen der Vertragsärzt:innen unter der Annahme zusammengefasst, dass mit diesem Impfstoff ausschließlich Personen ab 18 Jahre geimpft wurden (entsprechend der Zulassung). Dem RKI ist jedoch unbekannt, wie sich die Janssen-Impfungen der KBV auf die Altersgruppen 18-59 Jahre und 60+ Jahre verteilen. Daher können sie den mindestens einmal Geimpften der beiden Altersgruppen nicht zugewiesen werden. Dadurch werden in beiden Altersgruppen die Impfquoten der mindestens einmal Geimpften systematisch zu niedrig ausgewiesen. Es kommt hinzu, dass generell (in allen 3 Datenquellen) Genesene als "Vollständig Geimpft" übermittelt werden. In diesen Fällen werden ebenfalls keine Erstimpfungen angegeben. Das zusammengenommen führt dazu, dass in einigen Bundesländer die Impfquote der vollständig Geimpften höher als die der mindestens einmal Geimpften ist.  
+
+#### Gesonderte Ausweisung der Kinderimpfungen bei 5-11-Jährigen   
+
+Seit dem 21.12.2021 werden Kinderimpfungen bei 5-11-Jährigen gesondert ausgewiesen. Bis einschließlich 20.12.2021 wurden alle Kinderimpfungen der Altersgruppe 12-17 Jahre zugewiesen. Die Neuzuordnung der Kinderimpfungen auch für zurückliegende Impftage führt im Vergleich zu den am Vortag publizierten Werten einmalig zu einem Absinken der Impfquote der 12-17-Jährigen, insbesondere bei den mindestens einmal Geimpften.
 
 ## Hinweise zur Nachnutzung der Daten
 
