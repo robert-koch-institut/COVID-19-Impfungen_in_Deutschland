@@ -17,6 +17,7 @@ Nita Perumal (Datenanalyse)
 [Hermann Claus](https://orcid.org/0000-0002-0120-1846) (Technische Leitung)  
 Constantin Fischer (Datenmanagement)  
 Sven Schröder (Datenmanagement)  
+Daniel Wesseler (Datenmanagement)  
 
 **MF 4 | Forschungsdatenmanagement**  
 [Hannes Wuensche](https://orcid.org/0000-0002-8837-0326) (Datenkuration)  
@@ -262,7 +263,7 @@ Die kumulative Zahl der Impfungen umfasst alle Impfungen bis einschließlich des
 Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impfstatus und der Altersgruppen. 
 
 - Impfstatus (_min1, _voll, _boost)  
-- Altersgruppe ( _gesamt, _05bis11, _12bis17, _18bis59, _18plus, _60plus)  
+- Altersgruppe ( _gesamt, _05bis17, _05bis11, _12bis17, _18bis59, _18plus, _60plus)  
 
 Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differenziert nach Impfstatus - angegeben. Es werden nur Impfungen einbezogen, die bis zum Vortag des Erstellungsdatums durchgeführt und bis zum Erstellungsdatum der Datei gemeldet wurden.
 
@@ -275,33 +276,36 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 |Datum |Datum | ```JJJJ-MM-TT``` | Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden |
 |Bundesland   | Text | ```Schleswig-Holstein``` <br/> ... <br/> ```Thüringen```  <br/> ```Deutschland``` | Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet
 | BundeslandId_Impfort | Text | ```01```&nbsp;bis&nbsp;```16```&nbsp;:&nbsp;Bundesland&nbsp;ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
-|Impfungen_gesamt | natürliche Zahl |  ```≥0``` | Gesamtzahl der aller Impfungen. Die Impfungen mit Janssen sind sowohl in der Gruppe der mindestens einmal Geimpften als auch in der Gruppe der vollständig Geimpften enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. |
-|Impfungen_gesamt_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl mindestens einmal Geimpfter. Diese umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben.  |
-|Impfungen_gesamt_05bis11_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen im Alter von 5 bis 11 Jahren, die in der Variable Impfungen_gesamt_min1 enthalten sind |
-|Impfungen_gesamt_voll | natürliche Zahl |  ```≥0``` | Gesamtzahl der vollständig Geimpften. Diese umfasst alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. |
+|Impfungen_gesamt | natürliche Zahl |  ```≥0``` | Gesamtzahl der aller verabreichten Impfungen|
+|Impfungen_gesamt_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl mindestens einmal Geimpfter |
+|Impfungen_gesamt_voll | natürliche Zahl |  ```≥0``` | Gesamtzahl der Grundimmunisierten. |
 |Impfungen_gesamt_boost | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen mit einer Auffrischungsimpfung |
-|Impfquote_gesamt_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen | 
+|Impfquote_gesamt_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen |
+|Impfquote_05bis17_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindestens einmal geimpften Personen im Alter von 5 bis 17 Jahren |
+|Impfquote_05bis11_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindestens einmal geimpften Personen im Alter von 5 bis 11 Jahren |
 |Impfquote_12bis17_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindestens einmal geimpften Personen im Alter von 12 bis 17 Jahren |
 |Impfquote_18plus_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen im Alter ab 18 Jahren |
 |Impfquote_18bis59_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen im Alter von 18 bis 59 Jahren|
 |Impfquote_60plus_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen ab 60 Jahren|
-|Impfquote_gesamt_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen | 
-|Impfquote_12bis17_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen im Alter von 12 bis 17 Jahren |
-|Impfquote_18plus_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen im Alter ab 18 Jahren |
-|Impfquote_18bis59_voll| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der vollständig geimpften Personen im Alter von 18 bis 59 Jahren|
-|Impfquote_60plus_voll | rationale Zahl | ```≥0.0```oder ```NA``` | Impfquote der vollständig geimpften Personen ab 60 Jahren|
-|Impfquote_gesamt_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen | 
-|Impfquote_12bis17_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen im Alter von 12 bis 17 Jahren |
-|Impfquote_18plus_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen im Alter ab 18 Jahren |
-|Impfquote_18bis59_boost| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen im Alter von 18 bis 59 Jahren|
-|Impfquote_60plus_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der booster geimpften Personen ab 60 Jahren|n|
+|Impfquote_gesamt_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der grundimmunisierten Personen |
+|Impfquote_05bis17_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der grundimmunisierten Personen im Alter von 5 bis 17 Jahren |
+|Impfquote_05bis11_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der grundimmunisierten Personen im Alter von 5 bis 11 Jahren |
+|Impfquote_12bis17_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der grundimmunisierten Personen im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_voll | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der grundimmunisierten Personen im Alter ab 18 Jahren |
+|Impfquote_18bis59_voll| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der grundimmunisierten Personen im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_voll | rationale Zahl | ```≥0.0```oder ```NA``` | Impfquote der grundimmunisierten Personen ab 60 Jahren|
+|Impfquote_gesamt_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit Auffrischimpfung | 
+|Impfquote_12bis17_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit Auffrischimpfung im Alter von 12 bis 17 Jahren |
+|Impfquote_18plus_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit Auffrischimpfung im Alter ab 18 Jahren |
+|Impfquote_18bis59_boost| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit Auffrischimpfung im Alter von 18 bis 59 Jahren|
+|Impfquote_60plus_boost | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit Auffrischimpfung ab 60 Jahren|n|
 
 
 Für die Bundesressorts können keine Impfquoten ausgewiesen werden. Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte.
 
-#### Hinweis bezüglich Impfungen mit Impfstoff Janssen  
+#### Erklärung zum Impfstatus und Hinweis bezüglich Impfungen mit Impfstoff Janssen  
 
-Die Gesamtzahl mindestens einmal Geimpfter umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna oder AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben. Als vollständig geimpft gelten alle Personen, die Zweitimpfungen mit BioNTech, Moderna oder AstraZeneca oder eine Impfung mit Janssen erhalten haben. Die Impfungen mit Janssen sind daher sowohl in der Gruppe "mindestens einmal geimpft" als auch in der Gruppe "vollständig geimpft" enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt.  
+Die Gesamtzahl mindestens einmal Geimpfter umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna, AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben. Als grundimmunisiert gelten alle Personen, die Zweitimpfungen mit BioNTech, Moderna, AstraZeneca, eine Impfung mit Janssen oder eine Impfung nach Genesung erhalten haben. Die Impfungen mit Janssen sind sowohl in der Gruppe "mindestens einmal geimpft" als auch in der Gruppe "grundimmunisiert" enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. Als Personen mit Auffrischimpfung gelten Personen, die eine weitere Impfung nach abgeschlossener Grundimmunisierung erhalten haben.  
 
 #### Unterschätzung der Impfquoten nach Alter, mindestens einmal Geimpfter  
 
