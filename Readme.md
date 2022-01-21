@@ -86,6 +86,9 @@ Die Rohdaten der einzelnen Datenquellen werden für den vorliegenden Datensatz a
 
 Zu beachten ist, dass Zweitimpfungen erst ab dem 15.01.2021 und Auffrischimpfungen erst ab 01.06.2021 als plausibel erachtet werden. Entsprechende Impfungen mit einem früheren Datum sind am ehesten auf Eingabefehler zurückzuführen, werden jedoch in den aggregierten Daten mit ausgewiesen.  
 
+|Auf der Homepage des Paul-Ehrlich-Instituts wurde die entsprechend der Zulassung geltende Definition, nach der eine Impfstoffdosis des Impfstoffes `Janssen` (Janssen‑Cilag/Johnson & Johnson) zum Nachweis eines vollständigen Impfschutzes ausreicht, mit Wirkung vom 15.01.22 geändert. Nunmehr sind auch beim Janssen‑Cilag/Johnson & Johnson-Impfstoff zwei Impfungen für die Grundimmunisierung vorgesehen. Um diese Änderungen zukünftig auch in den Impfquoten berücksichtigen zu können, müssen jedoch noch Anpassungen in den Meldesystemen und den Auswertungsalgorithmen vorgenommen werden. <br/><br/> Die derzeitig bereitgestellten Daten beziehen sich daher, bezüglich des Impfstoffes `Janssen`, noch auf die bis zum 14.01.22 entsprechend der Zulassung geltende Definition. (Issue #5)|
+|:---|
+
 #### Korrektur von mehrfachen Meldungen  
 
 Den übermittelten DIM-Daten wird ein personenbezogenes Pseudonym zugeordnet. Beispielsweise, durch die spätere Korrektur von Meldungen kommt es dazu, dass zu einem personenbezogenen Pseudonym mehrere, sich widersprechende Einträge vorliegen. Das ist z.B. der Fall, wenn fälschlicherweise eine Erstimpfung als Zweitimpfung gemeldet wird und später zur Erstimpfung korrigiert wird. Im Datensatz wird dann zunächst die Zweitimpfung und, nach gemeldeter Korrektur, die Erstimpfung ausgewiesen werden.  
