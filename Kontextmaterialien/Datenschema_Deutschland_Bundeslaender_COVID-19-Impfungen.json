@@ -58,7 +58,7 @@
 	"impfungen": {
       "description": "Anzahl der  Impfungen",
       "$ref": "#/definitions/nichtnegative_ganze_zahl"
-    },
+    }
   },
   "properties": {
     "metadata": {
