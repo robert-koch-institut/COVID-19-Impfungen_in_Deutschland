@@ -38,11 +38,12 @@
       ]
     },
     "impfserie": {
-      "description": "Angabe zur Erst- oder Zweitimpfung",
+      "description": "Angabe zur Erst-, Zweit- und Auffrisschungsimpfung",
       "type": "integer",
       "enum": [
         1,
-        2
+        2,
+		3
       ]
     },
     "Impfstoff": {
@@ -52,7 +53,8 @@
         "Moderna",
         "Comirnaty",
         "AstraZeneca",
-        "Janssen"
+        "Janssen",
+		"Nuvaxovid"
       ]
     },
     "impfungen": {
