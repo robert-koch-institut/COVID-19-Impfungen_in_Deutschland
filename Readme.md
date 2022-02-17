@@ -58,9 +58,9 @@ Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagemen
 Das DIM-Projekt enthält Daten über den Verlauf der COVID-19-Impfungen in Deutschland. Diese Daten werden der Disziplin der Infektionsepidemiologie zugeordnet. Die hier veröffentlichten Impfdaten sind aggregierte Daten aus drei Datenquellen. Neben dem Meldeweg über die DIM-Anwendung werden zur Erfassung der Impfquote auch Impfdaten aus Arztpraxen über die Kassenärztliche Bundesvereinigung (KBV) und den Privatärztlicher Bundesverband (PBV) erfasst. Insgesamt werden im Datensatz "COVID-19-Impfungen in Deutschland" somit verschiedenste Datenquellen in einem Datensatz zusammengeführt und ständig erweitert:
 
 
-* Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzt:innen, die über die DIM-Webanwendung übermittelt werden.  
+* Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser, der Betriebsärzt:innen und der Apotheken, die über die DIM-Webanwendung übermittelt werden.  
 
-Aus den Impfzentren, mobilen Impfteams und Krankenhäusern der Bundesländer werden seit dem 27.12.2020, von Betriebsärzt:innen und betriebsmedizinischen Diensten seit dem 07.06.2021, täglich pseudonymisierte Daten mit der Web-Anwendung "Digitales Impfquotenmonitoring" übermittelt.  
+Aus den Impfzentren, mobilen Impfteams und Krankenhäusern der Bundesländer werden seit dem 27.12.2020, von Betriebsärzt:innen und betriebsmedizinischen Diensten seit dem 07.06.2021 und von Apotheken seit dem 08.02.2022 täglich pseudonymisierte Daten mit der Web-Anwendung "Digitales Impfquotenmonitoring" übermittelt.  
 
 * Der täglich aggregierte Kerndatensatz der impfenden Vertragsärzt:innen über die [Kassenärztliche Bundesvereinigung (KBV)](https://www.kbv.de/).  
 
