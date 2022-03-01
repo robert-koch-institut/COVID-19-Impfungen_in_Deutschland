@@ -183,7 +183,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | ```JJJJ-MM-TT``` | Datum der Impfungen
 | BundeslandId_Impfort | Text | ```01``` bis ```16``` : Bundesland ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
-|Impfstoff | Text | ```AstraZeneca```: AstraZeneca <br/> ```Moderna```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Janssen```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/>| Verabreichter Impfstoff | 
+|Impfstoff | Text | ```AstraZeneca```: AstraZeneca <br/> ```Moderna```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Janssen```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/> ```Novavax```: Novavax <br/>| Verabreichter Impfstoff | 
 |Impfserie| Natürliche Zahl | ```1```: Erstimpfung <br/> ```2```: Zweitimpfung <br/> ```3```: Auffrischungsimpfung | Angabe zur Erst-, Zweit- oder Auffrischungsimpfung| 
 |Anzahl| Natürliche Zahl | ```≥1``` | Anzahl der Impfungen in der Impfgruppe |
 
@@ -219,7 +219,7 @@ Anhand der PLZ der impfenden Stelle lässt sich keine Impfquote auf Landkreisebe
 #### Hinweis zur Berechnung von Impfquoten auf Basis der Landkreisdaten
 
 Auf Basis der COVID-19 Impfdaten der Landkreise lässt sich keine Berechnung der Impfquoten, wie sie in den Daten der Pressetabelle des RKI vorliegen, durchführen.  
-Hintergrund ist, dass über die Variable "Impfschutz", keine Aussage zur Anzahl der mindestens einmal Geimpften getroffen werden kann. Als "mindestens einmal geimpft" gelten Personen, die eine Erstimpfung mit den Impfstoffen von AstraZeneca, BioNTech oder Moderna oder eine Einzelimpfung mit Janssen erhalten haben. Personen, die mit Janssen geimpft wurden, gelten daher als "mindestens einmal geimpft", werden aber in der Tabelle der Landkreise ausschließlich in der Gruppe der vollständig Geimpften ausgewiesen (Impfschutz = 2). Eine Ableitung mindestens einmal geimpfter Personen ist nicht möglich, da aus den Daten nicht ermittelbar ist, wie viele Impfungen mit vollständigem Impfschutz auf Impfungen mit Janssen entfallen.  
+Hintergrund ist, dass über die Variable "Impfschutz", keine Aussage zur Anzahl der mindestens einmal Geimpften getroffen werden kann. Als "mindestens einmal geimpft" gelten Personen, die eine Erstimpfung mit den Impfstoffen von AstraZeneca, BioNTech, Novavax, Moderna oder eine Einzelimpfung mit Janssen erhalten haben. Personen, die mit Janssen geimpft wurden, gelten daher als "mindestens einmal geimpft", werden aber in der Tabelle der Landkreise ausschließlich in der Gruppe der vollständig Geimpften ausgewiesen (Impfschutz = 2). Eine Ableitung mindestens einmal geimpfter Personen ist nicht möglich, da aus den Daten nicht ermittelbar ist, wie viele Impfungen mit vollständigem Impfschutz auf Impfungen mit Janssen entfallen.  
 Die Impfquoten werden daher separat bereitgestellt, siehe [COVID-19 Impfquoten](#COVID-19-Impfquoten)
 
 
@@ -308,7 +308,7 @@ Für die Bundesressorts können keine Impfquoten ausgewiesen werden. Die entspre
 
 #### Erklärung zum Impfstatus und Hinweis bezüglich Impfungen mit Impfstoff Janssen  
 
-Die Gesamtzahl mindestens einmal Geimpfter umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna, AstraZeneca oder eine Impfung mit dem Impfstoff Janssen erhalten haben. Als grundimmunisiert gelten alle Personen, die Zweitimpfungen mit BioNTech, Moderna, AstraZeneca, eine Impfung mit Janssen oder eine Impfung nach Genesung erhalten haben. Die Impfungen mit Janssen sind sowohl in der Gruppe "mindestens einmal geimpft" als auch in der Gruppe "grundimmunisiert" enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. Als Personen mit Auffrischimpfung gelten Personen, die eine weitere Impfung nach abgeschlossener Grundimmunisierung erhalten haben.  
+Die Gesamtzahl mindestens einmal Geimpfter umfasst alle Personen, die Erstimpfungen mit den Impfstoffen von BioNTech, Moderna, AstraZeneca, Novavax oder eine Impfung mit dem Impfstoff Janssen erhalten haben. Als grundimmunisiert gelten alle Personen, die Zweitimpfungen mit BioNTech, Moderna, AstraZeneca, eine Impfung mit Janssen oder eine Impfung nach Genesung erhalten haben. Die Impfungen mit Janssen sind sowohl in der Gruppe "mindestens einmal geimpft" als auch in der Gruppe "grundimmunisiert" enthalten. Sie werden für die Gesamtzahl der verabreichten Impfungen jedoch nur einmal gezählt. Als Personen mit Auffrischimpfung gelten Personen, die eine weitere Impfung nach abgeschlossener Grundimmunisierung erhalten haben.  
 
 #### Unterschätzung der Impfquoten nach Alter, mindestens einmal Geimpfter  
 
