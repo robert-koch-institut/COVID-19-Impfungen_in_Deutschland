@@ -48,7 +48,7 @@ Die DIM-Datenbank am RKI speist sich aus weiteren Datenportalen, die jedoch tech
 Die nachfolgende Darstellung zeigt schematisch den Datenfluss von Erfassung der Daten bei den impfenden Stellen bis hin zur Publikation und Weitergabe der aggregierten Daten durch das RKI.
 
 
-![**Abbildung**: Überblick Datenfluss Digitales Impfquoten-Monitoring (DIM)](/.github/pictures/2021-08-27_DIM_Datenfluss_Uebersicht.jpg)
+![**Abbildung**: Überblick Datenfluss Digitales Impfquoten-Monitoring (DIM)](/.github/pictures/2022-06-21_DIM_Datenfluss_Uebersicht.jpg)
 
 
 ### Rollenbesetzung im RKI  
