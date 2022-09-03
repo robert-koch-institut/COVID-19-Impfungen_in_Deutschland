@@ -51,7 +51,7 @@ jobs:
       - name: Checkout Repository    
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: master
         
       - name: Replace DOIs in all given files by whitelist_replace_doi
         shell: bash
@@ -105,7 +105,7 @@ jobs:
       - name: Checkout Repository    
         uses: actions/checkout@v3
         with:
-          ref: main
+          ref: master
 
       - name: Create Release
         uses: actions/create-release@v1
