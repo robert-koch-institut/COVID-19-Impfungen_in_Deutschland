@@ -25,7 +25,7 @@ Daniel Wesseler (Datenmanagement)
 
 ---
 
-Robert Koch-Institut (2022): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7065203](http://doi.org/10.5281/zenodo.7065203).  
+Robert Koch-Institut (2022): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7066389](http://doi.org/10.5281/zenodo.7066389).  
 
 ## Informationen zum Datensatz und Entstehungskontext  
 
