@@ -100,13 +100,20 @@
       "identifier": "info:ddc/22/eng//614.4"
     }
   ],
-  "publication_date": "2022-10-17T08:51:52+02:00",
-  "version": "2022-10-17",
+  "publication_date": "2022-10-18T08:51:36+02:00",
+  "version": "2022-10-18",
   "dates": [
     {
       "start": "2020-12-27",
-      "end": "2022-10-17",
+      "end": "2022-10-18",
       "type": "Collected"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland",
+      "resource_type": "dataset"
     }
   ]
 }
