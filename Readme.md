@@ -25,7 +25,7 @@ Daniel Wesseler (Datenmanagement)
 
 ---
 
-Robert Koch-Institut (2022): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7350242](https://doi.org/10.5281/zenodo.7350242).  
+Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.5126652](http://doi.org/10.5281/zenodo.5126652).  
 
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>
 
@@ -71,26 +71,26 @@ Das DIM-Projekt enthält Daten über den Verlauf der COVID-19-Impfungen in Deuts
 
 * Über ein Meldeportal der [Kassenärztliche Bundesvereinigung (KBV)](https://www.kbv.de/) übermitteln die impfenden Vertragsärzt:innen täglich einen aggregierten Kerndatensatz.  
 
-    Von den Vertragsärzt:innen werden täglich aggregierte Daten an die KBV übermittelt und dort in zwei separaten Datenpaketen dem RKI bereitgestellt. Die Pakete beinhalten 1) die Anzahl durchgeführter Impfungen je Praxis und Impftag aufgeschlüsselt nach Impfstoff und Impfstoffdosis (verfügbar seit Impftag 10.03.2021) sowie 2.) die Anzahl der Impfungen aufgeschlüsselt nach Altersgruppe <18, 18-59 und 60+ Jahre und Impfstoffdosis (verfügbar seit Impftag 26.03.2021). Die beiden Datenpakete sind nicht miteinander verknüpfbar. Eine Zuordnung von Impfstoff und Altersgruppe ist mit diesen Daten nicht möglich. Seit Impftag 14.12.2021 wird die Altersgruppe <18 Jahre aufgeschlüsselt nach Altersgruppe 5-11 sowie 12-17 Jahre übermittelt. Seit dem 27.01.2022 sollten im KBV-Portal alle Impfungen entsprechend ihrer tatsächlichen Dosis in der Impfserie übermittelt werden können; seit dem 10.02.22 liegen Daten mit der Impfserie 4 vor. Besonderheiten gab es bei der Übermittlung von Impfungen mit Jcovden-Impfstoff (s. weiter unten).  
+    Von den Vertragsärzt:innen werden täglich aggregierte Daten an die KBV übermittelt und dort in zwei separaten Datenpaketen dem RKI bereitgestellt. Die Pakete beinhalten 1) die Anzahl durchgeführter Impfungen je Praxis und Impftag aufgeschlüsselt nach Impfstoff und Impfstoffdosis (verfügbar seit Impftag 10.03.2021) sowie 2.) die Anzahl der Impfungen aufgeschlüsselt nach Altersgruppe <18, 18-59 und 60+ Jahre und Impfstoffdosis (verfügbar seit Impftag 26.03.2021). Die beiden Datenpakete sind nicht miteinander verknüpfbar. Eine Zuordnung von Impfstoff und Altersgruppe ist mit diesen Daten nicht möglich. Seit Impftag 14.12.2021 wird die Altersgruppe <18 Jahre aufgeschlüsselt nach Altersgruppe 5-11 und 12-17 Jahre sowie seit dem 07.11.2022 zusätzlich mit der Altersgruppe 0-4 Jahre übermittelt. Seit dem 27.01.2022 sollten im KBV-Portal alle Impfungen entsprechend ihrer tatsächlichen Dosis in der Impfserie übermittelt werden können; seit dem 10.02.22 liegen Daten mit der Impfserie 4 und seit dem 04.10.2022 die Impfserien 5 und 6 vor. Besonderheiten gab es bei der Übermittlung von Impfungen mit Jcovden-Impfstoff (s. weiter unten).  
 
     Eine regionale Zuordnung der Impfdaten ist ausschließlich nach der PLZ der Arztpraxis möglich.  
 
 * Quartalsweise Abrechnungsdaten der Kassenärztlichen Vereinigungen (KV) ersetzen rückwirkend die KBV-Daten.  
 
-    Die Daten der Vertragsärzte aus dem KBV-Schnellmeldeportal werden sukzessive durch die quartalsweisen Abrechnungsdaten der Kassenärztlichen Vereinigungen (KV) ersetzt. In den KV-Daten ist die regionale Zuordnung nach der Wohnort-PLZ der Geimpften sowie die Zuordnung von Impfstoff und Altersgruppe möglich.  
+    Die Daten der Vertragsärzte aus dem KBV-Schnellmeldeportal werden soweit möglich durch die quartalsweisen Abrechnungsdaten der Kassenärztlichen Vereinigungen (KV) ersetzt. In den KV-Daten ist die regionale Zuordnung nach der Wohnort-PLZ der Geimpften sowie die Zuordnung von Impfstoff und Altersgruppe möglich.  
     Ab dem 22.06.2022 gilt: Die KBV-Schnellmeldungen mit Impfungen bis zum Ende des vierten Quartals 2021 (31.12.2021) wurden durch Daten der 17 KVen ersetzt, wobei folgende Einschränkungen gelten:  
     * Für den Zeitraum 14.12.-31.12.21 liegen die KV-Abrechnungsdaten der <18-Jährigen nur für die Gesamtaltersgruppe vor, nicht aber weiter differenziert nach 5-11 Jahre und 12-17 Jahre. Daher wurde eine Ersetzung der KBV-Daten durch die KV-Daten für diesen Zeitraum zwar für die Gesamtgruppe <18 Jahre vorgenommen, nicht jedoch für die beiden Einzelaltersgruppen 5-11 und 12-17 Jahre, für die weiterhin die KBV-Daten verwendet wurden. Somit können rund 35.000 Impfungen im Alter <18 Jahren nicht korrekt den beiden Einzelaltersgruppen zugewiesen werden.
     * Für 128.289 übermittelte Impfungen der KV Brandenburg liegt weder eine Differenzierung nach Impfstoff noch nach Impfserie vor. Diese Impfungen blieben unberücksichtigt.  
 
 * Privatärzt:innen übermitteln täglich einen aggregierten Kerndatensatz über die [Privatärztlichen Verrechnungsstellen (PVS)](https://www.pbv-aerzte.de/).  
 
-    Von den Privatärzt:innen werden täglich aggregierte Daten an die PVS übermittelt und dort in einem Datenpaket dem RKI bereitgestellt. Dieses Paket enthält die Anzahl durchgeführter Impfungen je Praxis und Impftag aufgeschlüsselt nach Impfstoff, Altersgruppe <18, 18-59 und 60+ Jahre und Impfstoffdosis (Daten verfügbar seit Impftag 07.06.2021). Seit Impftag 10.12.2021 wird die Altersgruppe <18 Jahre aufgeschlüsselt nach Altersgruppe 5-11 sowie 12-17 Jahre übermittelt. Seit Impftag 19.01.2022 können alle Impfungen entsprechend ihrer tatsächlichen Dosis in der Impfserie übermittelt werden, seit dem 10.02.2022 liegen Daten zur Impfserie 4 vor. Auch in diesen Daten ist eine regionale Zuordnung der Impfdaten ausschließlich nach der PLZ der Arztpraxis möglich. Die Daten der Privatärzt:innen liegen nicht noch einmal in anderen Datenbeständen wie zum Beispiel in Abrechnungsdaten feiner aufgeschlüsselt vor und können daher nicht ersetzt werden.  
+    Von den Privatärzt:innen werden täglich aggregierte Daten an die PVS übermittelt und dort in einem Datenpaket dem RKI bereitgestellt. Dieses Paket enthält die Anzahl durchgeführter Impfungen je Praxis und Impftag aufgeschlüsselt nach Impfstoff, Altersgruppe <18, 18-59 und 60+ Jahre und Impfstoffdosis (Daten verfügbar seit Impftag 07.06.2021). Seit Impftag 10.12.2021 wird die Altersgruppe <18 Jahre aufgeschlüsselt nach Altersgruppe 5-11 sowie 12-17 Jahre übermittelt. Seit Impftag 19.01.2022 können alle Impfungen entsprechend ihrer tatsächlichen Dosis in der Impfserie übermittelt werden, seit dem 10.02.2022 liegen Daten zur Impfserie 4 und seit dem 27.09.2022 die Impfserien 5 und 6 vor. Auch in diesen Daten ist eine regionale Zuordnung der Impfdaten ausschließlich nach der PLZ der Arztpraxis möglich. Die Daten der Privatärzt:innen liegen nicht noch einmal in anderen Datenbeständen wie zum Beispiel in Abrechnungsdaten feiner aufgeschlüsselt vor und können daher nicht ersetzt werden.  
 
 #### Impfmeldungen mit Jcovden-Impfstoff  
 
 Besonderheiten gab es bei der Meldung von Impfungen mit dem Jcovden-Impfstoff (verfügbar seit Mai 2021). Für diesen Impfstoff war zunächst eine Impfstoffdosis als ausreichend für die Grundimmunisierung angesehen worden. Seit Oktober 2021 sind von der Ständigen Impfkommission Optimierungsimpfungen nach einmaliger Jcovden-Impfung mit mRNA-Impfstoffen empfohlen. Mit Wirkung vom 15.01.2022 sind beim Jcovden-Impfstoff generell zwei Impfungen für die Grundimmunisierung vorgesehen. Alle Meldesysteme (DIM, PVS, KBV) wurden im Laufe des Januar 2022 dahingehend angepasst, dass alle Impfungen (inklusive Jcovden-Impfungen) entsprechend der tatsächlichen Folge in der Impfserie gemeldet und gewertet werden können. Die Meldung von Jcovden-Impfungen und die Umsetzung der Änderungen erfolgte in den einzelnen Portalen unterschiedlich. Seit dem 29.04.2022 werden alle Daten entsprechend ihrer tatsächlich gemeldeten Impfserie publiziert. Auch dabei gibt es jedoch Unterschiede.  
 
-Im **DIM-Portal** wurden Jcovden-Impfungen bis zum 24.01.2022 ausschließlich mit der Impfserie 1 gemeldet und in der Analyse zusätzlich der vollständigen Grundimmunisierung (Impfserie 2) hinzugerechnet. Optimierungsimpfungen waren dementsprechend bis 24.01.22 als Auffrischimpfung (Impfserie 3) zu dokumentieren. Ab 25.01.22 konnten hier alle Impfungen entsprechend ihrer tatsächlichen Reihenfolge dokumentiert und gemeldet werden. Die Datenanalyse und -Publikation wurde bez. der Jcovden-Impfung zum 29.04.2022 wie folgt umgestellt: Einmalige Jcovden-Impfungen zählen nur noch als Erstimpfung (Impfserie 1; das Hinzurechnen zur Impfserie 2 entfällt), Optimierungsimpfungen wurden soweit möglich in Zweitimpfungen umbewertet.  
+Im **DIM-Portal** wurden Jcovden-Impfungen bis zum 24.01.2022 ausschließlich mit der Impfserie 1 gemeldet und in der Analyse zusätzlich der vollständigen Grundimmunisierung (Impfserie 2) hinzugerechnet. Optimierungsimpfungen waren dementsprechend bis 24.01.22 als Auffrischimpfung (Impfserie 3) zu dokumentieren. Ab 25.01.22 konnten hier alle Impfungen entsprechend ihrer tatsächlichen Reihenfolge dokumentiert und gemeldet werden. Die Datenanalyse und -Publikation wurde bezüglich der Jcovden-Impfung zum 29.04.2022 wie folgt umgestellt: Einmalige Jcovden-Impfungen zählen nur noch als Erstimpfung (Impfserie 1; das Hinzurechnen zur Impfserie 2 entfällt), Optimierungsimpfungen wurden soweit möglich in Zweitimpfungen umbewertet.  
 
 In den aggregierten Daten der Ärzteschaft ist diese Umbewertung jedoch nicht möglich; Optimierungsimpfungen können nicht als solche identifiziert werden. Im **KBV-Datenpaket** mit Impfstoffangabe wurden bis zum Impftag 05.01.2022 alle Impfungen mit Jcovden-Impfstoff mit der Impfserie 2 übermittelt. Ab dem Impftag 06.01.2022 wurden Impfungen mit dem Jcovden-Impfstoff auch mit der Impfserie 3 übermittelt, seit dem 27.01.2022 ist für Jcovden-Impfungen die Angabe der Impfserie 1 möglich. Alle bis zum 26.01.2022 im KBV-Portal übermittelten Jcovden-Impfungen mit der Impfserie 2 werden der Impfserie 1 zugeordnet, da diese Impfungen mit hoher Wahrscheinlichkeit tatsächliche Erstimpfungen waren. Für die Impfquotenbestimmung werden diese Impfungen sowohl bei den mindestens einmal Geimpften als auch – der Übermittlung entsprechend - bei den Grundimmunisierten berücksichtigt. Alle ab dem 27.01.2022 übermittelten Impfungen mit Jcovden-Impfstoff werden mit ihrer tatsächlich übermittelten Impfserie ausgewiesen.   
 
@@ -105,11 +105,12 @@ Die Rohdaten der einzelnen Datenquellen werden für den Auswertungs-Datensatz au
 1. Grundlegende Validitätsprüfung der übermittelten Datensätze  
 2. Einheitliche Benennung der Impfstoffe  
 3. Zuweisung der BundeslandID oder LandkreisID des Impfortes  
-4. Ausschluss von Datensätzen ohne Angabe des Impfzentrums sowie bei einer Altersangabe kleiner "2" (nur DIM)  
-5. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022 und dem Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
-6. Erkennung von Sammelpatienten:innen und Auswahl der aktuellsten Datensätze je Pseudonym/Sammelpatienten:innen und Impfdatum (nur DIM)  
-7. Prüfung auf inhaltliche Konsistenz und ggf. Korrekturen (nur DIM)  
-8. Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
+4. Ausschluss von Datensätzen ohne Angabe des Impfzentrums (nur DIM)
+5. Ausschluss von Datensätzen bei einer Altersangabe kleiner "2" vor dem 07.11.2022 oder eines unbekannten Alters (nur DIM)  
+6. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022 und dem Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
+7. Erkennung von Sammelpatienten:innen und Auswahl der aktuellsten Datensätze je Pseudonym/Sammelpatienten:innen und Impfdatum (nur DIM)  
+8. Prüfung auf inhaltliche Konsistenz und ggf. Korrekturen (nur DIM)  
+9. Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
 
 Die folgende Beschreibung des Vorgehens bezieht sich allein auf die Daten aus dem DIM-Portal:  
 
@@ -138,7 +139,7 @@ Zur Herstellung inhaltlicher Konsistenz wird ein Mindestabstand zwischen Impfung
 |4        | Der aktuelle Eintrag hat eine größere Impfserie als die letzte ausgewiesene Impfung und die Datumsgrenze ist eingehalten. | Ja : Weise die Impfung aus. <br/> Nein: weiter mit Schritt 5|
 |5        | Der aktuelle Eintrag hat keine größere Impfserie als die letzte ausgewiesene Impfung, die um eins höhere Impfserie der aktuellen Eintrags ist nicht größer als die maximal ausgewiesene Impfserie (4) und für diese Impfserie ist die Datumsgrenze eingehalten. | Ja : Ändere die Impfserie zu der um eins erhöhten Impfserie des aktuellen Eintrags und weise die Impfung aus <br/> Nein: verwerfe den aktuellen Eintrag|
 
-Wichtig ist, dass innerhalb des DIM Systems zwischen Impfdatum und dem Datum der Datenerfassung unterschieden wird. Meldungen als auch deren Korrekturen können sich auf das gleiche Impfdatum beziehen, das Datum der Datenerfassung unterscheidet sich ggf. jedoch, da die Korrektur später gemeldet wird.  
+Wichtig ist, dass innerhalb des DIM Systems zwischen Impfdatum und dem Datum der Datenerfassung unterschieden wird. Meldungen als auch deren Korrekturen können sich auf das gleiche Impfdatum beziehen, das Datum der Datenerfassung unterscheidet sich ggf. jedoch, da die Korrektur später gemeldet wird.
 
 ## Aufbau und Inhalt des publizierten Datensatzes
 
@@ -205,13 +206,15 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | ```JJJJ-MM-TT``` | Datum der Impfungen
 | BundeslandId_Impfort | Text | ```01``` bis ```16``` : Bundesland ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
-|Impfstoff | Text | ```Vaxzevria```: AstraZeneca <br/> ```Spikevax```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Jcovden```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/> ```Nuvaxovid```: Novavax <br/> ```Valneva```: Valneva <br/> ```Comirnaty bivalent (Original/Omikron)```: BioNTech/Pfizer <br/> ```Spikevax bivalent (Original/Omikron)```: Moderna | Verabreichter Impfstoff | 
-|Impfserie| Natürliche Zahl | ```1```: Erstimpfung <br/> ```2```: Zweitimpfung <br/> ```3```: erste Auffrischimpfung <br/> ```4```: zweite Auffrischimpfung| Angabe zur Erst-, Zweit- oder Auffrischimpfung| 
+|Impfstoff | Text | ```Vaxzevria```: AstraZeneca <br/> ```Spikevax```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Jcovden```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/> ```Nuvaxovid```: Novavax <br/> ```Valneva```: Valneva <br/> ```Comirnaty bivalent (Original/Omikron)```: BioNTech/Pfizer <br/> ```Spikevax bivalent (Original/Omikron)```: Moderna <br/> ```Comirnaty-Kleinkinder```: BioNTech/Pfizer | Verabreichter Impfstoff | 
+|Impfserie| Natürliche Zahl | ```1```: erste Impfung <br/> ```2```: zweite Impfung <br/> ```3```: dritte Impfung <br/> ```4```: vierte Impfung <br/> ```5```: fünfte Impfung <br/> ```6```: sechste Impfung | Angabe zur Stellung innerhalb der Impfserie | 
 |Anzahl| Natürliche Zahl | ```≥1``` | Anzahl der Impfungen in der Impfgruppe |
 
 Die Omikron-angepassten Impfstoffe werden nur je Hersteller differenziert ausgewiesen.  
 
-Zweitimpfungen mit dem Jcovden-Impfstoff aus dem **KBV-Datenpaket**  bzw. Impfungen mit der Abrechnungsziffer für Jcovden-Impfstoff aus den **Abrechnungsdaten der KVen**, die vor dem 27.01.2022 erfolgten, werden mit Impfserie 1 ausgewiesen.  
+Aus der angegebenen Impfserie und dem für den Impfsoff verwendeten Impfschema leitet sich ab, ob eine Person grundimmunisiert ist und um die wie vielte Auffrischimpfung es sich handelt. Nach aktuellem Stand werden für die Ausprägung "Comirnaty-Kleinkinder" im Impfstoff drei Impfdosen für die Grundimmunisierung  benötigt, alle anderen Impfstoffe benötigen zwei Impfdosen. Zu berücksichtigen ist, dass Zweitimpfungen mit dem Jcovden-Impfstoff aus dem **KBV-Datenpaket**  bzw. Impfungen mit der Abrechnungsziffer für Jcovden-Impfstoff aus den **Abrechnungsdaten der KVen**, die vor dem 27.01.2022 erfolgten, mit Impfserie 1 ausgewiesen werden.  
+
+Ist die Anzahl an Impfungen einer Impfgruppe mit Impfstoff "Comirnaty-Kleinkinder" an einem Tag kleiner als fünf, werden an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit Impfstoff "Comirnaty-Kleinkinder" mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.
 
 ## COVID-19 Impfdaten auf Ebene der Landkreise 
 
@@ -239,7 +242,7 @@ Für jede Impfgruppe wird die tägliche Anzahl von Impfungen ausgewiesen, sofern
 
 #### Erklärung zur Variable Impfschutz  
 
-Da eine Umbewertung der Jcovden-Impfungen aus dem **KBV-Datenpaket** mit Altersangabe vor dem 27.01.2022 nicht möglich ist, werden für die Impfungen der niedergelassenen Ärzte in diesen Zeitraum die gemeldeten Impfserien der Impfungen ausgewiesen. Damit unterscheidet sich die Variable Impfschutz von der Variable Impfserie im vorherigen Datensatz. Ab dem 27.01.2022 entspricht die Variable Impschutz der Impfserie im Datensatz [COVID-19 Impfdaten auf Ebene der Bundesländer](https://codimd.mathphys.stura.uni-heidelberg.de/hFnsOsedQB-ZbIZ00wqnfw?both#COVID-19-Impfdaten-auf-Ebene-der-Bundesl%C3%A4nder).  
+Da eine Umbewertung der Jcovden-Impfungen aus dem **KBV-Datenpaket** mit Altersangabe vor dem 27.01.2022 nicht möglich ist, werden für die Impfungen der niedergelassenen Ärzte in diesen Zeitraum die gemeldeten Impfserien der Impfungen ausgewiesen. Damit unterscheidet sich die Variable Impfschutz von der Variable Impfserie im vorherigen Datensatz. Ab dem 27.01.2022 entspricht die Variable Impschutz der Impfserie im Datensatz [COVID-19 Impfdaten auf Ebene der Bundesländer](https://codimd.mathphys.stura.uni-heidelberg.de/hFnsOsedQB-ZbIZ00wqnfw?both#COVID-19-Impfdaten-auf-Ebene-der-Bundesl%C3%A4nder) unter Berücksichtigung des impfstoffspezifischen Impfschemas.  
 
 #### Hinweis zur Interpretation der Landkreisangaben  
 
@@ -255,8 +258,8 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | ```JJJJ-MM-TT```| Datum der Impfungen
 | LandkreisId_Impfort | Text | ```01001``` bis ```16077```: Landkreis ID <br/> ```17000``` : Bundesressorts <br/> ```u```: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden. |
-| Altersgruppe | Text | ```05-11```: Altersgruppe 5 bis 11 Jahre <br/> ```12-17```: Altersgruppe 12 bis 17 Jahre <br/>```18-59```: Altersgruppe 18 bis 59 Jahre <br/> ```60+```:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
-|Impfschutz| Natürliche Zahl | ```1```: Erstimpfung <br/> ```2```: Grundimmunisierung <br/> ```3```: erste Auffrischimpfung <br/> ```4```: zweite Auffrischimpfung | Angabe zum Impfschutz <br/> Grundimmunisierung wird angenommen bei allen gemeldeten Zweitimpfungen sowie Impfungen mit Jcovden-Impfstoff bei niedergelassenen Ärzt:innen vor dem 27.01.2022 | 
+| Altersgruppe | Text | ```00-04```: Altersgruppe 0 bis 4 Jahre <br/> ```05-11```: Altersgruppe 5 bis 11 Jahre <br/> ```12-17```: Altersgruppe 12 bis 17 Jahre <br/>```18-59```: Altersgruppe 18 bis 59 Jahre <br/> ```60+```:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
+|Impfschutz| Natürliche Zahl | ```1```: Erstimpfung <br/> ```2```: Grundimmunisierung <br/> ```3```: erste Auffrischimpfung <br/> ```4```: zweite Auffrischimpfung <br/> ```5```: dritte Auffrischimpfung <br/> ```6```: vierte Auffrischimpfung <br/> ```11```: fortgesetzte, aber nicht abgeschlossene Grundimmunisierung | Angabe zum Impfschutz <br/> Grundimmunisierung wird angenommen bei allen gemeldeten Zweitimpfungen, Impfungen mit Jcovden-Impfstoff bei niedergelassenen Ärzt:innen vor dem 27.01.2022 sowie allen gemeldeten Drittimpfungen mit Comirnaty ab dem 07.11.2022 in der Altersgruppe 0 bis 4 Jahre <br/> Fortgesetzte, aber nicht abgeschlossene Grundimmunisierungen entsprechen Impfungen zwischen der Erstimpfung und der Grundimmunisierung| 
 |Anzahl | Natürliche Zahl | ```≥5``` | Anzahl der Impfungen in der Impfgruppe |
 
 Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.  
@@ -285,14 +288,14 @@ Die aktuellen COVID-19-Impfquoten sind im Hauptverzeichnis unter "Aktuell_Deutsc
 Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_COVID-19-Impfquoten.csv" ist identisch mit dem neusten Datenstand des Archivs.  
 Die kumulative Zahl der Impfungen umfasst alle Impfungen bis einschließlich des Vortages, die bis zum Erstellungsdatum, 08:00 Uhr, dem RKI gemeldet wurden. Nachmeldungen und Datenkorrekturen aus zurückliegenden Tagen sind in der kumulativen Zahl der Impfungen enthalten.  
 Die regionale Zuordnung aller durchgeführten Impfungen erfolgt anhand des Ortes der impfenden Stelle und nicht anhand des Wohnortes der geimpften Person. Nur die Angabe des Ortes der impfenden Stellen ist in allen Datenquellen enthalten (siehe Hinweis zu den Datenquellen). Da diese regionalisierten Impfdaten zur Berechnung einer Impfquote auf die jeweilige Wohnbevölkerung bezogen werden, können dabei rechnerisch auch Anteile von >100% kalkuliert werden.  
-Alle Impfquoten beziehen sich immer auf die Gesamtzahl der jeweils angegebenen Bevölkerungsgruppe. Die Impfquote "Gesamtbevölkerung" ist der Anteil aller bisher Geimpften in der Gesamtbevölkerung; die Impfquoten nach Alter bilden den Anteil der Geimpften in der jeweiligen Altersgruppe ab. Für die Berechnung der Impfquote wurde der Bevölkerungsstand vom 31.12.2021 zugrunde gelegt (Statistisches Bundesamt (Destatis), 2022, https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html). Die zweite Auffrischimpfung wird gegenwärtig von der STIKO nur bestimmten Bevölkerungsgruppen empfohlen. Diese Gruppen werden im Impfquoten-Monitoring nicht spezifisch erfasst. Aus diesem Grund ist es nicht möglich für diese Gruppen spezifische Impfquoten abzubilden und es wird stattdessen auch hier der Bezug zur Wohnbevölkerung nach Altersgruppe hergestellt.  
+Alle Impfquoten beziehen sich immer auf die Gesamtzahl der jeweils angegebenen Bevölkerungsgruppe. Die Impfquote "Gesamtbevölkerung" ist der Anteil aller bisher Geimpften in der Gesamtbevölkerung; die Impfquoten nach Alter bilden den Anteil der Geimpften in der jeweiligen Altersgruppe ab. Für die Berechnung der Impfquote wurde der Bevölkerungsstand vom 31.12.2021 zugrunde gelegt (Statistisches Bundesamt (Destatis), 2022, https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html). Die zweiten und weiteren Auffrischimpfungen werden gegenwärtig von der STIKO nur bestimmten Bevölkerungsgruppen empfohlen. Diese Gruppen werden im Impfquoten-Monitoring nicht spezifisch erfasst. Aus diesem Grund ist es nicht möglich für diese Gruppen spezifische Impfquoten abzubilden und es kann stattdessen auch hier nur der Bezug zur Wohnbevölkerung nach Altersgruppe hergestellt werden.  
 
 ### Variablen 
 
 Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impfstatus und der Altersgruppen. 
 
-- Impfstatus (_min1, _gi, _boost1, _boost2)  
-- Altersgruppe ( _gesamt, _05bis17, _05bis11, _12bis17, _18bis59, _18plus, _60plus)  
+- Impfstatus (_min1, _gi, _boost1, _boost2, _boost3, _boost4)  
+- Altersgruppe ( _gesamt, _00bis04, _05bis17, _05bis11, _12bis17, _18bis59, _18plus, _60plus)  
 
 Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differenziert nach Impfstatus - angegeben. Es werden nur Impfungen einbezogen, die bis zum Vortag des Erstellungsdatums durchgeführt und bis zum Erstellungsdatum der Datei gemeldet wurden.
 
@@ -307,9 +310,13 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 | BundeslandId_Impfort | Text | ```01```&nbsp;bis&nbsp;```16```&nbsp;:&nbsp;Bundesland&nbsp;ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
 |Impfungen_gesamt | natürliche Zahl |  ```≥0``` | Gesamtzahl der aller verabreichten Impfungen|
 |Impfungen_gesamt_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl mindestens einmal Geimpfter |
+|Impfungen_gesamt_00bis04_min1 | natürliche Zahl |  ```≥5``` oder ```NA``` | Gesamtzahl der Personen im Alter von 0 bis 4 Jahren, die in der Variable Impfungen_gesamt_min1 enthalten sind |
 |Impfungen_gesamt_gi | natürliche Zahl |  ```≥0``` | Gesamtzahl der Grundimmunisierten. |
+|Impfungen_gesamt_00bis04_gi | natürliche Zahl |  ```≥5``` oder ```NA``` | Gesamtzahl der Personen im Alter von 0 bis 4 Jahren, die in der Variable Impfungen_gesamt_gi enthalten sind |
 |Impfungen_gesamt_boost1 | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen mit einer ersten Auffrischimpfung |
 |Impfungen_gesamt_boost2 | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen mit einer zweiten Auffrischimpfung |
+|Impfungen_gesamt_boost3 | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen mit einer dritten Auffrischimpfung |
+|Impfungen_gesamt_boost4 | natürliche Zahl |  ```≥0``` | Gesamtzahl der Personen mit einer vierten Auffrischimpfung |
 |Impfquote_gesamt_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindesten einmal geimpften Personen |
 |Impfquote_05bis17_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindestens einmal geimpften Personen im Alter von 5 bis 17 Jahren |
 |Impfquote_05bis11_min1 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der mindestens einmal geimpften Personen im Alter von 5 bis 11 Jahren |
@@ -337,13 +344,13 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 
 #### Erklärung zur Variablenausprägung "Bundesressorts"
 Umfasst Impfungen, die aus dem Impfkontingent des Bundes gemäß Coronavirus-Impfverordnung an Angehörige des Bundes verabreicht wurden. Eine Impfquote kann aufgrund einer fehlenden Nennerpopulation nicht berechnet werden, die Impfungen gehen allerdings in die Berechnung der Impfquote für Gesamtdeutschland mit ein.  
-Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte.
+Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte. Gleiches gilt für die Variablen zu Kleinkindern (Alter 0 bis 4 Jahre).
 
 #### Erklärung zum Merkmal Impfstatus
 
-Die Gesamtzahl mindestens einmal Geimpfter (min1) umfasst alle Meldungen, für die in den Daten des DIM die Impfserie ```1``` angegeben ist. Als Impfserie ```1``` gelten Erstimpfungen mit den in Deutschland zugelassenen und verfügbaren Impfstoffen. Nicht enthalten sind Impfungen von Personen, die erstmalig in Deutschland geimpft wurden, zuvor aber von einer SARS-CoV-2 Infektion genesen sind oder bereits eine Impfung im Ausland erhalten hatten. Diese gelten direkt als grundimmunisiert.  
-Darüber hinaus gelten alle Personen als grundimmunisiert (gi), für die in den Daten des DIM die Impfserie ```2``` angegeben ist. Darunter zählen Zweitimpfungen in Deutschland und Impfungen nach Genesung.  
-Als Personen mit erster bzw. zweiter Auffrischimpfung (boost1, boost2) gelten Personen, die eine oder zwei weitere Impfungen nach abgeschlossener Grundimmunisierung erhalten haben. Diese werden mit Impfserie ```3``` bzw. ```4``` gemeldet. Auch für die Auffrischungsimpfungen gilt, dass diesen eine Impfung im Ausland vorrangegangen sein kann und in den Daten somit keine vorhergehende Impfserie ```1``` und Impfserie ```2``` gemeldet wurde.   
+Die Gesamtzahl mindestens einmal Geimpfter (min1) umfasst alle Meldungen, für die in den Daten des DIM die Impfserie ```1``` angegeben ist. Als Impfserie ```1``` gelten Erstimpfungen mit den in Deutschland zugelassenen und verfügbaren Impfstoffen.  
+Darüber hinaus gelten alle Personen als grundimmunisiert (gi), für die in den Daten des DIM die Impfserie ```2``` bzw. ```3``` - je nach Impfschema - angegeben ist. Darunter zählen Zweit- bzw. Drittimpfungen (gemäß Impfschema) in Deutschland und Impfungen nach Genesung.  
+Als Personen mit erster, zweiter, dritter bzw. vierter Auffrischimpfung (boost1, boost2, boost3, boost4) gelten Personen, die eine, zwei, drei oder vier weitere Impfungen nach abgeschlossener Grundimmunisierung erhalten haben. Diese werden mit Impfserie ```3```, ```4```, ```5``` bzw. ```6``` gemeldet. Auch für die Auffrischungsimpfungen gilt, dass diesen eine Impfung im Ausland vorrangegangen sein kann und in den Daten somit keine vorhergehende Impfserie ```1``` und Impfserie ```2``` gemeldet wurde.  
 
 Ziel des Impfquotenmonitorings ist es, eine Aussage zum Impfschutzniveau auf Bevölkerungsebene zu treffen. Die Datenerhebung folgt dieser Perspektive. Da vom DIM keine Daten zum Genesungsstatus oder bestehenden Impfungen im Ausland erhoben werden, ist in der Datenauswertung keine Aussage oder Berücksichtigung diesbezüglich möglich.
   
@@ -354,9 +361,10 @@ Da alle bis zum 26.01.22 von den Vertragsärzt:innen gemeldeten Jcovden-Impfunge
 
 Da nicht rekonstruierbar ist, wie in den Meldeportalen von PVS und KBV die empfohlenen Folgeimpfungen nach einmaliger Jcovden-Impfung gemeldet wurden, bestehen weitere Unschärfen bei den Quoten der Grundimmunisierung und der ersten Auffrischimpfungen.  
 
-#### Gesonderte Ausweisung der Kinderimpfungen bei 5-11-Jährigen
+#### Gesonderte Ausweisung der Kinderimpfungen bei 0-11-Jährigen
 
-Seit dem 21.12.2021 werden Kinderimpfungen bei 5-11-Jährigen gesondert ausgewiesen. Bis einschließlich 20.12.2021 wurden alle Kinderimpfungen der Altersgruppe 12-17 Jahre zugewiesen.
+Seit dem 21.12.2021 werden Kinderimpfungen bei 5-11-Jährigen gesondert ausgewiesen. Bis einschließlich 20.12.2021 wurden alle Kinderimpfungen der Altersgruppe 12-17 Jahre zugewiesen.  
+Seit dem xx.xx.2022 werden Kinderimpfungen bei 0-4-Jährigen gesondert ausgewiesen. Bis einschließlich xx-1.xx.2022 wurden alle Kinderimpfungen der Altersgruppe 0-4 Jahre der Altersgruppe 5-11 Jahre zugewiesen.  
 
 ## Hinweise zur Nachnutzung der Daten
 
@@ -371,4 +379,8 @@ Offene Forschungsdaten des RKI werden auf GitHub.com, Zenodo.org und Edoc.rki.de
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>.  
 
 Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede:r hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](/LICENSE) bzw. [LIZENZ](/LIZENZ) Datei des Datensatzes.  
+
+Die empfohlene Zitierweise ist:  
+
+Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.5126652](http://doi.org/10.5281/zenodo.5126652).
 
