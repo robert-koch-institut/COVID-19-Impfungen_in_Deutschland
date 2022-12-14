@@ -7,17 +7,27 @@ Nordufer 20
 13353 Berlin  
 
 **FG 33 |  Impfprävention**  
-[Anette Siedler](https://orcid.org/0000-0002-6359-1018) (Fachliche Leitung), [Thorsten Rieck](https://orcid.org/0000-0002-8799-8744) (Datenanalyse), [Annika Steffen](https://orcid.org/0000-0003-4072-9245) (Datenanalyse), Nita Perumal (Datenanalyse), Nathalie Pomijalski (Dokumentation)  
+[Anette Siedler](https://orcid.org/0000-0002-6359-1018) (Fachliche Leitung)  
+[Thorsten Rieck](https://orcid.org/0000-0002-8799-8744) (Datenanalyse)  
+[Annika Steffen](https://orcid.org/0000-0003-4072-9245) (Datenanalyse)  
+Nita Perumal (Datenanalyse)  
+Nathalie Pomijalski (Dokumentation)  
 
 **IT 4 | Development**  
-[Lei Mao](https://orcid.org/0000-0002-8356-755X) (Projektleitung), [Hermann Claus](https://orcid.org/0000-0002-0120-1846) (Technische Leitung), Constantin Fischer (Datenmanagement), Sven Schröder (Datenmanagement), Daniel Wesseler (Datenmanagement)  
+[Lei Mao](https://orcid.org/0000-0002-8356-755X) (Projektleitung)  
+[Hermann Claus](https://orcid.org/0000-0002-0120-1846) (Technische Leitung)  
+Constantin Fischer (Datenmanagement)  
+Sven Schröder (Datenmanagement)  
+Daniel Wesseler (Datenmanagement)  
 
 **MF 4 | Informations- und Forschungsdatenmanagement**  
 [Hannes Wuensche](https://orcid.org/0000-0002-8837-0326) (Datenkuration)  
 
 ---
 
-Robert Koch-Institut (2022): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7431477](http://doi.org/10.5281/zenodo.7431477).  
+Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.5126652](http://doi.org/10.5281/zenodo.5126652).  
+
+Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>
 
 ## Informationen zum Datensatz und Entstehungskontext  
 
@@ -97,7 +107,7 @@ Die Rohdaten der einzelnen Datenquellen werden für den Auswertungs-Datensatz au
 3. Zuweisung der BundeslandID oder LandkreisID des Impfortes  
 4. Ausschluss von Datensätzen ohne Angabe des Impfzentrums (nur DIM)
 5. Ausschluss von Datensätzen bei einer Altersangabe kleiner "2" vor dem 07.11.2022 oder eines unbekannten Alters (nur DIM)  
-6. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022 und dem Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
+6. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022, Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022 und dem Omikron BA.4-5 angepassten Impfstoff von Moderna vor dem 28.11.2022 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
 7. Erkennung von Sammelpatienten:innen und Auswahl der aktuellsten Datensätze je Pseudonym/Sammelpatienten:innen und Impfdatum (nur DIM)  
 8. Prüfung auf inhaltliche Konsistenz und ggf. Korrekturen (nur DIM)  
 9. Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
@@ -142,8 +152,30 @@ Der Datensatz enthält Daten über den Verlauf der COVID-19-Impfungen in Deutsch
 * Datensatzdokumentation in deutscher Sprache  
 * Metadaten Datei zum Import in Zenodo  
 
+### Formatierung der COVID-19 Impfdaten  
 
-### COVID-19 Impfdaten auf Ebene der Bundesländer 
+Die Impfdaten sind im Datensatz als kommaseparierte .csv Dateien enthalten. Der verwendete Zeichensatz der .csv Dateien ist UTF-8. Datumsangaben sind im ISO8601 Standard formatiert.  
+
+* Zeichensatz: UTF-8  
+* Datumsformat: ISO8601  
+* .csv Trennzeichen: Komma ","  
+
+### Metadaten
+
+Die bereitgestellten Daten sind mit Metadaten beschrieben und wissenschaftlich zitierbar, u.a. durch die Vergabe einer DOI durch Zenodo.org. Die für den Import in Zenodo bereitgestellten Metadaten sind in folgender Datei hinterlegt:  
+
+> [.zenodo.json](/.zenodo.json)  
+
+Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.
+
+Neben der Beschreibung bibliographischer Metadaten, in der .zenodo.json, wird das Datenschema der Impfdaten bereitgestellt:  
+
+> [Kontextmaterialien/Datenschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Kontextmaterialien/Datenschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json)  
+> [Kontextmaterialien/Datenschema_Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Kontextmaterialien/Datenschema_Deutschland_Landkreise_COVID-19-Impfungen.json)  
+
+Im Datenschema aufgeführt sind die in den Impfdaten enthaltenen Variablen sowie deren Ausprägungen.  
+
+## COVID-19 Impfdaten auf Ebene der Bundesländer 
 
 Die aktuellen COVID-19-Impfzahlen auf Ebene der Bundesländer sind im Hauptverzeichnis unter "Aktuell_Deutschland_Bundeslaender_COVID-19_Impfungen.csv" abrufbar und werden täglich überschrieben. Im Archivordner sind die täglichen Impfdaten der Bundesländer unter den Dateinamen "JJJJ-MM-TT_Deutschland_Bundeslaender_COVID-19-Impfungen.csv" abgelegt.  
 
@@ -152,7 +184,7 @@ Die aktuellen COVID-19-Impfzahlen auf Ebene der Bundesländer sind im Hauptverze
 
 Die Impfdaten bilden einen tagesaktuellen Stand (08:00 Uhr) aller an das RKI gemeldeten Impfungen in Deutschland ab. Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_Bundeslaender_COVID-19-Impfungen.csv" ist identisch mit dem neusten Datenstand des Archivs.  
 
-#### Variablen und Variablenausprägungen 
+### Variablen 
 
 Die Impfdaten differenzieren nach verschiedenen Merkmalen einer „Impfgruppe“. Unter „Impfgruppe“ wird die Zusammenfassung der Merkmalsausprägungen pro Impftag verstanden. Pro Eintrag bzw. Zeile ist eine eineindeutige Impfgruppe für ein Impfdatum abgebildet. Eine Impfgruppe umfasst in der Regel keine Einzelfälle. Jedoch ist es möglich, dass in einer Impfgruppe nur ein Fall enthalten ist. Eine Impfgruppe wird grundlegend durch folgende Merkmale charakterisiert (in den Klammern finden sich die Variablen dieser Merkmale):  
 
@@ -166,29 +198,25 @@ Zusätzlich werden folgende Merkmale bzw. Variablen angegeben:
 
 Für jede Impfgruppe wird die tägliche Anzahl von Impfungen ausgewiesen, sofern diese größer Null sind. Für jedes Datum ist angegeben, wie viele Personen, differenziert nach den oben aufgeführten Variablen, geimpft wurden.  
 
+### Variablenausprägungen 
+
 Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
 |Impfdatum |Datum | ```JJJJ-MM-TT``` | Datum der Impfungen
 | BundeslandId_Impfort | Text | ```01``` bis ```16``` : Bundesland ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
-|Impfstoff | Text | ```Vaxzevria```: AstraZeneca <br/> ```Spikevax```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Jcovden```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/> ```Nuvaxovid```: Novavax <br/> ```Valneva```: Valneva <br/> ```Comirnaty bivalent (Original/Omikron)```: BioNTech/Pfizer <br/> ```Spikevax bivalent (Original/Omikron)```: Moderna <br/> ```Comirnaty-Kleinkinder```: BioNTech/Pfizer | Verabreichter Impfstoff | 
+|Impfstoff | Text | ```Vaxzevria```: AstraZeneca <br/> ```Spikevax```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Jcovden```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/> ```Nuvaxovid```: Novavax <br/> ```Valneva```: Valneva <br/> ```Comirnaty bivalent (Original/Omikron)```: BioNTech/Pfizer <br/> ```Spikevax bivalent (Original/Omikron)```: Moderna <br/> ```Comirnaty-Kleinkinder```: BioNTech/Pfizer <br/> ```VidPrevtyn Beta```: Sanofi Pasteur | Verabreichter Impfstoff | 
 |Impfserie| Natürliche Zahl | ```1```: erste Impfung <br/> ```2```: zweite Impfung <br/> ```3```: dritte Impfung <br/> ```4```: vierte Impfung <br/> ```5```: fünfte Impfung <br/> ```6```: sechste Impfung | Angabe zur Stellung innerhalb der Impfserie | 
 |Anzahl| Natürliche Zahl | ```≥1``` | Anzahl der Impfungen in der Impfgruppe |
 
-Die Omikron-angepassten Impfstoffe werden nur je Hersteller differenziert ausgewiesen.  
+Die Omikron-angepassten Impfstoffe werden nur je Hersteller differenziert ausgewiesen. Der Impfstoff VidPrevtyn Beta von Sanofi Pasteur ist voraussichtlich ab KW 3 2023 verfügbar.  
 
 Aus der angegebenen Impfserie und dem für den Impfsoff verwendeten Impfschema leitet sich ab, ob eine Person grundimmunisiert ist und um die wie vielte Auffrischimpfung es sich handelt. Nach aktuellem Stand werden für die Ausprägung "Comirnaty-Kleinkinder" im Impfstoff drei Impfdosen für die Grundimmunisierung  benötigt, alle anderen Impfstoffe benötigen zwei Impfdosen. Zu berücksichtigen ist, dass Zweitimpfungen mit dem Jcovden-Impfstoff aus dem **KBV-Datenpaket**  bzw. Impfungen mit der Abrechnungsziffer für Jcovden-Impfstoff aus den **Abrechnungsdaten der KVen**, die vor dem 27.01.2022 erfolgten, mit Impfserie 1 ausgewiesen werden.  
 
 Ist die Anzahl an Impfungen einer Impfgruppe mit Impfstoff "Comirnaty-Kleinkinder" an einem Tag kleiner als fünf, werden an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit Impfstoff "Comirnaty-Kleinkinder" mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.
 
-#### Formatierung 
-Die Daten sind im Datensatz als kommaseparierte .csv Datei enthalten. Der verwendete Zeichensatz der .csv Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Komma ",".
-
-- Zeichensatz: UTF-8
-- .csv Trennzeichen: Komma ","
-
-### COVID-19 Impfdaten auf Ebene der Landkreise 
+## COVID-19 Impfdaten auf Ebene der Landkreise 
 
 Die aktuellen COVID-19-Impfzahlen auf Ebene der Landkreise sind im Hauptverzeichnis unter "Aktuell_Deutschland_Landkreise_COVID-19_Impfungen.csv" abrufbar und werden täglich überschrieben. Im Archivordner sind die täglichen Impfdaten der Landkreise unter den Dateinamen "JJJJ-MM-TT_Deutschland_Landkreise_COVID-19-Impfungen.csv" abgelegt.  
 
@@ -197,7 +225,7 @@ Die aktuellen COVID-19-Impfzahlen auf Ebene der Landkreise sind im Hauptverzeich
 
 Die Impfdaten der Landkreise bilden einen tagesaktuellen Stand (08:00 Uhr) aller an das RKI auf Landkreisebene gemeldeten Impfungen in Deutschland ab. Im Dateinamen repräsentiert die Sequenz "JJJJ-MM-TT" das Erstellungsdatum der Datei und gleichzeitig das Datum des enthaltenen Datenstands. "JJJJ" steht dabei für das Jahr, "MM" für den Monat und "TT" für den Tag der Erstellung bzw. des enthaltenen Datenstands. Die "Aktuell_Deutschland_Landkreise_COVID-19-Impfungen.csv" ist identisch mit dem neusten Datenstand des Archivs.  
 
-#### Variablen und Variablenausprägungen 
+### Variablen 
 
 Die Impfdaten differenzieren nach verschiedenen Merkmalen einer „Impfgruppe“. Unter „Impfgruppe“ wird die Zusammenfassung der Merkmalsausprägungen pro Impftag verstanden. Pro Eintrag bzw. Zeile ist eine eineindeutige Impfgruppe für ein Impfdatum abgebildet. Eine Impfgruppe wird grundlegend durch folgende Merkmale charakterisiert (in den Klammern finden sich die Variablen dieser Merkmale):  
 
@@ -212,15 +240,17 @@ Zusätzlich werden folgende Variablen angegeben:
 
 Für jede Impfgruppe wird die tägliche Anzahl von Impfungen ausgewiesen, sofern diese größer vier ist.  
 
-##### Erklärung zur Variable Impfschutz  
+#### Erklärung zur Variable Impfschutz  
 
 Da eine Umbewertung der Jcovden-Impfungen aus dem **KBV-Datenpaket** mit Altersangabe vor dem 27.01.2022 nicht möglich ist, werden für die Impfungen der niedergelassenen Ärzte in diesen Zeitraum die gemeldeten Impfserien der Impfungen ausgewiesen. Damit unterscheidet sich die Variable Impfschutz von der Variable Impfserie im vorherigen Datensatz. Ab dem 27.01.2022 entspricht die Variable Impschutz der Impfserie im Datensatz [COVID-19 Impfdaten auf Ebene der Bundesländer](https://codimd.mathphys.stura.uni-heidelberg.de/hFnsOsedQB-ZbIZ00wqnfw?both#COVID-19-Impfdaten-auf-Ebene-der-Bundesl%C3%A4nder) unter Berücksichtigung des impfstoffspezifischen Impfschemas.  
 
-##### Hinweis zur Interpretation der Landkreisangaben  
+#### Hinweis zur Interpretation der Landkreisangaben  
 
 Die Zuordnung der Impfzahlen zu Bundesländern und Landkreisen erfolgt anhand der Postleitzahl (PLZ) der impfenden Stellen (Impfzentren, Betriebe, Betriebsärzt:innen, Apotheken, niedergelassene Ärzteschaft). Nur diese Angabe des Orts der Impfung ist in allen Datenquellen enthalten. Die PLZ der Geimpften ist in den Daten der KBV und der PVS nicht enthalten. Die Wohnort-PLZ ist zwar in den KV-Daten enthalten, diese liegen jedoch nicht bis zum aktuellen Impftag vor. Teilweise ist auch aus den Daten der DIM-Anwendung keine eindeutige Zuordnung zum Wohnort möglich aufgrund unvollständiger Erhebung, unklarer bzw. unbekannter Angaben oder eines Wohnortes außerhalb des Bundesgebietes.  
 
 Anhand der Ortsangabe der impfenden Stelle lässt sich keine Impfquote auf Landkreisebene berechnen, da Geimpfte ihren Wohnsitz auch in anderen Landkreisen als dem Landkreis der impfenden Stelle haben können. Zu beachten ist außerdem, dass die Zuordnung von PLZ zu Landkreis nicht immer eindeutig ist. Der Anteil der in einem Landkreis ansässigen Geimpften ist daher auf Grundlage der vorliegenden Daten nicht ermittelbar.  
+
+### Variablenausprägungen 
 
 Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
@@ -248,13 +278,7 @@ Die Anzahl der Impfungen dieser Impfgruppe ist für die ersten beiden Tage klein
 >Impfdatum,LandkreisId_Impfort,Altersgruppe,Impfschutz,Anzahl  
 >2021-06-28 ,01004 ,60+ ,1 ,16  
 
-#### Formatierung 
-Die Daten sind im Datensatz als kommaseparierte .csv Datei enthalten. Der verwendete Zeichensatz der .csv Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Komma ",".
-
-- Zeichensatz: UTF-8
-- .csv Trennzeichen: Komma ","
-
-### COVID-19 Impfquoten 
+## COVID-19 Impfquoten 
 
 Die aktuellen COVID-19-Impfquoten sind im Hauptverzeichnis unter "Aktuell_Deutschland_Impfquoten_COVID-19.csv" abrufbar und werden täglich überschrieben. Im Archivordner sind die täglichen Impfquoten unter den Dateinamen "JJJJ-MM-TT_Deutschland_Impfquoten_COVID-19.csv" abgelegt.  
 
@@ -266,7 +290,7 @@ Die kumulative Zahl der Impfungen umfasst alle Impfungen bis einschließlich des
 Die regionale Zuordnung aller durchgeführten Impfungen erfolgt anhand des Ortes der impfenden Stelle und nicht anhand des Wohnortes der geimpften Person. Nur die Angabe des Ortes der impfenden Stellen ist in allen Datenquellen enthalten (siehe Hinweis zu den Datenquellen). Da diese regionalisierten Impfdaten zur Berechnung einer Impfquote auf die jeweilige Wohnbevölkerung bezogen werden, können dabei rechnerisch auch Anteile von >100% kalkuliert werden.  
 Alle Impfquoten beziehen sich immer auf die Gesamtzahl der jeweils angegebenen Bevölkerungsgruppe. Die Impfquote "Gesamtbevölkerung" ist der Anteil aller bisher Geimpften in der Gesamtbevölkerung; die Impfquoten nach Alter bilden den Anteil der Geimpften in der jeweiligen Altersgruppe ab. Für die Berechnung der Impfquote wurde der Bevölkerungsstand vom 31.12.2021 zugrunde gelegt (Statistisches Bundesamt (Destatis), 2022, https://www.destatis.de/DE/Themen/Gesellschaft-Umwelt/Bevoelkerung/Bevoelkerungsstand/Tabellen/bevoelkerung-nichtdeutsch-laender.html). Die zweiten und weiteren Auffrischimpfungen werden gegenwärtig von der STIKO nur bestimmten Bevölkerungsgruppen empfohlen. Diese Gruppen werden im Impfquoten-Monitoring nicht spezifisch erfasst. Aus diesem Grund ist es nicht möglich für diese Gruppen spezifische Impfquoten abzubilden und es kann stattdessen auch hier nur der Bezug zur Wohnbevölkerung nach Altersgruppe hergestellt werden.  
 
-#### Variablen und Variablenausprägungen 
+### Variablen 
 
 Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impfstatus und der Altersgruppen. 
 
@@ -274,6 +298,8 @@ Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impf
 - Altersgruppe ( _gesamt, _00bis04, _05bis17, _05bis11, _12bis17, _18bis59, _18plus, _60plus)  
 
 Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differenziert nach Impfstatus - angegeben. Es werden nur Impfungen einbezogen, die bis zum Vortag des Erstellungsdatums durchgeführt und bis zum Erstellungsdatum der Datei gemeldet wurden.
+
+### Variablenausprägungen 
 
 Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
@@ -316,59 +342,45 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 |Impfquote_18bis59_boost2| rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit zweiter Auffrischimpfung im Alter von 18 bis 59 Jahren|
 |Impfquote_60plus_boost2 | rationale Zahl | ```≥0.0``` oder ```NA``` | Impfquote der Personen mit zweiter Auffrischimpfung ab 60 Jahren|
 
-#### Interpretationshinweise 
-##### Erklärung zur Variablenausprägung "Bundesressorts"
+#### Erklärung zur Variablenausprägung "Bundesressorts"
 Umfasst Impfungen, die aus dem Impfkontingent des Bundes gemäß Coronavirus-Impfverordnung an Angehörige des Bundes verabreicht wurden. Eine Impfquote kann aufgrund einer fehlenden Nennerpopulation nicht berechnet werden, die Impfungen gehen allerdings in die Berechnung der Impfquote für Gesamtdeutschland mit ein.  
 Die entsprechenden Variablen sind deshalb um den Wert "NA" in ihrer Ausprägung ergänzt, was bei der Verarbeitung dieser Variablen berücksichtigt werden sollte. Gleiches gilt für die Variablen zu Kleinkindern (Alter 0 bis 4 Jahre).
 
-##### Erklärung zum Merkmal Impfstatus
+#### Erklärung zum Merkmal Impfstatus
 
 Die Gesamtzahl mindestens einmal Geimpfter (min1) umfasst alle Meldungen, für die in den Daten des DIM die Impfserie ```1``` angegeben ist. Als Impfserie ```1``` gelten Erstimpfungen mit den in Deutschland zugelassenen und verfügbaren Impfstoffen.  
 Darüber hinaus gelten alle Personen als grundimmunisiert (gi), für die in den Daten des DIM die Impfserie ```2``` bzw. ```3``` - je nach Impfschema - angegeben ist. Darunter zählen Zweit- bzw. Drittimpfungen (gemäß Impfschema) in Deutschland und Impfungen nach Genesung.  
 Als Personen mit erster, zweiter, dritter bzw. vierter Auffrischimpfung (boost1, boost2, boost3, boost4) gelten Personen, die eine, zwei, drei oder vier weitere Impfungen nach abgeschlossener Grundimmunisierung erhalten haben. Diese werden mit Impfserie ```3```, ```4```, ```5``` bzw. ```6``` gemeldet. Auch für die Auffrischungsimpfungen gilt, dass diesen eine Impfung im Ausland vorrangegangen sein kann und in den Daten somit keine vorhergehende Impfserie ```1``` und Impfserie ```2``` gemeldet wurde.  
 
 Ziel des Impfquotenmonitorings ist es, eine Aussage zum Impfschutzniveau auf Bevölkerungsebene zu treffen. Die Datenerhebung folgt dieser Perspektive. Da vom DIM keine Daten zum Genesungsstatus oder bestehenden Impfungen im Ausland erhoben werden, ist in der Datenauswertung keine Aussage oder Berücksichtigung diesbezüglich möglich.
+  
 
-##### Unschärfen der Impfquoten
+#### Unschärfen der Impfquoten
 
 Da alle bis zum 26.01.22 von den Vertragsärzt:innen gemeldeten Jcovden-Impfungen ausschließlich als Zweit bzw. erste Auffrischimpfungen gemeldet wurden aber unklar ist, wie viele tatsächliche Erst- oder Zweitimpfungen darunter waren, wird die Impfquote der Grundimmunisierten systematisch zu hoch ausgewiesen.  
 
 Da nicht rekonstruierbar ist, wie in den Meldeportalen von PVS und KBV die empfohlenen Folgeimpfungen nach einmaliger Jcovden-Impfung gemeldet wurden, bestehen weitere Unschärfen bei den Quoten der Grundimmunisierung und der ersten Auffrischimpfungen.  
 
-##### Gesonderte Ausweisung der Kinderimpfungen bei 0-11-Jährigen
+#### Gesonderte Ausweisung der Kinderimpfungen bei 0-11-Jährigen
 
 Seit dem 21.12.2021 werden Kinderimpfungen bei 5-11-Jährigen gesondert ausgewiesen. Bis einschließlich 20.12.2021 wurden alle Kinderimpfungen der Altersgruppe 12-17 Jahre zugewiesen.  
 Seit dem xx.xx.2022 werden Kinderimpfungen bei 0-4-Jährigen gesondert ausgewiesen. Bis einschließlich xx-1.xx.2022 wurden alle Kinderimpfungen der Altersgruppe 0-4 Jahre der Altersgruppe 5-11 Jahre zugewiesen.  
 
-#### Formatierung 
-Die Daten sind im Datensatz als kommaseparierte .csv Datei enthalten. Der verwendete Zeichensatz der .csv Datei ist UTF-8. Trennzeichen der einzelnen Werte ist ein Komma ",".
-
-- Zeichensatz: UTF-8
-- .csv Trennzeichen: Komma ","
-
-### Metadaten
-
-Zur Erhöhung der Auffindbarkeit sind die bereitgestellten Daten mit Metadaten beschrieben. Über GitHub Actions werden Metadaten an die entsprechenden Plattformen verteilt. Für jede Plattform existiert eine spezifische Metadatendatei, diese sind im Metadaten-Ordner hinterlegt:
-[Metadaten/](/Metadaten/)  
-Versionierung und DOI-Vergabe erfolgt über [Zenodo](https://zenodo.org). Die für den Import in Zenodo bereitgestellten Metadaten sind in der [zenodo.json](/Metadaten/zenodo.json) hinterlegt. Die Dokumentation der einzelnen Metadatenvariablen ist unter https://developers.zenodo.org/#representation nachlesbar.   
-
-> [Metadaten/zenodo.json](/Metadaten/zenodo.json)  
-
-Neben der Beschreibung bibliographischer Metadaten, in der .zenodo.json, wird das Datenschema der Impfdaten bereitgestellt:  
-
-> [Kontextmaterialien/Datenschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Kontextmaterialien/Datenschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json)  
-> [Kontextmaterialien/Datenschema_Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Kontextmaterialien/Datenschema_Deutschland_Landkreise_COVID-19-Impfungen.json)  
-
-Im Datenschema aufgeführt sind die in den Impfdaten enthaltenen Variablen sowie deren Ausprägungen.  
-
 ## Hinweise zur Nachnutzung der Daten
 
-Offene Forschungsdaten des RKI werden auf GitHub.com und Zenodo.org bereitgestellt:
-* https://github.com/robert-koch-institut
-* https://zenodo.org/communities/robertkochinstitut
+Offene Forschungsdaten des RKI werden auf GitHub.com, Zenodo.org und Edoc.rki.de bereitgestellt:  
+
+* https://github.com/robert-koch-institut  
+* https://zenodo.org/communities/robertkochinstitut  
+* https://edoc.rki.de/  
 
 ### Lizenz
 
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>.  
 
 Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede:r hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](/LICENSE) bzw. [LIZENZ](/LIZENZ) Datei des Datensatzes.  
+
+Die empfohlene Zitierweise ist:  
+
+Robert Koch-Institut (2021): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.5126652](http://doi.org/10.5281/zenodo.5126652).
+
