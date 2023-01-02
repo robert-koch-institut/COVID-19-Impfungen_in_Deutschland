@@ -25,7 +25,7 @@ Daniel Wesseler (Datenmanagement)
 
 ---
 
-Robert Koch-Institut (2023): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7495033](https://doi.org/10.5281/zenodo.7495033).  
+Robert Koch-Institut (2023): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7498573](https://doi.org/10.5281/zenodo.7498573).  
 
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License |](https://creativecommons.org/licenses/by/4.0/deed.de) <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/legalcode.de">CC-BY 4.0 International</a>
 
