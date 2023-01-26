@@ -107,7 +107,7 @@ Die Rohdaten der einzelnen Datenquellen werden für den Auswertungs-Datensatz au
 3. Zuweisung der BundeslandID oder LandkreisID des Impfortes  
 4. Ausschluss von Datensätzen ohne Angabe des Impfzentrums (nur DIM)
 5. Ausschluss von Datensätzen bei einer Altersangabe kleiner "2" vor dem 07.11.2022 oder eines unbekannten Alters (nur DIM)  
-6. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022, Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022 und dem Omikron BA.4-5 angepassten Impfstoff von Moderna vor dem 28.11.2022 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
+6. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, VidPrevtyn Beta vor dem 16.01.2023, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022, Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022 und dem Omikron BA.4-5 angepassten Impfstoff von Moderna vor dem 28.11.2022 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
 7. Erkennung von Sammelpatienten:innen und Auswahl der aktuellsten Datensätze je Pseudonym/Sammelpatienten:innen und Impfdatum (nur DIM)  
 8. Prüfung auf inhaltliche Konsistenz und ggf. Korrekturen (nur DIM)  
 9. Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
@@ -210,11 +210,9 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 |Impfserie| Natürliche Zahl | ```1```: erste Impfung <br/> ```2```: zweite Impfung <br/> ```3```: dritte Impfung <br/> ```4```: vierte Impfung <br/> ```5```: fünfte Impfung <br/> ```6```: sechste Impfung | Angabe zur Stellung innerhalb der Impfserie | 
 |Anzahl| Natürliche Zahl | ```≥1``` | Anzahl der Impfungen in der Impfgruppe |
 
-Der Impfstoff VidPrevtyn Beta von Sanofi Pasteur ist voraussichtlich ab KW 3 2023 verfügbar.  
-
 Aus der angegebenen Impfserie und dem für den Impfsoff verwendeten Impfschema leitet sich ab, ob eine Person grundimmunisiert ist und um die wie vielte Auffrischimpfung es sich handelt. Nach aktuellem Stand werden für die Ausprägung "Comirnaty-Kleinkinder" im Impfstoff drei Impfdosen für die Grundimmunisierung  benötigt, alle anderen Impfstoffe benötigen zwei Impfdosen. Zu berücksichtigen ist, dass Zweitimpfungen mit dem Jcovden-Impfstoff aus dem **KBV-Datenpaket**  bzw. Impfungen mit der Abrechnungsziffer für Jcovden-Impfstoff aus den **Abrechnungsdaten der KVen**, die vor dem 27.01.2022 erfolgten, mit Impfserie 1 ausgewiesen werden.  
 
-Ist die Anzahl an Impfungen einer Impfgruppe mit Impfstoff "Comirnaty-Kleinkinder" an einem Tag kleiner als fünf, werden an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit Impfstoff "Comirnaty-Kleinkinder" mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.
+Ist die Anzahl an Impfungen einer Impfgruppe mit Impfstoff "Comirnaty-Kleinkinder" bzw. "VidPrevtyn Beta" an einem Tag kleiner als fünf, werden an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit Impfstoff "Comirnaty-Kleinkinder" bzw. "VidPrevtyn Beta" mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von fünf übersteigt.
 
 ## COVID-19 Impfdaten auf Ebene der Landkreise 
 
