@@ -24,10 +24,9 @@ Daniel Wesseler (Datenmanagement)
 [Hannes Wuensche](https://orcid.org/0000-0002-8837-0326) (Datenkuration)  
 
 ---
+### ⚠️Vorerst keine weitere Aktualisierung der Datensätze⚠️  
 
-Robert Koch-Institut (2023): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.7809904](http://doi.org/10.5281/zenodo.7809904).  
-
-Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/deed.de) | [CC-BY 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)
+Mit dem Auslaufen der CoronaImpfV am 07. April 2023 wird die tägliche Aktualisierung des COVID-19-Impfquotenmonitorings eingestellt und die Berichterstattung zunächst pausiert. Mit Inkrafttreten der COVID-19-VorsorgeV am 8. April 2023 wird das RKI die Aktualisierungsfrequenz des Impfquotenmonitorings an die Meldefrequenz in der COVID-19-VorsorgeV anpassen und voraussichtlich ab Mai das Update der Impfdaten in angepasster Form und Frequenz wieder aufnehmen.
 
 ## Informationen zum Datensatz und Entstehungskontext  
 
@@ -377,5 +376,4 @@ Offene Forschungsdaten des RKI werden auf GitHub.com, Zenodo.org und Edoc.rki.de
 Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/deed.de) | [CC-BY 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/legalcode.de)
 
 Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede:r hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](/LICENSE) bzw. [LIZENZ](/LIZENZ) Datei des Datensatzes.  
-
 
