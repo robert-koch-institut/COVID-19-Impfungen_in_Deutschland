@@ -1,0 +1,297 @@
+{
+  "data": {
+    "type": "studyhub_resources",
+    "attributes": {
+      "commit_button": "Submit",
+      "content_blobs": [
+        {
+          "content_type": "text/html",
+          "url": "https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland",
+          "original_filename": "Github Link"
+        }
+      ],
+      "resource": {
+        "resource_type": "Dataset",
+        "resource_type_general": "Dataset",
+        "resource_titles": [
+          {
+            "title": "COVID-19-Impfungen in Deutschland",
+            "title_language": "DE (German)"
+          }
+        ],
+        "resource_acronyms": [],
+        "resource_descriptions": [
+          {
+            "description": "Die COVID-19-Impfung kann einen Wendepunkt in der Kontrolle der COVID-19-Pandemie darstellen und erfährt daher hohes Maß an öffentlicher Aufmerksamkeit. Einführung und Umsetzung der COVID-19-Impfung gehen mit besonderen Herausforderungen einher, die bei der Impfdatenerfassung zu berücksichtigen sind. In diesem Kontext ist es Ziel des Projekts 'Digitales Impfquoten-Monitoring' (DIM), tagesaktuell, bundesweit die Impfquote zu erfassen und folgend aufbereitet darzustellen, um zeitnah den Verlauf der COVID-19-Impfkampanne zu analysieren, bei Bedarf nach zusteuern, und logistisch bzw. organisatorische Konsequenzen zu ziehen. Der durch das DIM-Projekt bereitgestellte Datensatz enthält Daten über den Verlauf der COVID-19 Impfungen in Deutschland. Die hier veröffentlichten Impfdaten aggregieren Daten aus drei Datenquellen:\n\n- Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden\n\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Kassenärztliche Bundesvereinigung (KBV)\n\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Privatärztliche Bundesvereinigung (PBV)  ",
+            "description_language": "DE (German)"
+          }
+        ],
+        "resource_format": "",
+        "resource_keywords": [
+          {
+            "resource_keywords_label": "COVID-19",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "SARS-CoV-2",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Vakzination",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Impfschutz-Deckungsgrad",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Massenimpfung",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Deutschland",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Vaccination",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Vaccination Coverage",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Mass Vaccination",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Germany",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "RKI",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Gesundheitsberichterstattung",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Epidemiologie",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Public health surveillance",
+            "resource_keywords_label_code": ""
+          },
+          {
+            "resource_keywords_label": "Epidemiology",
+            "resource_keywords_label_code": ""
+          }
+        ],
+        "resource_language": [
+          "DE (German)"
+        ],
+        "resource_version": "2023-04-08",
+        "resource_web_page": "https://robert-koch-institut.github.io/COVID-19-Impfungen_in_Deutschland/",
+        "resource_use_rights_label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)",
+        "resource_use_rights_description": "",
+        "resource_use_rights_authors_confirmation_1": true,
+        "resource_use_rights_authors_confirmation_2": true,
+        "resource_use_rights_authors_confirmation_3": true,
+        "resource_use_rights_support_by_licencing": true,
+        "provenance": {
+          "data_source": ""
+        },
+        "roles": [
+          {
+            "role_type": "Project leader",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Anette",
+            "role_name_personal_family_name": "Siedler",
+            "role_name_identifiers": [
+              {
+                "role_name_identifier": "0000-0002-6359-1018",
+                "role_name_identifier_scheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "role_type": "Researcher",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Thorsten",
+            "role_name_personal_family_name": "Rieck",
+            "role_name_identifiers": [
+              {
+                "role_name_identifier": "0000-0002-8799-8744",
+                "role_name_identifier_scheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "role_type": "Researcher",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Annika",
+            "role_name_personal_family_name": "Steffen",
+            "role_name_identifiers": [
+              {
+                "role_name_identifier": "0000-0003-4072-9245",
+                "role_name_identifier_scheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "role_type": "Researcher",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Nita",
+            "role_name_personal_family_name": "Perumal",
+            "role_name_identifiers": []
+          },
+          {
+            "role_type": "Project manager",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Lei",
+            "role_name_personal_family_name": "Mao",
+            "role_name_identifiers": [
+              {
+                "role_name_identifier": "0000-0002-8356-755X",
+                "role_name_identifier_scheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "role_type": "Project leader",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Hermann",
+            "role_name_personal_family_name": "Claus",
+            "role_name_identifiers": [
+              {
+                "role_name_identifier": "0000-0002-0120-1846",
+                "role_name_identifier_scheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "role_type": "Data manager",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Constantin",
+            "role_name_personal_family_name": "Fischer",
+            "role_name_identifiers": []
+          },
+          {
+            "role_type": "Data manager",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Sven",
+            "role_name_personal_family_name": "Schroeder",
+            "role_name_identifiers": []
+          },
+          {
+            "role_type": "Data curator",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Hannes",
+            "role_name_personal_family_name": "Wuensche",
+            "role_name_identifiers": [
+              {
+                "role_name_identifier": "0000-0002-8837-0326",
+                "role_name_identifier_scheme": "ORCID"
+              }
+            ]
+          },
+          {
+            "role_type": "Creator/Author",
+            "role_email": "",
+            "role_phone": "",
+            "role_affiliation_address": "",
+            "role_affiliation_web_page": "",
+            "role_affiliation_identifiers": [],
+            "role_name_type": "Personal",
+            "role_name_personal_title": "Other",
+            "role_name_personal_given_name": "Fachgebiet 33",
+            "role_name_personal_family_name": "Robert Koch-Institut",
+            "role_name_identifiers": []
+          }
+        ],
+        "ids": [
+          {
+            "id_identifier": "https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland",
+            "id_date": "",
+            "id_type": "URL",
+            "id_relation_type": "describes",
+            "id_resource_type_general": "Dataset"
+          },
+          {
+            "id_identifier": "10.5281/zenodo.7809904",
+            "id_date": "",
+            "id_type": "DOI",
+            "id_relation_type": "has part",
+            "id_resource_type_general": "Dataset"
+          }
+        ]
+      }
+    },
+    "relationships": {
+      "projects": {
+        "data": [
+          {
+            "id": "1",
+            "type": "projects"
+          }
+        ]
+      }
+    }
+  }
+}

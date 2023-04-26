@@ -1,15 +1,6 @@
 {
   "title": "COVID-19-Impfungen in Deutschland",
-  "description": "Die COVID-19-Impfung kann einen Wendepunkt in der Kontrolle der COVID-19-Pandemie darstellen und erfährt daher hohes Maß an öffentlicher Aufmerksamkeit. Einführung und Umsetzung der COVID-19-Impfung gehen mit besonderen Herausforderungen einher, die bei der Impfdatenerfassung zu berücksichtigen sind. In diesem Kontext ist es Ziel des Projekts 'Digitales Impfquoten-Monitoring' (DIM), tagesaktuell, bundesweit die Impfquote zu erfassen und folgend aufbereitet darzustellen, um zeitnah den Verlauf der COVID-19-Impfkampanne zu analysieren, bei Bedarf nach zusteuern, und logistisch bzw. organisatorische Konsequenzen zu ziehen.<p>Der durch das DIM-Projekt bereitgestellte Datensatz enthält Daten über den Verlauf der COVID-19 Impfungen in Deutschland. Die hier veröffentlichten Impfdaten aggregieren Daten aus drei Datenquellen:</p><ul><li>Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden</li><li>Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Kassenärztliche Bundesvereinigung (KBV)</li><li>Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Privatärztliche Bundesvereinigung (PBV)</li></ul>",
-  "upload_type": "dataset",
-  "access_right": "open",
-  "license": "cc-by",
-  "language": "deu",
-  "communities": [
-    {
-      "identifier": "robertkochinstitut"
-    }
-  ],
+  "description": "Die COVID-19-Impfung kann einen Wendepunkt in der Kontrolle der COVID-19-Pandemie darstellen und erfährt daher hohes Maß an öffentlicher Aufmerksamkeit. Einführung und Umsetzung der COVID-19-Impfung gehen mit besonderen Herausforderungen einher, die bei der Impfdatenerfassung zu berücksichtigen sind. In diesem Kontext ist es Ziel des Projekts 'Digitales Impfquoten-Monitoring' (DIM), tagesaktuell, bundesweit die Impfquote zu erfassen und folgend aufbereitet darzustellen, um zeitnah den Verlauf der COVID-19-Impfkampanne zu analysieren, bei Bedarf nach zusteuern, und logistisch bzw. organisatorische Konsequenzen zu ziehen. Der durch das DIM-Projekt bereitgestellte Datensatz enthält Daten über den Verlauf der COVID-19 Impfungen in Deutschland. Die hier veröffentlichten Impfdaten aggregieren Daten aus drei Datenquellen:<br>\n<br>\n- Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden<br>\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Kassenärztliche Bundesvereinigung (KBV)<br>\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Privatärztliche Bundesvereinigung (PBV)  ",
   "creators": [
     {
       "name": "Robert Koch-Institut, Fachgebiet 33",
@@ -20,37 +11,37 @@
     {
       "name": "Siedler, Anette",
       "affiliation": "Robert Koch-Institut",
-      "orcid": "0000-0002-6359-1018",
-      "type": "ProjectLeader"
+      "type": "ProjectLeader",
+      "orcid": "0000-0002-6359-1018"
     },
     {
       "name": "Rieck, Thorsten",
       "affiliation": "Robert Koch-Institut",
-      "orcid": "0000-0002-8799-8744",
-      "type": "Researcher"
+      "type": "Researcher",
+      "orcid": "0000-0002-8799-8744"
     },
     {
-      "name": "Steffen,Annika ",
+      "name": "Steffen, Annika",
       "affiliation": "Robert Koch-Institut",
-      "orcid": "0000-0003-4072-9245",
-      "type": "Researcher"
+      "type": "Researcher",
+      "orcid": "0000-0003-4072-9245"
     },
     {
-      "name": "Perumal, Nita ",
+      "name": "Perumal, Nita",
       "affiliation": "Robert Koch-Institut",
       "type": "Researcher"
     },
     {
       "name": "Mao, Lei",
       "affiliation": "Robert Koch-Institut",
-      "orcid": "0000-0002-8356-755X",
-      "type": "ProjectManager"
+      "type": "ProjectManager",
+      "orcid": "0000-0002-8356-755X"
     },
     {
       "name": "Claus, Hermann",
       "affiliation": "Robert Koch-Institut",
-      "orcid": "0000-0002-0120-1846",
-      "type": "ProjectLeader"
+      "type": "ProjectLeader",
+      "orcid": "0000-0002-0120-1846"
     },
     {
       "name": "Fischer, Constantin",
@@ -65,8 +56,8 @@
     {
       "name": "Wuensche, Hannes",
       "affiliation": "Robert Koch-Institut",
-      "orcid": "0000-0002-8837-0326",
-      "type": "DataCurator"
+      "type": "DataCurator",
+      "orcid": "0000-0002-8837-0326"
     }
   ],
   "keywords": [
@@ -81,6 +72,17 @@
     "Mass Vaccination",
     "Germany",
     "RKI"
+  ],
+  "publication_date": "2023-04-08",
+  "version": "2023-04-08",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "CC-BY-4.0",
+  "language": "deu",
+  "communities": [
+    {
+      "identifier": "robertkochinstitut"
+    }
   ],
   "subjects": [
     {
@@ -100,20 +102,26 @@
       "identifier": "info:ddc/22/eng//614.4"
     }
   ],
-  "publication_date": "2023-04-08T08:53:47+02:00",
-  "version": "2023-04-08",
-  "dates": [
-    {
-      "start": "2020-12-27",
-      "end": "2023-04-08",
-      "type": "Collected"
-    }
-  ],
   "related_identifiers": [
     {
       "relation": "isSupplementTo",
       "identifier": "https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland",
       "resource_type": "dataset"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/Readme.md",
+      "resource_type": "publication-report"
+    },
+    {
+      "relation": "isDocumentedBy",
+      "identifier": "https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/master/[Dokumentation]_COVID-19-Impfungen_in_Deutschland.pdf",
+      "resource_type": "publication-report"
+    },
+    {
+      "relation": "isDescribedBy",
+      "identifier": "https://robert-koch-institut.github.io/COVID-19-Impfungen_in_Deutschland/",
+      "resource_type": "other"
     }
   ]
 }
