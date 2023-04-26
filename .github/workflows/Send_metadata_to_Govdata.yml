@@ -1,0 +1,44 @@
+name: Send metadata to Govdata
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'Metadaten/**.ttl'
+jobs:
+  Push_Govdata_ttl:
+    name: Push metadata to Govdata-Repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Rename ttl with reponame
+        run: cp Metadaten/govdata.ttl Metadaten/${{ github.event.repository.name }}.ttl
+        
+      - name: Push dataset ttl to Govdata repository
+        id: pushStep1
+        continue-on-error: true
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GOVDATA_TOKEN }}
+        with:
+          source_file: 'Metadaten/${{ github.event.repository.name }}.ttl'
+          destination_repo: 'robert-koch-institut/Metadaten_fuer_GovData'
+          destination_folder: 'Datensaetze'
+          commit_message: 'adding ${{ github.event.repository.name }}.ttl'
+          user_email: 'opendata@rki.de'
+          user_name: 'RKIOpenData'
+          
+      - name: Retry push dataset ttl to Govdata repository
+        id: pushStep2
+        if: steps.pushStep1.outcome == 'failure'
+        uses: dmnemec/copy_file_to_another_repo_action@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.GOVDATA_TOKEN }}
+        with:
+          source_file: 'Metadaten/${{ github.event.repository.name }}.ttl'
+          destination_repo: 'robert-koch-institut/Metadaten_fuer_GovData'
+          destination_folder: 'Datensaetze'
+          commit_message: 'adding ${{ github.event.repository.name }}.ttl'
+          user_email: 'opendata@rki.de'
+          user_name: 'RKIOpenData'

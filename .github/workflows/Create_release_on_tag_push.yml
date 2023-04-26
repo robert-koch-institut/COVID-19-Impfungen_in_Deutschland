@@ -1,0 +1,30 @@
+name: Create release on tag push
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+ push:
+  tags:
+    - '[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  Release:
+    name: Create Release
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository    
+        uses: actions/checkout@v3
+
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+        with:
+          tag_name: ${{github.ref_name}}
+          release_name: Datenstand ${{github.ref_name}}
+          body: Datenstand ${{github.ref_name}} inklusive aktualisierter Metadaten
+          draft: false
+          prerelease: false
