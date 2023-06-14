@@ -1,9 +1,9 @@
 {
   "title": "COVID-19-Impfungen in Deutschland",
-  "description": "Die COVID-19-Impfung kann einen Wendepunkt in der Kontrolle der COVID-19-Pandemie darstellen und erfährt daher hohes Maß an öffentlicher Aufmerksamkeit. Einführung und Umsetzung der COVID-19-Impfung gehen mit besonderen Herausforderungen einher, die bei der Impfdatenerfassung zu berücksichtigen sind. In diesem Kontext ist es Ziel des Projekts 'Digitales Impfquoten-Monitoring' (DIM), tagesaktuell, bundesweit die Impfquote zu erfassen und folgend aufbereitet darzustellen, um zeitnah den Verlauf der COVID-19-Impfkampanne zu analysieren, bei Bedarf nach zusteuern, und logistisch bzw. organisatorische Konsequenzen zu ziehen. Der durch das DIM-Projekt bereitgestellte Datensatz enthält Daten über den Verlauf der COVID-19 Impfungen in Deutschland. Die hier veröffentlichten Impfdaten aggregieren Daten aus drei Datenquellen:<br>\n<br>\n- Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden<br>\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Kassenärztliche Bundesvereinigung (KBV)<br>\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Privatärztliche Bundesvereinigung (PBV)  ",
+  "description": "Die COVID-19-Impfung kann einen Wendepunkt in der Kontrolle der COVID-19-Pandemie darstellen und erfährt daher hohes Maß an öffentlicher Aufmerksamkeit. Einführung und Umsetzung der COVID-19-Impfung gehen mit besonderen Herausforderungen einher, die bei der Impfdatenerfassung zu berücksichtigen sind. In diesem Kontext ist es Ziel des Projekts 'Digitales Impfquoten-Monitoring' (DIM), tagesaktuell, bundesweit die Impfquote zu erfassen und folgend aufbereitet darzustellen, um zeitnah den Verlauf der COVID-19-Impfkampanne zu analysieren, bei Bedarf nach zusteuern, und logistisch bzw. organisatorische Konsequenzen zu ziehen.<br>\n<br>\nDer durch das DIM-Projekt bereitgestellte Datensatz enthält Daten über den Verlauf der COVID-19 Impfungen in Deutschland. Die hier veröffentlichten Impfdaten aggregieren Daten aus drei Datenquellen:<br>\n<br>\n- Die DIM-Daten enthalten Angaben der Impfzentren, mobilen Impfteams, Krankenhäuser und der Betriebsärzte_innen, die über die DIM-Webanwendung übermittelt werden<br>\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Kassenärztliche Bundesvereinigung (KBV)<br>\n- Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die Privatärztliche Bundesvereinigung (PBV)",
   "creators": [
     {
-      "name": "Robert Koch-Institut, Fachgebiet 33",
+      "name": "Robert Koch-Institut",
       "affiliation": "Robert Koch-Institut"
     }
   ],
@@ -13,6 +13,18 @@
       "affiliation": "Robert Koch-Institut",
       "type": "ProjectLeader",
       "orcid": "0000-0002-6359-1018"
+    },
+    {
+      "name": "Mao, Lei",
+      "affiliation": "Robert Koch-Institut",
+      "type": "ProjectManager",
+      "orcid": "0000-0002-8356-755X"
+    },
+    {
+      "name": "Claus, Hermann",
+      "affiliation": "Robert Koch-Institut",
+      "type": "ProjectLeader",
+      "orcid": "0000-0002-0120-1846"
     },
     {
       "name": "Rieck, Thorsten",
@@ -32,29 +44,17 @@
       "type": "Researcher"
     },
     {
-      "name": "Mao, Lei",
-      "affiliation": "Robert Koch-Institut",
-      "type": "ProjectManager",
-      "orcid": "0000-0002-8356-755X"
-    },
-    {
-      "name": "Claus, Hermann",
-      "affiliation": "Robert Koch-Institut",
-      "type": "ProjectLeader",
-      "orcid": "0000-0002-0120-1846"
-    },
-    {
       "name": "Fischer, Constantin",
       "affiliation": "Robert Koch-Institut",
       "type": "DataManager"
     },
     {
-      "name": "Schroeder, Sven",
+      "name": "Schröder, Sven",
       "affiliation": "Robert Koch-Institut",
       "type": "DataManager"
     },
     {
-      "name": "Wuensche, Hannes",
+      "name": "Wünsche, Hannes",
       "affiliation": "Robert Koch-Institut",
       "type": "DataCurator",
       "orcid": "0000-0002-8837-0326"
@@ -66,15 +66,17 @@
     "Vakzination",
     "Impfschutz-Deckungsgrad",
     "Massenimpfung",
-    "Deutschland",
     "Vaccination",
     "Vaccination Coverage",
     "Mass Vaccination",
-    "Germany",
-    "RKI"
+    "Open Data",
+    "Offene Daten",
+    "RKI",
+    "Deutschland",
+    "Germany"
   ],
-  "publication_date": "2023-04-08",
-  "version": "2023-04-08",
+  "publication_date": "2023-06-14",
+  "version": "2023-06-14",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "CC-BY-4.0",
