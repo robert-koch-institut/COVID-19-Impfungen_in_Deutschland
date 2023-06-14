@@ -1,0 +1,92 @@
+name: Sync Github Open Data repository and its metadata to OpenCoDE.de
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Create release on tag push"]
+    types:
+      - completed
+      
+env:    
+  # OpenCoDE Metadata 
+  GROUP_ID: 2781
+  ACCESS_USER: RKIOpenData
+      
+  # The repository name must not start or end with a special character and must not contain consecutive special characters
+  REPO_PATH: ${{ github.event.repository.name }} 
+  ZENODOJSON_PATH: Metadaten/zenodo.json
+
+jobs:
+  sync_metadata_to_opencode:
+    name: Sync Open Data metadata to OpenCoDE
+    runs-on: ubuntu-latest
+    outputs:
+      GROUP_PATH: ${{ steps.group_path.outputs.GROUP_PATH }}
+    steps:
+    
+      # Get OpenCoDE group path from the OpenCoDE API
+      - name: Get OpencoDE group path
+        id: group_path
+        run: | 
+            GROUP_INFO=$(curl \
+              --request GET "https://gitlab.opencode.de/api/v4/groups/$GROUP_ID" \
+              --header "PRIVATE-TOKEN: ${{ secrets.OPENCODE_TOKEN }}")
+            
+            # Add metadata to enviroment 
+            echo "GROUP_PATH="$(echo $GROUP_INFO | jq -r '.path')"" >> $GITHUB_OUTPUT
+      
+      # Get metadata on name, description and keywords from the zenodo.json   
+      - name: Get zenodo.json metadata from Github Open Data repository
+        run: |          
+           ZENODOJSON_URL=$(curl \
+            --request GET https://api.github.com/repos/${{ github.repository }}/contents/${{ env.ZENODOJSON_PATH }} \
+            --header "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            --header "Accept: application/vnd.github.mercy-preview+json" \
+            | jq -r '.download_url')
+           
+           # Add Zenodo metadata to enviroment 
+           echo "REPO_NAME="$(curl $ZENODOJSON_URL | jq -r '.title')"" >> $GITHUB_ENV 
+           echo "DESCRIPTION="$(curl $ZENODOJSON_URL | jq -r '.description')"" >> $GITHUB_ENV
+           echo "TOPICS="$(curl $ZENODOJSON_URL| jq -r '.keywords | join(",")')"" >> $GITHUB_ENV
+     
+                          
+      - name: Create OpenCoDE repository and update repository metadata
+        run: |
+            # Create OpenCoDE repository
+            curl \
+              --request POST "https://gitlab.opencode.de/api/v4/projects" \
+              --header "PRIVATE-TOKEN: ${{ secrets.OPENCODE_TOKEN }}" \
+              --data-urlencode  "path=${{ env.REPO_PATH }}" \
+              --data-urlencode  "namespace_id=${{ env.GROUP_ID }}"
+              
+            # Update OpenCoDE repository metadata
+            response=$(curl \
+              --request PUT "https://gitlab.opencode.de/api/v4/projects/${{ steps.group_path.outputs.GROUP_PATH }}%2F${{ env.REPO_PATH }}" \
+              --header "PRIVATE-TOKEN: ${{ secrets.OPENCODE_TOKEN }}" \
+              --data-urlencode  "name=${{ env.REPO_NAME }}" \
+              --data-urlencode  "description=${{ env.DESCRIPTION }}" \
+              --data-urlencode  "topics=${{ env.TOPICS }}" \
+              --data-urlencode  "visibility=public") 
+      
+  sync_data_to_opencode:
+    name: Sync Github Open Data repository data to OpenCoDE
+    needs: sync_metadata_to_opencode
+    runs-on: ubuntu-latest    
+    steps:
+    
+      # Clone Github Open Data repository into the action enviroment
+      - name: Checkout Github repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+          lfs: 'true'
+          ref: 'main'
+          fetch-depth: '0'
+          
+      # Force push latest Github Open Data repository status to OpenCoDE     
+      - name: Force push latest status to OpenCoDE 
+        run: |
+          git remote add opencode https://${{ env.ACCESS_USER  }}:${{ secrets.OPENCODE_TOKEN }}@gitlab.opencode.de/${{ needs.sync_metadata_to_opencode.outputs.GROUP_PATH }}/${{ env.REPO_PATH }}.git
+          git push opencode -f
+          
+          
