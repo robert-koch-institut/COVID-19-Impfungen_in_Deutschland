@@ -9,7 +9,7 @@ Nordufer 20
 [Anette Siedler](https://orcid.org/0000-0002-6359-1018) (Fachliche Leitung), [Thorsten Rieck](https://orcid.org/0000-0002-8799-8744) (Datenanalyse), [Annika Steffen](https://orcid.org/0000-0003-4072-9245) (Datenanalyse), Nita Perumal (Datenanalyse), Nathalie Pomijalski (Dokumentation)  
 
 **IT 4 | Softwarearchitektur und -entwicklung**  
-[Lei Mao](https://orcid.org/0000-0002-8356-755X) (Projektleitung), [Hermann Claus](https://orcid.org/0000-0002-0120-1846) (Technische Leitung), onstantin Fischer (Datenmanagement), Sven Schröder (Datenmanagement), Daniel Wesseler (Datenmanagement)  
+[Lei Mao](https://orcid.org/0000-0002-8356-755X) (Projektleitung), [Hermann Claus](https://orcid.org/0000-0002-0120-1846) (Technische Leitung), Constantin Fischer (Datenmanagement), Sven Schröder (Datenmanagement), Daniel Wesseler (Datenmanagement)  
 
 **MF 4 | Fach- und Forschungsdatenmanagement**  
 [Hannes Wuensche](https://orcid.org/0000-0002-8837-0326) (Datenkuration)  
