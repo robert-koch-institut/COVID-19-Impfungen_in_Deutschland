@@ -100,7 +100,7 @@
         "resource_language": [
           "DE (German)"
         ],
-        "resource_version": "2023-06-14",
+        "resource_version": "2023-07-11",
         "resource_web_page": "https://robert-koch-institut.github.io/COVID-19-Impfungen_in_Deutschland/",
         "resource_use_rights_label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)",
         "resource_use_rights_description": "",
@@ -280,7 +280,7 @@
             "id_resource_type_general": "Dataset"
           },
           {
-            "id_identifier": "10.5281/zenodo.8037608",
+            "id_identifier": "10.5281/zenodo.8135669",
             "id_date": "",
             "id_type": "DOI",
             "id_relation_type": "has part",
