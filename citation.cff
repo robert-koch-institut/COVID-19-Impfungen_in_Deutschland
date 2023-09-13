@@ -27,7 +27,7 @@ abstract: >-
 
   - Der täglich aggregierte Kerndatensatz der impfenden Ärzt_innen über die
   Privatärztliche Bundesvereinigung (PBV)
-date-released: '2023-08-08'
+date-released: '2023-09-13'
 keywords:
   - COVID-19
   - SARS-CoV-2
@@ -49,7 +49,8 @@ keywords:
 message: Cite me!
 url: https://robert-koch-institut.github.io/COVID-19-Impfungen_in_Deutschland/
 license: CC-BY-4.0
-doi: 10.5281/zenodo.8224075
+doi: 10.5281/zenodo.8341556
+version: '2023-09-13T17:16:17+02:00'
 authors:
   - name: Robert Koch-Institut
     email: info@rki.de
