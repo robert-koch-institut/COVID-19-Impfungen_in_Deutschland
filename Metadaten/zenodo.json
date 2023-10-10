@@ -75,8 +75,8 @@
     "Deutschland",
     "Germany"
   ],
-  "publication_date": "2023-09-13",
-  "version": "2023-09-13",
+  "publication_date": "2023-10-10",
+  "version": "2023-10-10",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "CC-BY-4.0",
@@ -106,8 +106,8 @@
   ],
   "dates": [
     {
-      "start": "2023-09-13T17:16:17+02:00",
-      "end": "2023-09-13T17:16:17+02:00",
+      "start": "2023-10-10T13:58:12+02:00",
+      "end": "2023-10-10T13:58:12+02:00",
       "type": "Collected",
       "description": "Date when the Dataset was created"
     }
