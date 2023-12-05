@@ -20,7 +20,7 @@
     ],
     "ids": [
       {
-        "identifier": "10.5281/zenodo.10221715",
+        "identifier": "10.5281/zenodo.10259037",
         "typeGeneral": "Dataset",
         "relationType": "A references B"
       },
@@ -103,7 +103,7 @@
         },
         "label": "CC BY 4.0 (Creative Commons Attribution 4.0 International)"
       },
-      "version": "2023-11-29"
+      "version": "2023-12-05"
     },
     "webpage": "https://robert-koch-institut.github.io/COVID-19-Impfungen_in_Deutschland/",
     "contributors": [
@@ -113,11 +113,9 @@
             "name": "Robert Koch-Institut"
           }
         ],
+        "groupType": "Creator/Author",
         "nameType": "Organisational",
-        "organisational": {
-          "name": "Robert Koch-Institut",
-          "type": "Creator/Author"
-        }
+        "groupName": "Robert Koch-Institut"
       },
       {
         "affiliations": [
