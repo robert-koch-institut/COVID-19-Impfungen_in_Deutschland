@@ -1,24 +1,15 @@
-name: Build and deploy OpenData-Website
-
+name: Manually build and deploy OpenData-Website
 on:
   workflow_dispatch:
-  workflow_run:
-    workflows: ["Create release on tag push"]
-    types:
-      - completed
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
-    name: Bulid and deploy OpenData Website
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    runs-on: ubuntu-latest
-    
     # Steps represent a sequence of tasks that will be executed as part of the job
+    runs-on: ubuntu-latest
     steps:  
-    - name: Bulid and deploy OpenData Website
-      uses: robert-koch-institut/OpenData-Website@main
-      with:
-        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   
+      - name: Bulid and deploy OpenData Website
+        uses: robert-koch-institut/OpenData-Website@main
+        with:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   

@@ -1,0 +1,40 @@
+name: OpenData Workfow for FAIR Data
+on:
+  push:
+    tags:
+      - '[0-9][0-9][0-9][0-9]-[0-1][0-9]-[0-3][0-9]'
+  #workflow_dispatch:
+
+jobs:
+  build:
+    uses: robert-koch-institut/OpenData-Workflows/.github/workflows/OpenData_Workflows.yml@main
+    with:
+      # Push to OpenCoDE
+      OPENCODE_ACTIVE: true
+      OPENCODE_GROUPID: 2781
+      OPENCODE_ACCESS_USER: RKIOpenData
+      OPENCODE_ZENODOJSON_PATH: Metadaten/zenodo.json
+      
+      # Push to GovData Repositoy
+      GOVDATA_ACTIVE: true
+      GOVDATA_DESTINATION_REPO: robert-koch-institut/Metadaten_fuer_GovData
+      
+      # Push to NFDI4Health
+      NFDI4HEALTH_ACTIVE: true
+      
+      #Build Open Data Website
+      WEBSITE_ACTIVE: true
+      
+    secrets:
+      # Token from GovData Repository
+      GOVDATA_GITHUB_TOKEN: ${{secrets.GOVDATA_TOKEN}}
+      
+      # Token from OpenCoDE Account
+      OPENCODE_TOKEN: ${{secrets.OPENCODE_TOKEN}}
+      
+      # NFDI4Health Credentials
+      NFDI4HEALTH_CLIENT_ID: CSH_RKI_CLIENT
+      NFDI4HEALTH_CLIENT_SECRET: ${{secrets.NFDI4HEALTH_SECRET}}
+      
+      # Github Token
+      GH_TOKEN: ${{secrets.GITHUB_TOKEN}}

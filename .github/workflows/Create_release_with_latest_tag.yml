@@ -1,0 +1,27 @@
+name: Manually create relese with latest tag
+on:
+  workflow_dispatch:
+  
+permissions:
+  contents: write
+  
+jobs:
+  create_release:
+    name: Create reslese 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          
+      - name: Get latest tag and set env
+        run: |
+          echo "LATEST_TAG=$(git describe --tags `git rev-list --tags --max-count=1`)" >> $GITHUB_ENV
+
+      - name: Create Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: robert-koch-institut/OpenData-Workflows/Create_release_on_tag_push@main
+        with:
+          REF_NAME: ${{ env.LATEST_TAG }}
