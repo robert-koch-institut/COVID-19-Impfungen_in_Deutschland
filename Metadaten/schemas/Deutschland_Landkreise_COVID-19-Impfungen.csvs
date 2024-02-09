@@ -1,0 +1,7 @@
+version 1.1
+@totalColumns 5
+Impfdatum: xDate
+LandkreisId_Impfort: regex("^(1[0-6]{1}|0[0-9]{1})[0-9]{3}$") or is("17000") or is("u")
+Altersgruppe: any("00-04", "05-11", "12-17", "18-59", "60+")
+Impfschutz: any("1", "2", "3", "4", "5", "6", "11")
+Anzahl: positiveInteger and range(5,*)

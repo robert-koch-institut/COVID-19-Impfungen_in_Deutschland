@@ -1,0 +1,7 @@
+version 1.1
+@totalColumns 5
+Impfdatum: xDate
+BundeslandId_Impfort: positiveInteger and range(1,17)
+Impfstoff: any("Comirnaty", "Comirnaty Omicron XBB.1.5", "Comirnaty Original/Omicron BA.1","Comirnaty Original/Omicron BA.4-5", "Comirnaty bivalent (Original/Omikron)", "Comirnaty-Kleinkinder","Jcovden", "Nuvaxovid", "Spikevax", "Spikevax bivalent (Original/Omikron)", "Spikevax bivalent Original/Omicron BA.1","Spikevax bivalent Original/Omicron BA.4-5", "Valneva", "Vaxzevria", "VidPrevtyn Beta")
+Impfserie: positiveInteger and range(1,*)
+Anzahl: positiveInteger

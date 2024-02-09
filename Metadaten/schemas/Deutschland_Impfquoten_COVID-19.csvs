@@ -1,0 +1,38 @@
+version 1.1
+@totalColumns 36
+Datum: xDate
+Bundesland: any("Baden-Württemberg", "Bayern","Berlin","Brandenburg","Bremen","Hamburg","Hessen","Mecklenburg-Vorpommern", "Niedersachsen", "Nordrhein-Westfalen", "Rheinland-Pfalz", "Saarland", "Sachsen", "Sachsen-Anhalt","Schleswig-Holstein","Thüringen", "Deutschland")
+BundeslandId_Impfort: positiveInteger and range(1,17)
+Impfungen_gesamt: positiveInteger
+Impfungen_gesamt_min1: positiveInteger
+Impfungen_gesamt_00bis04_min1: (positiveInteger and range(5,*)) or is("NA")
+Impfungen_gesamt_gi: positiveInteger
+Impfungen_gesamt_00bis04_gi: (positiveInteger and range(5,*)) or is("NA")
+Impfungen_gesamt_boost1: positiveInteger
+Impfungen_gesamt_boost2: positiveInteger
+Impfungen_gesamt_boost3: positiveInteger
+Impfungen_gesamt_boost4: positiveInteger
+Impfquote_gesamt_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_05bis17_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_05bis11_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_12bis17_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18plus_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18bis59_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_60plus_min1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_gesamt_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_05bis17_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_05bis11_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_12bis17_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18plus_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18bis59_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_60plus_gi: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_gesamt_boost1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_12bis17_boost1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18plus_boost1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18bis59_boost1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_60plus_boost1: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_gesamt_boost2: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_12bis17_boost2: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18plus_boost2: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_18bis59_boost2: regex("([0-9]+\.([0-9]{1}))") or is("NA")
+Impfquote_60plus_boost2: regex("([0-9]+\.([0-9]{1}))") or is("NA")
