@@ -101,13 +101,12 @@ Die Rohdaten der einzelnen Datenquellen werden für den Auswertungs-Datensatz au
 
 1. Grundlegende Validitätsprüfung der übermittelten Datensätze  
 2. Einheitliche Benennung der Impfstoffe  
-3. Zuweisung der BundeslandID oder LandkreisID des Impfortes  
-4. Ausschluss von Datensätzen ohne Angabe des Impfzentrums (nur DIM)
-5. Ausschluss von Datensätzen bei einer Altersangabe kleiner "2" vor dem 07.11.2022 oder eines unbekannten Alters (nur DIM)  
-6. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, VidPrevtyn Beta vor dem 16.01.2023, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022, Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022, dem Omikron BA.4-5 angepassten Impfstoff von Moderna vor dem 28.11.2022 und Comirnaty Omicron XBB.1.5 vor dem 15.09.2023 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
-7. Erkennung von Sammelpatient:innen und Auswahl der aktuellsten Datensätze je Pseudonym/Sammelpatient:innen und Impfdatum (nur DIM)  
-8. Prüfung auf inhaltliche Konsistenz und ggf. Korrekturen (nur DIM)  
-9. Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
+3. Zuweisung der BundeslandID oder LandkreisID des Impfortes (ggf. an Hand der meisten Wohnort-PLZs der geimpften Personen bei DIM, falls die impfende Stelle unbekannt ist)
+4. Ausschluss von Datensätzen bei einer Altersangabe kleiner "2" vor dem 07.11.2022 oder eines unbekannten Alters (nur DIM)  
+5. Ausschluss von Impfungen mit Nuvaxovid vor dem 25.02.2022, Valneva vor dem 13.09.2022, VidPrevtyn Beta vor dem 16.01.2023, Omikron BA.1-angepassten Impfstoffen von BioNTech/Pfizer und Moderna vor dem 07.09.2022, Omikron BA.4-5 angepassten Impfstoff von BioNTech/Pfizer vor dem 19.09.2022, dem Omikron BA.4-5 angepassten Impfstoff von Moderna vor dem 28.11.2022 und Comirnaty Omicron XBB.1.5 vor dem 15.09.2023 (da die Impfstoffe in Deutschland erst seit diesen Tagen zur Verfügung stehen)  
+6. Erkennung von Sammelpatient:innen und Auswahl der aktuellsten Datensätze je Pseudonym/Sammelpatient:innen und Impfdatum (nur DIM)  
+7. Prüfung auf inhaltliche Konsistenz und ggf. Korrekturen (nur DIM)  
+8. Filterung auf Impfdaten im Zeitraum vom 27.12.2020 bis zum vorhergehenden Tag  
 
 Die folgende Beschreibung des Vorgehens bezieht sich allein auf die Daten aus dem DIM-Portal:  
 
