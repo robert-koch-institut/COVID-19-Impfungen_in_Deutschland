@@ -16,7 +16,7 @@ Nordufer 20
 
 ---
 **Zitieren**  
-Robert Koch-Institut (2024): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.11230408](http://doi.org/10.5281/zenodo.11230408).  
+Robert Koch-Institut (2024): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.11365694](http://doi.org/10.5281/zenodo.11365694).  
 
 ## Einleitung
 
