@@ -9,21 +9,27 @@ jobs:
   build:
     uses: robert-koch-institut/OpenData-Workflows/.github/workflows/OpenData_Workflows.yml@main
     with:
+      # General Variables 
+      ZENODOJSON_PATH: Metadaten/zenodo.json
+    
       # Push to OpenCoDE
       OPENCODE_ACTIVE: true
       OPENCODE_GROUPID: 2781
       OPENCODE_ACCESS_USER: RKIOpenData
-      OPENCODE_ZENODOJSON_PATH: Metadaten/zenodo.json
       
       # Push to GovData Repositoy
       GOVDATA_ACTIVE: true
-      GOVDATA_DESTINATION_REPO: robert-koch-institut/Metadaten_fuer_GovData
+      GOVDATA_DESTINATION_REPO: RKIOpenData/Metadaten_fuer_GovData
       
       # Push to NFDI4Health
       NFDI4HEALTH_ACTIVE: true
       
       #Build Open Data Website
       WEBSITE_ACTIVE: true
+
+      #Update Github Details
+      GITHUB_DETAILS_ACTIVE: true
+          
       
     secrets:
       # Token from GovData Repository
@@ -38,3 +44,4 @@ jobs:
       
       # Github Token
       GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      GITHUB_METADATA_TOKEN: ${{secrets.ADMINISTRATION_TOKEN}}

@@ -1,0 +1,13 @@
+name: Manually update Github repository details
+on:
+  workflow_dispatch:
+
+jobs:
+  update-github-repository-details :
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Github repository details weith zenodo.json metadata
+        uses: robert-koch-institut/OpenData-Workflows/Update_details_on_Github@main
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_METADATA_TOKEN: ${{ secrets.ADMINISTRATION_TOKEN }}
