@@ -179,7 +179,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
-|Impfdatum |Datum | ```JJJJ-MM-TT``` | Datum der Impfungen
+|Impfdatum |Datum | ```JJJJ-MM-TT``` | Datum der Impfungen |
 | BundeslandId_Impfort | Text | ```01``` bis ```16``` : Bundesland ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
 |Impfstoff | Text | ```Vaxzevria```: AstraZeneca <br/> ```Spikevax```: Moderna <br/> ```Comirnaty```: BioNTech/Pfizer <br/> ```Jcovden```:&nbsp;Janssen&#8209;Cilag/Johnson&nbsp;&&nbsp;Johnson <br/> ```Nuvaxovid```: Novavax <br/> ```Valneva```: Valneva <br/> ```Comirnaty bivalent (Original/Omikron)```: BioNTech/Pfizer <br/> ```Comirnaty Original/Omicron BA.1```: BioNTech/Pfizer <br/> ```Comirnaty Original/Omicron BA.4-5```: BioNTech/Pfizer <br/> ```Spikevax bivalent (Original/Omikron)```: Moderna <br/> ```Spikevax bivalent Original/Omicron BA.1```: Moderna <br/> ```Spikevax bivalent Original/Omicron BA.4-5```: Moderna <br/> ```Comirnaty-Kleinkinder```: BioNTech/Pfizer <br/> ```VidPrevtyn Beta```: Sanofi Pasteur  <br/> ```Comirnaty Omicron XBB.1.5```: BioNTech/Pfizer | Verabreichter Impfstoff | 
 |Impfserie| Natürliche Zahl | ```1```: erste Impfung <br/> ```2```: zweite Impfung <br/> ```3```: dritte Impfung <br/> ```4```: vierte Impfung <br/> ```5```: fünfte Impfung <br/> ```6```: sechste und weitere Impfungen | Angabe zur Stellung innerhalb der Impfserie | 
@@ -229,7 +229,7 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
-|Impfdatum |Datum | ```JJJJ-MM-TT```| Datum der Impfungen
+|Impfdatum |Datum | ```JJJJ-MM-TT```| Datum der Impfungen |
 | LandkreisId_Impfort | Text | ```01001``` bis ```16077```: Landkreis ID <br/> ```17000``` : Bundesressorts <br/> ```u```: unbekannt | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden. |
 | Altersgruppe | Text | ```00-04```: Altersgruppe 0 bis 4 Jahre <br/> ```05-11```: Altersgruppe 5 bis 11 Jahre <br/> ```12-17```: Altersgruppe 12 bis 17 Jahre <br/>```18-59```: Altersgruppe 18 bis 59 Jahre <br/> ```60+```:&nbsp;Altersgruppe&nbsp;60&nbsp;Jahre&nbsp;und&nbsp;älter| Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV | 
 |Impfschutz| Natürliche Zahl | ```1```: Erstimpfung <br/> ```2```: Grundimmunisierung <br/> ```3```: erste Auffrischimpfung <br/> ```4```: zweite Auffrischimpfung <br/> ```5```: dritte Auffrischimpfung <br/> ```6```: vierte und weitere Auffrischimpfungen <br/> ```11```: fortgesetzte, aber nicht abgeschlossene Grundimmunisierung | Angabe zum Impfschutz <br/> Grundimmunisierung wird angenommen bei allen gemeldeten Zweitimpfungen, Impfungen mit Jcovden-Impfstoff bei niedergelassenen Ärzt:innen vor dem 27.01.2022 sowie allen gemeldeten Drittimpfungen mit Comirnaty ab dem 07.11.2022 in der Altersgruppe 0 bis 4 Jahre <br/> Fortgesetzte, aber nicht abgeschlossene Grundimmunisierungen entsprechen Impfungen zwischen der Erstimpfung und der Grundimmunisierung| 
@@ -282,7 +282,7 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 | Variable | Typ | Ausprägung | Beschreibung |
 | -------- | --- | ---------- | ------------ |
 |Datum |Datum | ```JJJJ-MM-TT``` | Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden |
-|Bundesland   | Text | ```Schleswig-Holstein``` <br/> ... <br/> ```Thüringen```  <br/> ```Deutschland``` | Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet
+|Bundesland   | Text | ```Schleswig-Holstein``` <br/> ... <br/> ```Thüringen```  <br/> ```Deutschland``` | Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet |
 | BundeslandId_Impfort | Text | ```01```&nbsp;bis&nbsp;```16```&nbsp;:&nbsp;Bundesland&nbsp;ID<br/> ```17``` : Bundesressorts  | Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden  |
 |Impfungen_gesamt | natürliche Zahl |  ```≥0``` | Gesamtzahl der aller verabreichten Impfungen|
 |Impfungen_gesamt_min1 | natürliche Zahl |  ```≥0``` | Gesamtzahl mindestens einmal Geimpfter |

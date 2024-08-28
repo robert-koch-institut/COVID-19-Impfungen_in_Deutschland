@@ -1,0 +1,29 @@
+{
+  "fields": [
+    {
+      "name": "Impfdatum",
+      "type": "date",
+      "constraints": {}
+    },
+    {
+      "name": "BundeslandId_Impfort",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfstoff",
+      "type": "string",
+      "constraints": {}
+    },
+    {
+      "name": "Impfserie",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Anzahl",
+      "type": "integer",
+      "constraints": {}
+    }
+  ]
+}

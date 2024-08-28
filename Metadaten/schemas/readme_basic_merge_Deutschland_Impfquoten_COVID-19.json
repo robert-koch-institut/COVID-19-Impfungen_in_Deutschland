@@ -1,0 +1,184 @@
+{
+  "fields": [
+    {
+      "name": "Datum",
+      "type": "date",
+      "constraints": {}
+    },
+    {
+      "name": "Bundesland",
+      "type": "string",
+      "constraints": {}
+    },
+    {
+      "name": "BundeslandId_Impfort",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_min1",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_00bis04_min1",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_gi",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_00bis04_gi",
+      "type": "string",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_boost1",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_boost2",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_boost3",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfungen_gesamt_boost4",
+      "type": "integer",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_gesamt_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_05bis17_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_05bis11_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_12bis17_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18plus_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18bis59_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_60plus_min1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_gesamt_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_05bis17_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_05bis11_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_12bis17_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18plus_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18bis59_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_60plus_gi",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_gesamt_boost1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_12bis17_boost1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18plus_boost1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18bis59_boost1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_60plus_boost1",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_gesamt_boost2",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_12bis17_boost2",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18plus_boost2",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_18bis59_boost2",
+      "type": "number",
+      "constraints": {}
+    },
+    {
+      "name": "Impfquote_60plus_boost2",
+      "type": "number",
+      "constraints": {}
+    }
+  ]
+}

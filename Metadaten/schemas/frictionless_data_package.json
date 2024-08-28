@@ -1,0 +1,34 @@
+{
+  "name": "covid-19-impfungen_in_deutschland",
+  "title": "COVID-19-Impfungen_in_Deutschland",
+  "description": "Frictionless data package. This package lists and describes all data files in this open data repository. For more information on frictionless data, see https://specs.frictionlessdata.io/ and https://framework.frictionlessdata.io/.",
+  "resources": [
+    {
+      "name": "deutschland_bundeslaender_covid-19-impfungen",
+      "type": "table",
+      "path": "../../Deutschland_Bundeslaender_COVID-19-Impfungen.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json"
+    },
+    {
+      "name": "deutschland_impfquoten_covid-19",
+      "type": "table",
+      "path": "../../Deutschland_Impfquoten_COVID-19.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json"
+    },
+    {
+      "name": "deutschland_landkreise_covid-19-impfungen",
+      "type": "table",
+      "path": "../../Deutschland_Landkreise_COVID-19-Impfungen.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json"
+    }
+  ]
+}
