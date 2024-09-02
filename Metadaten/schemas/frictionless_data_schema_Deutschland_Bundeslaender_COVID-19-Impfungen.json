@@ -3,7 +3,8 @@
     {
       "name": "Impfdatum",
       "type": "date",
-      "description": "Datum der Impfungen"
+      "description": "Datum der Impfungen",
+      "format": "%Y-%m-%d"
     },
     {
       "name": "BundeslandId_Impfort",
@@ -26,8 +27,7 @@
           "13",
           "14",
           "15",
-          "16",
-          "17"
+          "16"
         ]
       }
     },
@@ -37,21 +37,21 @@
       "description": "Verabreichter Impfstoff",
       "constraints": {
         "enum": [
+          "Vaxzevria",
+          "Spikevax",
           "Comirnaty",
-          "Comirnaty Omicron XBB.1.5",
-          "Comirnaty Original/Omicron BA.1",
-          "Comirnaty Original/Omicron BA.4-5",
-          "Comirnaty bivalent (Original/Omikron)",
-          "Comirnaty-Kleinkinder",
           "Jcovden",
           "Nuvaxovid",
-          "Spikevax",
+          "Valneva",
+          "Comirnaty bivalent (Original/Omikron)",
+          "Comirnaty Original/Omicron BA.1",
+          "Comirnaty Original/Omicron BA.4-5",
           "Spikevax bivalent (Original/Omikron)",
           "Spikevax bivalent Original/Omicron BA.1",
           "Spikevax bivalent Original/Omicron BA.4-5",
-          "Valneva",
-          "Vaxzevria",
-          "VidPrevtyn Beta"
+          "Comirnaty-Kleinkinder",
+          "VidPrevtyn Beta",
+          "Comirnaty Omicron XBB.1.5"
         ]
       }
     },
@@ -68,7 +68,7 @@
       "type": "integer",
       "description": "Anzahl der Impfungen in der Impfgruppe",
       "constraints": {
-        "minimum": 0
+        "minimum": 1
       }
     }
   ]

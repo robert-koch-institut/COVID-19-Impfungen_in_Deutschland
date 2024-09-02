@@ -3,17 +3,59 @@
     {
       "name": "Datum",
       "type": "date",
-      "description": "Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden"
+      "description": "Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden",
+      "format": "%Y-%m-%d"
     },
     {
       "name": "Bundesland",
       "type": "string",
-      "description": "Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet"
+      "description": "Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet",
+      "constraints": {
+        "enum": [
+          "Baden-Württemberg",
+          "Bayern",
+          "Berlin",
+          "Brandenburg",
+          "Bremen",
+          "Hamburg",
+          "Hessen",
+          "Mecklenburg-Vorpommern",
+          "Niedersachsen",
+          "Nordrhein-Westfalen",
+          "Rheinland-Pfalz",
+          "Saarland",
+          "Sachsen",
+          "Sachsen-Anhalt",
+          "Schleswig-Holstein",
+          "Thüringen",
+          "Deutschland"
+        ]
+      }
     },
     {
       "name": "BundeslandId_Impfort",
       "type": "string",
-      "description": "Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden"
+      "description": "Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden",
+      "constraints": {
+        "enum": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ]
+      }
     },
     {
       "name": "Impfungen_gesamt",

@@ -2,14 +2,11 @@
   "fields": [
     {
       "name": "Datum",
-      "type": "date",
-      "description": "Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden",
-      "format": "%Y-%m-%d"
+      "type": "date"
     },
     {
       "name": "Bundesland",
       "type": "string",
-      "description": "Name des Bundeslandes zuzüglich der Angabe für das gesamte Bundesgebiet",
       "constraints": {
         "enum": [
           "Baden-Württemberg",
@@ -34,33 +31,15 @@
     },
     {
       "name": "BundeslandId_Impfort",
-      "type": "string",
-      "description": "Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden",
+      "type": "integer",
       "constraints": {
-        "enum": [
-          "01",
-          "02",
-          "03",
-          "04",
-          "05",
-          "06",
-          "07",
-          "08",
-          "09",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16"
-        ]
+        "minimum": 1,
+        "maximum": 17
       }
     },
     {
       "name": "Impfungen_gesamt",
       "type": "integer",
-      "description": "Gesamtzahl der aller verabreichten Impfungen",
       "constraints": {
         "minimum": 0
       }
@@ -68,7 +47,6 @@
     {
       "name": "Impfungen_gesamt_min1",
       "type": "integer",
-      "description": "Gesamtzahl mindestens einmal Geimpfter",
       "constraints": {
         "minimum": 0
       }
@@ -76,18 +54,16 @@
     {
       "name": "Impfungen_gesamt_00bis04_min1",
       "type": "integer",
-      "description": "Gesamtzahl der Personen im Alter von 0 bis 4 Jahren, die in der Variable Impfungen_gesamt_min1 enthalten sind",
       "missingValues": [
         "NA"
       ],
       "constraints": {
-        "minimum": 5
+        "minimum": 0
       }
     },
     {
       "name": "Impfungen_gesamt_gi",
       "type": "integer",
-      "description": "Gesamtzahl der Grundimmunisierten.",
       "constraints": {
         "minimum": 0
       }
@@ -95,18 +71,16 @@
     {
       "name": "Impfungen_gesamt_00bis04_gi",
       "type": "integer",
-      "description": "Gesamtzahl der Personen im Alter von 0 bis 4 Jahren, die in der Variable Impfungen_gesamt_gi enthalten sind",
       "missingValues": [
         "NA"
       ],
       "constraints": {
-        "minimum": 5
+        "minimum": 0
       }
     },
     {
       "name": "Impfungen_gesamt_boost1",
       "type": "integer",
-      "description": "Gesamtzahl der Personen mit einer ersten Auffrischimpfung",
       "constraints": {
         "minimum": 0
       }
@@ -114,7 +88,6 @@
     {
       "name": "Impfungen_gesamt_boost2",
       "type": "integer",
-      "description": "Gesamtzahl der Personen mit einer zweiten Auffrischimpfung",
       "constraints": {
         "minimum": 0
       }
@@ -122,7 +95,6 @@
     {
       "name": "Impfungen_gesamt_boost3",
       "type": "integer",
-      "description": "Gesamtzahl der Personen mit einer dritten Auffrischimpfung",
       "constraints": {
         "minimum": 0
       }
@@ -130,7 +102,6 @@
     {
       "name": "Impfungen_gesamt_boost4",
       "type": "integer",
-      "description": "Gesamtzahl der Personen mit einer vierten und weiteren Auffrischimpfungen, wobei gemäß den erfolgten Impfungen mehrfach gezählt wird",
       "constraints": {
         "minimum": 0
       }
@@ -138,7 +109,6 @@
     {
       "name": "Impfquote_gesamt_min1",
       "type": "number",
-      "description": "Impfquote der mindesten einmal geimpften Personen",
       "missingValues": [
         "NA"
       ],
@@ -149,7 +119,6 @@
     {
       "name": "Impfquote_05bis17_min1",
       "type": "number",
-      "description": "Impfquote der mindestens einmal geimpften Personen im Alter von 5 bis 17 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -160,7 +129,6 @@
     {
       "name": "Impfquote_05bis11_min1",
       "type": "number",
-      "description": "Impfquote der mindestens einmal geimpften Personen im Alter von 5 bis 11 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -171,7 +139,6 @@
     {
       "name": "Impfquote_12bis17_min1",
       "type": "number",
-      "description": "Impfquote der mindestens einmal geimpften Personen im Alter von 12 bis 17 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -182,7 +149,6 @@
     {
       "name": "Impfquote_18plus_min1",
       "type": "number",
-      "description": "Impfquote der mindesten einmal geimpften Personen im Alter ab 18 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -193,7 +159,6 @@
     {
       "name": "Impfquote_18bis59_min1",
       "type": "number",
-      "description": "Impfquote der mindesten einmal geimpften Personen im Alter von 18 bis 59 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -204,7 +169,6 @@
     {
       "name": "Impfquote_60plus_min1",
       "type": "number",
-      "description": "Impfquote der mindesten einmal geimpften Personen ab 60 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -215,7 +179,6 @@
     {
       "name": "Impfquote_gesamt_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen",
       "missingValues": [
         "NA"
       ],
@@ -226,7 +189,6 @@
     {
       "name": "Impfquote_05bis17_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen im Alter von 5 bis 17 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -237,7 +199,6 @@
     {
       "name": "Impfquote_05bis11_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen im Alter von 5 bis 11 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -248,7 +209,6 @@
     {
       "name": "Impfquote_12bis17_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen im Alter von 12 bis 17 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -259,7 +219,6 @@
     {
       "name": "Impfquote_18plus_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen im Alter ab 18 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -270,7 +229,6 @@
     {
       "name": "Impfquote_18bis59_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen im Alter von 18 bis 59 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -281,7 +239,6 @@
     {
       "name": "Impfquote_60plus_gi",
       "type": "number",
-      "description": "Impfquote der grundimmunisierten Personen ab 60 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -292,7 +249,6 @@
     {
       "name": "Impfquote_gesamt_boost1",
       "type": "number",
-      "description": "Impfquote der Personen mit erster Auffrischimpfung",
       "missingValues": [
         "NA"
       ],
@@ -303,7 +259,6 @@
     {
       "name": "Impfquote_12bis17_boost1",
       "type": "number",
-      "description": "Impfquote der Personen mit erster Auffrischimpfung im Alter von 12 bis 17 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -314,7 +269,6 @@
     {
       "name": "Impfquote_18plus_boost1",
       "type": "number",
-      "description": "Impfquote der Personen mit erster Auffrischimpfung im Alter ab 18 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -325,7 +279,6 @@
     {
       "name": "Impfquote_18bis59_boost1",
       "type": "number",
-      "description": "Impfquote der Personen mit erster Auffrischimpfung im Alter von 18 bis 59 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -336,7 +289,6 @@
     {
       "name": "Impfquote_60plus_boost1",
       "type": "number",
-      "description": "Impfquote der Personen mit erster Auffrischimpfung ab 60 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -347,7 +299,6 @@
     {
       "name": "Impfquote_gesamt_boost2",
       "type": "number",
-      "description": "Impfquote der Personen mit zweiter Auffrischimpfung",
       "missingValues": [
         "NA"
       ],
@@ -358,7 +309,6 @@
     {
       "name": "Impfquote_12bis17_boost2",
       "type": "number",
-      "description": "Impfquote der Personen mit zweiter Auffrischimpfung im Alter von 12 bis 17 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -369,7 +319,6 @@
     {
       "name": "Impfquote_18plus_boost2",
       "type": "number",
-      "description": "Impfquote der Personen mit zweiter Auffrischimpfung im Alter ab 18 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -380,7 +329,6 @@
     {
       "name": "Impfquote_18bis59_boost2",
       "type": "number",
-      "description": "Impfquote der Personen mit zweiter Auffrischimpfung im Alter von 18 bis 59 Jahren",
       "missingValues": [
         "NA"
       ],
@@ -391,7 +339,6 @@
     {
       "name": "Impfquote_60plus_boost2",
       "type": "number",
-      "description": "Impfquote der Personen mit zweiter Auffrischimpfung ab 60 Jahren",
       "missingValues": [
         "NA"
       ],

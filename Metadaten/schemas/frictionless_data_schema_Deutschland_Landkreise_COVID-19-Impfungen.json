@@ -3,7 +3,8 @@
     {
       "name": "Impfdatum",
       "type": "date",
-      "description": "Datum der Impfungen"
+      "description": "Datum der Impfungen",
+      "format": "%Y-%m-%d"
     },
     {
       "name": "LandkreisId_Impfort",
@@ -29,7 +30,7 @@
     },
     {
       "name": "Impfschutz",
-      "type": "string",
+      "type": "integer",
       "description": "Angabe zum Impfschutz <br/> Grundimmunisierung wird angenommen bei allen gemeldeten Zweitimpfungen, Impfungen mit Jcovden-Impfstoff bei niedergelassenen Ärzt:innen vor dem 27.01.2022 sowie allen gemeldeten Drittimpfungen mit Comirnaty ab dem 07.11.2022 in der Altersgruppe 0 bis 4 Jahre <br/> Fortgesetzte, aber nicht abgeschlossene Grundimmunisierungen entsprechen Impfungen zwischen der Erstimpfung und der Grundimmunisierung",
       "constraints": {
         "enum": [

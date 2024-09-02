@@ -1,0 +1,24 @@
+{
+  "fields": [
+    {
+      "name": "Impfdatum",
+      "type": "date"
+    },
+    {
+      "name": "LandkreisId_Impfort",
+      "type": "integer"
+    },
+    {
+      "name": "Altersgruppe",
+      "type": "string"
+    },
+    {
+      "name": "Impfschutz",
+      "type": "integer"
+    },
+    {
+      "name": "Anzahl",
+      "type": "integer"
+    }
+  ]
+}

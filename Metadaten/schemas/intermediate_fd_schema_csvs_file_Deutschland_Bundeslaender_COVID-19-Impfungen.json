@@ -1,0 +1,53 @@
+{
+  "fields": [
+    {
+      "name": "Impfdatum",
+      "type": "date"
+    },
+    {
+      "name": "BundeslandId_Impfort",
+      "type": "integer",
+      "constraints": {
+        "minimum": 1,
+        "maximum": 17
+      }
+    },
+    {
+      "name": "Impfstoff",
+      "type": "string",
+      "constraints": {
+        "enum": [
+          "Comirnaty",
+          "Comirnaty Omicron XBB.1.5",
+          "Comirnaty Original/Omicron BA.1",
+          "Comirnaty Original/Omicron BA.4-5",
+          "Comirnaty bivalent (Original/Omikron)",
+          "Comirnaty-Kleinkinder",
+          "Jcovden",
+          "Nuvaxovid",
+          "Spikevax",
+          "Spikevax bivalent (Original/Omikron)",
+          "Spikevax bivalent Original/Omicron BA.1",
+          "Spikevax bivalent Original/Omicron BA.4-5",
+          "Valneva",
+          "Vaxzevria",
+          "VidPrevtyn Beta"
+        ]
+      }
+    },
+    {
+      "name": "Impfserie",
+      "type": "integer",
+      "constraints": {
+        "minimum": 1
+      }
+    },
+    {
+      "name": "Anzahl",
+      "type": "integer",
+      "constraints": {
+        "minimum": 0
+      }
+    }
+  ]
+}
