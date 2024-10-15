@@ -1,3 +1,16 @@
+
+> [!IMPORTANT]
+> **Einstellung des Datensatzes zum 09.07.2024**
+> 
+> Am 30.06.2024 ist die COVID-19-Vorsorgeverordnung außer Kraft getreten. Mit dem Auslaufen der Verordnung wurden die Meldeportale für die niedergelassene Ärzteschaft zur zeitnahen Übermittlung durchgeführter COVID-19-Impfungen abgeschaltet.
+> 
+> Die am 09.07.2024 publizierten Daten repräsentieren den finalen Datenstand des Digitalen Impfquotenmonitorings. Die COVID-19-Impfungen werden künftig wie die anderen Routineimpfungen im Rahmen der [KV-Impfsurveillance](https://doi.org/10.5281/zenodo.12748542) ausgewertet.
+
+---------
+
+
+
+
 Datensatzdokumentation  
 # COVID-19-Impfungen in Deutschland  
 
