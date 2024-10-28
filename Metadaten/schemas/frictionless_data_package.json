@@ -1,7 +1,7 @@
 {
   "name": "covid-19-impfungen_in_deutschland",
   "title": "COVID-19-Impfungen_in_Deutschland",
-  "description": "Frictionless data package. This package lists and describes all data files in this open data repository. For more information on frictionless data, see https://specs.frictionlessdata.io/ and https://framework.frictionlessdata.io/.",
+  "description": "Diese Datei gibt eine Übersicht über alle Datensätze in diesem Open Data Repository. Informationen zum Frictionless Data Standard finden Sie unter https://specs.frictionlessdata.io/ und https://framework.frictionlessdata.io/.",
   "resources": [
     {
       "name": "deutschland_bundeslaender_covid-19-impfungen",
