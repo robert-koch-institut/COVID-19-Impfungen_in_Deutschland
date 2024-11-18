@@ -190,6 +190,12 @@ Für jede Impfgruppe wird die tägliche Anzahl von Impfungen ausgewiesen, sofern
 
 Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Deutschland_Bundeslaender_COVID-19-Impfungen", "lang": "de"} -->
+
+Die Datei [Deutschland_Bundeslaender_COVID-19-Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Deutschland_Bundeslaender_COVID-19-Impfungen.csv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Frictionless-Data Format](https://specs.frictionlessdata.io/) in [frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json) hinterlegt:
+> [frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json)
+
+<!-- DATA_SCHEMA_TABLE_START -->
 | Variable             | Typ     | Ausprägungen                                                                                                               | Beschreibung                                                                                                                                                                                                               |
 |:---------------------|:--------|:---------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Impfdatum            | date    | Format: `YYYY-MM-DD`                                                                                                       | Datum der Impfungen                                                                                                                                                                                                        |
@@ -198,11 +204,14 @@ Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und 
 | Impfserie            | integer | Werte: ≥1                                                                                                                  | Angabe zur Stellung innerhalb der Impfserie                                                                                                                                                                                |
 | Anzahl               | integer | Werte: ≥1                                                                                                                  | Anzahl der Impfungen in der Impfgruppe                                                                                                                                                                                     |
 
+<!-- DATA_SCHEMA_TABLE_END -->
+
+<!-- DATA_SCHEMA_SPECIFICATION_END -->
 
 
 
 
-Eine maschinenlesbares Datenschema zu diesem Datensatz finden sie in der Datei [`frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json`](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json).
+
 
 
 Aus der angegebenen Impfserie und dem für den Impfsoff verwendeten Impfschema leitet sich ab, ob eine Person grundimmunisiert ist und um die wie vielte Auffrischimpfung es sich handelt. Nach aktuellem Stand werden für die Ausprägung "Comirnaty-Kleinkinder" im Impfstoff drei Impfdosen für die Grundimmunisierung  benötigt, alle anderen Impfstoffe benötigen zwei Impfdosen. Zu berücksichtigen ist, dass Zweitimpfungen mit dem Jcovden-Impfstoff aus dem **KBV-Datenpaket**  bzw. Impfungen mit der Abrechnungsziffer für Jcovden-Impfstoff aus den **Abrechnungsdaten der KVen**, die vor dem 27.01.2022 erfolgten, mit Impfserie 1 ausgewiesen werden.  
@@ -247,19 +256,28 @@ Anhand der Ortsangabe der impfenden Stelle lässt sich keine Impfquote auf Landk
 
 Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
-| Variable            | Typ     | Ausprägungen                                                     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                |
-|:--------------------|:--------|:-----------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Impfdatum           | date    | Format: `YYYY-MM-DD`                                             | Datum der Impfungen                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| LandkreisId_Impfort | string  | Format: siehe Datenschemadatei (Link direkt nach dieser Tabelle) | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden.                                                                                                                                                                                                                  |
-| Altersgruppe        | string  | Werte: `00-04`, `05-11`, `12-17`, `18-59`, `60+`                 | Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV                                                                                                                                                                                                                                                                                                                                                                   |
-| Impfschutz          | integer | Werte: `1`, `2`, `3`, `4`, `5`, `6`, `11`                        | Angabe zum Impfschutz <br/> Grundimmunisierung wird angenommen bei allen gemeldeten Zweitimpfungen, Impfungen mit Jcovden-Impfstoff bei niedergelassenen Ärzt:innen vor dem 27.01.2022 sowie allen gemeldeten Drittimpfungen mit Comirnaty ab dem 07.11.2022 in der Altersgruppe 0 bis 4 Jahre <br/> Fortgesetzte, aber nicht abgeschlossene Grundimmunisierungen entsprechen Impfungen zwischen der Erstimpfung und der Grundimmunisierung |
-| Anzahl              | integer | Werte: ≥5                                                        | Anzahl der Impfungen in der Impfgruppe                                                                                                                                                                                                                                                                                                                                                                                                      |
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Deutschland_Landkreise_COVID-19-Impfungen", "lang": "de"} -->
+
+Die Datei [Deutschland_Landkreise_COVID-19-Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Deutschland_Landkreise_COVID-19-Impfungen.csv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Frictionless-Data Format](https://specs.frictionlessdata.io/) in [frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json) hinterlegt:
+> [frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json)
+
+<!-- DATA_SCHEMA_TABLE_START -->
+| Variable            | Typ     | Ausprägungen                                                            | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                                                |
+|:--------------------|:--------|:------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Impfdatum           | date    | Format: `YYYY-MM-DD`                                                    | Datum der Impfungen                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| LandkreisId_Impfort | string  | Werte: `01001`, `01002`, `01003`, `01004`, `01051`, `01053`, `01054`, … | Identifikationsnummer des Landkreises basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden.                                                                                                                                                                                                                  |
+| Altersgruppe        | string  | Werte: `00-04`, `05-11`, `12-17`, `18-59`, `60+`                        | Altersgruppen der in der Impfgruppe enthaltenen Fälle nach Schema der KBV                                                                                                                                                                                                                                                                                                                                                                   |
+| Impfschutz          | integer | Werte: `1`, `2`, `3`, `4`, `5`, `6`, `11`                               | Angabe zum Impfschutz <br/> Grundimmunisierung wird angenommen bei allen gemeldeten Zweitimpfungen, Impfungen mit Jcovden-Impfstoff bei niedergelassenen Ärzt:innen vor dem 27.01.2022 sowie allen gemeldeten Drittimpfungen mit Comirnaty ab dem 07.11.2022 in der Altersgruppe 0 bis 4 Jahre <br/> Fortgesetzte, aber nicht abgeschlossene Grundimmunisierungen entsprechen Impfungen zwischen der Erstimpfung und der Grundimmunisierung |
+| Anzahl              | integer | Werte: ≥5                                                               | Anzahl der Impfungen in der Impfgruppe                                                                                                                                                                                                                                                                                                                                                                                                      |
+
+<!-- DATA_SCHEMA_TABLE_END -->
+
+<!-- DATA_SCHEMA_SPECIFICATION_END -->
 
 
 
 
 
-Eine maschinenlesbares Datenschema zu diesem Datensatz finden sie in der Datei [`frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json`](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json).
 
 
 Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von mindestens fünf erreicht.  
@@ -306,6 +324,12 @@ Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differ
 
 Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
+<!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Deutschland_Impfquoten_COVID-19", "lang": "de"} -->
+
+Die Datei [Deutschland_Impfquoten_COVID-19.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Deutschland_Impfquoten_COVID-19.csv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Frictionless-Data Format](https://specs.frictionlessdata.io/) in [frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json) hinterlegt:
+> [frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json)
+
+<!-- DATA_SCHEMA_TABLE_START -->
 | Variable                      | Typ     | Ausprägungen                                                                                    | Beschreibung                                                                                                                                                                                                               |
 |:------------------------------|:--------|:------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Datum                         | date    | Format: `YYYY-MM-DD`                                                                            | Datum, bis zu dem alle durchgeführten und gemeldeten Impfungen berücksichtigt werden                                                                                                                                       |
@@ -345,11 +369,14 @@ Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Va
 | Impfquote_18bis59_boost2      | number  | Werte: ≥0<br>Fehlende Werte: `NA`                                                               | Impfquote der Personen mit zweiter Auffrischimpfung im Alter von 18 bis 59 Jahren                                                                                                                                          |
 | Impfquote_60plus_boost2       | number  | Werte: ≥0<br>Fehlende Werte: `NA`                                                               | Impfquote der Personen mit zweiter Auffrischimpfung ab 60 Jahren                                                                                                                                                           |
 
+<!-- DATA_SCHEMA_TABLE_END -->
+
+<!-- DATA_SCHEMA_SPECIFICATION_END -->
 
 
 
 
-Eine maschinenlesbares Datenschema zu diesem Datensatz finden sie in der Datei [`frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json`](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Impfquoten_COVID-19.json).
+
 
 
 #### Erklärung zur Variablenausprägung "Bundesressorts"
