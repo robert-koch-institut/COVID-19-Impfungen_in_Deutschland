@@ -188,8 +188,6 @@ Für jede Impfgruppe wird die tägliche Anzahl von Impfungen ausgewiesen, sofern
 
 #### Variablenausprägungen 
 
-Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
-
 <!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Deutschland_Bundeslaender_COVID-19-Impfungen", "lang": "de"} -->
 
 Die Datei [Deutschland_Bundeslaender_COVID-19-Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Deutschland_Bundeslaender_COVID-19-Impfungen.csv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Frictionless-Data Format](https://specs.frictionlessdata.io/) in [frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Bundeslaender_COVID-19-Impfungen.json) hinterlegt:
@@ -207,11 +205,6 @@ Die Datei [Deutschland_Bundeslaender_COVID-19-Impfungen.csv](https://github.com/
 <!-- DATA_SCHEMA_TABLE_END -->
 
 <!-- DATA_SCHEMA_SPECIFICATION_END -->
-
-
-
-
-
 
 
 Aus der angegebenen Impfserie und dem für den Impfsoff verwendeten Impfschema leitet sich ab, ob eine Person grundimmunisiert ist und um die wie vielte Auffrischimpfung es sich handelt. Nach aktuellem Stand werden für die Ausprägung "Comirnaty-Kleinkinder" im Impfstoff drei Impfdosen für die Grundimmunisierung  benötigt, alle anderen Impfstoffe benötigen zwei Impfdosen. Zu berücksichtigen ist, dass Zweitimpfungen mit dem Jcovden-Impfstoff aus dem **KBV-Datenpaket**  bzw. Impfungen mit der Abrechnungsziffer für Jcovden-Impfstoff aus den **Abrechnungsdaten der KVen**, die vor dem 27.01.2022 erfolgten, mit Impfserie 1 ausgewiesen werden.  
@@ -254,8 +247,6 @@ Anhand der Ortsangabe der impfenden Stelle lässt sich keine Impfquote auf Landk
 
 #### Variablenausprägungen 
 
-Die Impfdaten enthalten die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
-
 <!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Deutschland_Landkreise_COVID-19-Impfungen", "lang": "de"} -->
 
 Die Datei [Deutschland_Landkreise_COVID-19-Impfungen.csv](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Deutschland_Landkreise_COVID-19-Impfungen.csv) enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen. Ein maschinenlesbares Datenschema ist im [Frictionless-Data Format](https://specs.frictionlessdata.io/) in [frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/Metadaten/schemas/frictionless_data_schema_Deutschland_Landkreise_COVID-19-Impfungen.json) hinterlegt:
@@ -273,11 +264,6 @@ Die Datei [Deutschland_Landkreise_COVID-19-Impfungen.csv](https://github.com/rob
 <!-- DATA_SCHEMA_TABLE_END -->
 
 <!-- DATA_SCHEMA_SPECIFICATION_END -->
-
-
-
-
-
 
 
 Ist die Anzahl an Impfungen einer Impfgruppe an einem Tag kleiner als fünf, werden, aus Gründen des Datenschutzes, an diesem Tag keine Impfungen für die Impfgruppe ausgewiesen. Um dennoch einen genauen Überblick über die Gesamtzahl der Impfungen zu ermöglichen, werden Impfgruppen mit weniger als fünf Impfungen zu Impfungen der Folgetage derselben Impfgruppe hinzuaddiert, bis die kumulierte Anzahl der Impfungen an einem Tag den Wert von mindestens fünf erreicht.  
@@ -321,8 +307,6 @@ Die Tabelle der Impfquoten differenziert grundlegend nach den Merkmalen des Impf
 Neben den Impfquoten wird zusätzlich die absolute Anzahl der Geimpften - differenziert nach Impfstatus - angegeben. Es werden nur Impfungen einbezogen, die bis zum Vortag des Erstellungsdatums durchgeführt und bis zum Erstellungsdatum der Datei gemeldet wurden.
 
 #### Variablenausprägungen 
-
-Die Tabelle der Impfquoten enthält die in der folgenden Tabelle abgebildeten Variablen und deren Ausprägungen:  
 
 <!-- DATA_SCHEMA_SPECIFICATION_START: {"id": "Deutschland_Impfquoten_COVID-19", "lang": "de"} -->
 
