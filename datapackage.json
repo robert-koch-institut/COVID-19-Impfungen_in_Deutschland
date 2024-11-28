@@ -1,0 +1,35 @@
+{
+  "name": "10.5281/zenodo.5126651",
+  "title": "COVID-19-Impfungen in Deutschland",
+  "description": "Diese Datei gibt eine Übersicht über die Datensätze in diesem Open Data Repository. Informationen zum Data Package Standard finden Sie unter https://datapackage.org/. Mehr Information über diesen Datensatz finden sie auf Zenodo (https://doi.org/10.5281/zenodo.5126651) oder Github (https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland)",
+  "homepage": "https://doi.org/10.5281/zenodo.5126651",
+  "resources": [
+    {
+      "name": "deutschland_bundeslaender_covid-19-impfungen",
+      "type": "table",
+      "path": "Deutschland_Bundeslaender_COVID-19-Impfungen.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "Metadaten/schemas/tableschema_Deutschland_Bundeslaender_COVID-19-Impfungen.json"
+    },
+    {
+      "name": "deutschland_impfquoten_covid-19",
+      "type": "table",
+      "path": "Deutschland_Impfquoten_COVID-19.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "Metadaten/schemas/tableschema_Deutschland_Impfquoten_COVID-19.json"
+    },
+    {
+      "name": "deutschland_landkreise_covid-19-impfungen",
+      "type": "table",
+      "path": "Deutschland_Landkreise_COVID-19-Impfungen.csv",
+      "scheme": "file",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "schema": "Metadaten/schemas/tableschema_Deutschland_Landkreise_COVID-19-Impfungen.json"
+    }
+  ]
+}
