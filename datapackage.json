@@ -1,7 +1,7 @@
 {
   "name": "10.5281/zenodo.5126651",
   "title": "COVID-19-Impfungen in Deutschland",
-  "description": "Diese Datei gibt eine Übersicht über die Datensätze in diesem Open Data Repository. Informationen zum Data Package Standard finden Sie unter https://datapackage.org/. Mehr Information über diesen Datensatz finden sie auf Zenodo (https://doi.org/10.5281/zenodo.5126651) oder Github (https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland)",
+  "description": "Diese Datei gibt eine Übersicht über die im Datensatz enthaltenen Daten im Data Package Standard (https://datapackage.org). Der dokumentierte Datensatz ist auf den Plattformen Zenodo (https://doi.org/10.5281/zenodo.5126651) und Github (https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland) verfügbar.",
   "homepage": "https://doi.org/10.5281/zenodo.5126651",
   "resources": [
     {
