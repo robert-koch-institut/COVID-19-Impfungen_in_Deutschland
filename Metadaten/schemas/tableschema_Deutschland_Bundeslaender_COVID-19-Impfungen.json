@@ -1,0 +1,75 @@
+{
+  "fields": [
+    {
+      "name": "Impfdatum",
+      "type": "date",
+      "description": "Datum der Impfungen",
+      "format": "%Y-%m-%d"
+    },
+    {
+      "name": "BundeslandId_Impfort",
+      "type": "string",
+      "description": "Identifikationsnummer des Bundeslandes basierend auf dem Amtlichen Gemeindeschlüssel (AGS). Impfungen des Bundesressorts werden separat ausgewiesen, da die Impfstellen des Bundes ohne exakte Angabe des Impfortes melden",
+      "constraints": {
+        "enum": [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16"
+        ]
+      }
+    },
+    {
+      "name": "Impfstoff",
+      "type": "string",
+      "description": "Verabreichter Impfstoff",
+      "constraints": {
+        "enum": [
+          "Vaxzevria",
+          "Spikevax",
+          "Comirnaty",
+          "Jcovden",
+          "Nuvaxovid",
+          "Valneva",
+          "Comirnaty bivalent (Original/Omikron)",
+          "Comirnaty Original/Omicron BA.1",
+          "Comirnaty Original/Omicron BA.4-5",
+          "Spikevax bivalent (Original/Omikron)",
+          "Spikevax bivalent Original/Omicron BA.1",
+          "Spikevax bivalent Original/Omicron BA.4-5",
+          "Comirnaty-Kleinkinder",
+          "VidPrevtyn Beta",
+          "Comirnaty Omicron XBB.1.5"
+        ]
+      }
+    },
+    {
+      "name": "Impfserie",
+      "type": "integer",
+      "description": "Angabe zur Stellung innerhalb der Impfserie",
+      "constraints": {
+        "minimum": 1
+      }
+    },
+    {
+      "name": "Anzahl",
+      "type": "integer",
+      "description": "Anzahl der Impfungen in der Impfgruppe",
+      "constraints": {
+        "minimum": 1
+      }
+    }
+  ]
+}
