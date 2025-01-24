@@ -9,8 +9,6 @@
 ---------
 
 
-
-
 Datensatzdokumentation  
 # COVID-19-Impfungen in Deutschland  
 
@@ -29,7 +27,10 @@ Nordufer 20
 
 ---
 **Zitieren**  
-Robert Koch-Institut (2024): COVID-19-Impfungen in Deutschland, Berlin: Zenodo. DOI:[10.5281/zenodo.12697471](http://doi.org/10.5281/zenodo.12697471).  
+<!-- CITATION_START: {"citation_style": "apa"} -->
+Robert Koch-Institut. (2024). COVID-19-Impfungen in Deutschland [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.12697471](https://doi.org/10.5281/zenodo.12697471)
+<!-- CITATION_END -->
+
 
 ## Einleitung
 
