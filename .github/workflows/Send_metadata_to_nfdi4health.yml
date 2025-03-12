@@ -15,4 +15,3 @@ jobs:
           nfdi4health_metadata_path: Metadaten/nfdi4health.json
           nfdi4health_authorization_endpoint: "https://sso.studyhub.nfdi4health.de/realms/nfdi4health/protocol/openid-connect/token"
           github_token: ${{secrets.GITHUB_TOKEN}}
-          nfdi4health_base_url: "https://csh.nfdi4health.de/api/"
