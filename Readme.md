@@ -238,7 +238,7 @@ Für jede Impfgruppe wird die tägliche Anzahl von Impfungen ausgewiesen, sofern
 
 #### Erklärung zur Variable Impfschutz  
 
-Da eine Umbewertung der Jcovden-Impfungen aus dem **KBV-Datenpaket** mit Altersangabe vor dem 27.01.2022 nicht möglich ist, werden für die Impfungen der niedergelassenen Ärzte in diesen Zeitraum die gemeldeten Impfserien der Impfungen ausgewiesen. Damit unterscheidet sich die Variable Impfschutz von der Variable Impfserie im vorherigen Datensatz. Ab dem 27.01.2022 entspricht die Variable Impschutz der Impfserie im Datensatz [COVID-19 Impfdaten auf Ebene der Bundesländer](https://codimd.mathphys.stura.uni-heidelberg.de/hFnsOsedQB-ZbIZ00wqnfw?both#COVID-19-Impfdaten-auf-Ebene-der-Bundesl%C3%A4nder) unter Berücksichtigung des impfstoffspezifischen Impfschemas.  
+Da eine Umbewertung der Jcovden-Impfungen aus dem **KBV-Datenpaket** mit Altersangabe vor dem 27.01.2022 nicht möglich ist, werden für die Impfungen der niedergelassenen Ärzte in diesen Zeitraum die gemeldeten Impfserien der Impfungen ausgewiesen. Damit unterscheidet sich die Variable Impfschutz von der Variable Impfserie im vorherigen Datensatz. Ab dem 27.01.2022 entspricht die Variable Impschutz der Impfserie im Datensatz [COVID-19 Impfdaten auf Ebene der Bundesländer](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland?tab=readme-ov-file#covid-19-impfdaten-auf-ebene-der-bundesl%C3%A4nder) unter Berücksichtigung des impfstoffspezifischen Impfschemas.  
 
 #### Hinweis zur Interpretation der Landkreisangaben  
 
