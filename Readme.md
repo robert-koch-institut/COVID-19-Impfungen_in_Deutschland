@@ -8,28 +8,51 @@
 
 ---------
 
+<!-- HEADER_START: {"lang": "de"} -->
 
-Datensatzdokumentation  
-# COVID-19-Impfungen in Deutschland  
 
-[Robert Koch-Institut](https://www.rki.de) | [RKI](https://www.wikidata.org/wiki/Q679041)  
-Nordufer 20  
-13353 Berlin  
+Dokumentation  
+# COVID-19-Impfungen in Deutschland
 
-**FG 33 |  Impfprävention**  
-[Anette Siedler](https://orcid.org/0000-0002-6359-1018) (Fachliche Leitung), [Thorsten Rieck](https://orcid.org/0000-0002-8799-8744) (Datenanalyse), [Annika Steffen](https://orcid.org/0000-0003-4072-9245) (Datenanalyse), Nita Perumal (Datenanalyse), Nathalie Pomijalski (Dokumentation)  
+<br> 
+<br> 
+<br> 
 
-**IT 4 | Softwarearchitektur und -entwicklung**  
-[Lei Mao](https://orcid.org/0000-0002-8356-755X) (Projektleitung), [Hermann Claus](https://orcid.org/0000-0002-0120-1846) (Technische Leitung), Constantin Fischer (Datenmanagement), Sven Schröder (Datenmanagement), Daniel Wesseler (Datenmanagement)  
+[**Robert Koch-Institut**](https://www.rki.de/)
 
-**MF 4 | Fach- und Forschungsdatenmanagement**  
-[Hannes Wuensche](https://orcid.org/0000-0002-8837-0326) (Datenkuration)  
+<br> 
 
----
+**Beitragende**   
+[Anette Siedler](https://orcid.org/0000-0002-6359-1018)&sup1;, [Thorsten Rieck](https://orcid.org/0000-0002-8799-8744)&sup1;, [Annika Steffen](https://orcid.org/0000-0003-4072-9245)&sup1;, Nita Perumal&sup1;, Nathalie Pomijalski&sup1;, [Lei Mao](https://orcid.org/0000-0002-8356-755X)&sup2;, [Hermann Claus](https://orcid.org/0000-0002-0120-1846)&sup2;, Constantin Fischer&sup2;, Sven Schröder&sup2;, Daniel Wesseler&sup2;, & [Hannes Wünsche](https://orcid.org/0000-0002-8837-0326)&sup3;
+
+&emsp;&emsp;&sup1; [Robert Koch-Institut](https://www.rki.de/) | [Fachgebiet 33](https://www.rki.de/fg33)  
+&emsp;&emsp;&sup2; [Robert Koch-Institut](https://www.rki.de/) | [Fachgebiet IT 4](https://www.rki.de/it4)  
+&emsp;&emsp;&sup3; [Robert Koch-Institut](https://www.rki.de/) | [Fachgebiet MF 4](https://www.rki.de/mf4)
+
+<br> 
+
 **Zitieren**  
-<!-- CITATION_START: {"citation_style": "apa"} -->
 Robert Koch-Institut. (2024). COVID-19-Impfungen in Deutschland [Data set]. Zenodo. [https://doi.org/10.5281/zenodo.12697471](https://doi.org/10.5281/zenodo.12697471)
-<!-- CITATION_END -->
+
+<br>
+
+
+**Zusammenfassung**    
+Im Datensatz "COVID-19-Impfungen in Deutschland" des Robert Koch-Instituts werden Daten zum Verlauf der COVID-19-Impfkampagne in Deutschland zwischen dem 27.12.2020 und dem 30.03.2024 bereitgestellt. Im  zugrunde liegenden Projekt "Digitales Impfquoten-Monitoring" (DIM) wurden tagesaktuell und bundesweit Impfdaten aus verschiedenen Quellen über vier Meldewege erfasst und validiert: der DIM-Webanwendung, Datenmeldungen der Kassenärztlichen Bundesvereinigung, der Privatärztlichen Verrechnungsstellen sowie Abrechnungsdaten der Kassenärztlichen Vereinigungen. Die Impfmeldungen sind nach Impfserie, Impfstoff, Alter, Region und weiteren Merkmalen aggregiert. Der Datensatz bildet eine wertvolle Grundlage für die Steuerung der Impfstrategie auf Bundes-, Länder- und kommunaler Ebene.
+
+<br>
+
+**Inhaltsverzeichnis** 
+<!-- TOC_START: {"heading_depth": 2} -->
+  - [Einleitung](#einleitung)
+  - [Informationen zum Datensatz und Entstehungskontext](#informationen-zum-datensatz-und-entstehungskontext)
+  - [Aufbau und Inhalt des publizierten Datensatzes](#aufbau-und-inhalt-des-publizierten-datensatzes)
+  - [Hinweise zur Nachnutzung der Daten](#hinweise-zur-nachnutzung-der-daten)
+<!-- TOC_END -->
+
+<br>
+
+<!-- HEADER_END -->
 
 
 ## Einleitung
@@ -64,13 +87,13 @@ Die nachfolgende Darstellung zeigt schematisch den Datenfluss von Erfassung der 
 
 ### Rollenbesetzung im RKI  
 
-Die fachlich-technische Projektleitung liegt im [Fachgebiet IT 4 | Softwarearchitektur und -entwicklung](https://www.rki.de/DE/Institut/Organisation/Abteilungen/MFI/IT4/it4-softwarearchitektur-und-entwicklung-node.html) des RKI. Hier erfolgt die Verarbeitung und Aufbereitung der vorliegenden Rohdaten.  
+Die fachlich-technische Projektleitung liegt im [Fachgebiet IT 4 | Softwarearchitektur und -entwicklung](https://www.rki.de/it4) des RKI. Hier erfolgt die Verarbeitung und Aufbereitung der vorliegenden Rohdaten.  
 
-Die fachlich-epidemiologische Projektleitung liegt im [Fachgebiet 33 | Impfprävention](https://www.rki.de/DE/Institut/Organisation/Abteilungen/Abteilung-3/FG33/fg33-impfpraevention-stiko-node.html) des RKI. Hier erfolgt die epidemiologische Datenanalyse.  
+Die fachlich-epidemiologische Projektleitung liegt im [Fachgebiet 33 | Impfprävention](https://www.rki.de/fg33) des RKI. Hier erfolgt die epidemiologische Datenanalyse.  
 
 Inhaltliche Fragen zum Digitalen Impfquoten-Monitoring und dem Impf-Fortschritt können direkt an info@rki.de gerichtet werden.  
 
-Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/DE/Institut/Organisation/Abteilungen/MFI/MF4/mf4-fach-und-forschungsdatenmanagement-node.html). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
+Die Veröffentlichung der Daten, die Datenkuration sowie das Qualitätsmanagement der (Meta-)Daten erfolgen durch das Fachgebiet [MF 4 | Fach- und Forschungsdatenmanagement](https://www.rki.de/mf4). Fragen zum Datenmanagement und zur Publikationsinfrastruktur können an das Open Data Team des Fachgebiets MF4 unter [OpenData@rki.de](mailto:OpenData@rki.de) gerichtet werden.  
 
 ### Zusammensetzung der Datenquellen
 
@@ -443,7 +466,7 @@ Offene Forschungsdaten des RKI werden auf [Zenodo.org](http://Zenodo.org/), [Git
  
 ### Lizenz  
 
-Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter  der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
+Der Datensatz "COVID-19-Impfungen in Deutschland" ist lizenziert unter der [Creative Commons Namensnennung 4.0 International Public License | CC-BY 4.0 International](https://creativecommons.org/licenses/by/4.0/deed.de).  
 
 Die im Datensatz bereitgestellten Daten sind, unter Bedingung der Namensnennung des Robert Koch-Instituts als Quelle, frei verfügbar. Das bedeutet, jede Person hat das Recht die Daten zu verarbeiten und zu verändern, Derivate des Datensatzes zu erstellen und sie für kommerzielle und nicht kommerzielle Zwecke zu nutzen. Weitere Informationen zur Lizenz finden sich in der [LICENSE](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/LICENSE) bzw. [LIZENZ](https://github.com/robert-koch-institut/COVID-19-Impfungen_in_Deutschland/blob/main/LIZENZ) Datei des Datensatzes.  
 <!-- FOOTER_END -->
